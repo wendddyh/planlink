@@ -1,6 +1,9 @@
 class VenueController < ApplicationController
-before_action:set_event, only: [:show]
+  before_action:set_venue, only: [:show]
+  skip_before_action :authenticate_user!, only: :show
+
   def show
+    authorize @venue
   end
 
   def index
@@ -8,7 +11,8 @@ before_action:set_event, only: [:show]
 
   private
 
-  def set_event
-    @event = Event.find(params[:id])
+  def set_venue
+    @venue = Venue.find(params[:id])
   end
+
 end
