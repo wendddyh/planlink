@@ -5,59 +5,24 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-# require 'faker'
-# require "open-uri"
-# User.destroy_all
+require 'json'
+require "open-uri"
+User.destroy_all
 
-# puts "Creating User"
+puts "Creating User"
 
-# User.create(email:"deon@gmail.com")
+User.create!(email:"deon@gmail.com",password: "deonnn", first_name: "Deon", last_name:"Joshua", phone_number:"12345",image_url: "https://i.pravatar.cc/150?img=68")
+User.create!(email: "wendy@gmail.com", password: "wendyy", first_name: "Wendy", last_name:"Henry", phone_number:"12345",image_url: "https://i.pravatar.cc/150?img=46")
+User.create!(email: "bob@gmail.com", password: "bobbbb", first_name: "Bob", last_name:"Marley",  phone_number:"12345",image_url:"https://i.pravatar.cc/150?img=65 ")
+User.create!(email: "lucy@gmail.com", password: "lucyyy", first_name: "Lucy", last_name:"Santiago",  phone_number:"12345", image_url:"https://i.pravatar.cc/150?img=49")
+User.create!(email: "john@gmail.com", password: "johnnn", first_name: "John", last_name:"Wick", phone_number:"12345",image_url:"https://i.pravatar.cc/150?img=64")
 
+puts "User created"
 
-# Venue.create(
-#   name: "The Royal Pavilion",
-#   description: "A stately venue exuding historic charm, offering versatile spaces for events amidst lush gardens and ornate interiors. Ideal for weddings, corporate functions, and cultural gatherings.",
-#   suburb: "Brighton",
-#   country: "Australia",
-#   category: "Events Venue",
-#   phone_number:" +61 3 1234 5678",
-#   email_address: "info@royalpavilion.com.au"
-#   website: "www.royalpavilion.com.au"
-#   Review: "A regal setting with impeccable service. Perfect for any grand celebration!"
-#   Photo URL: [Link]
-#   Capacity: 300,
-#   Price: $$$$$,
-#   Operation Hours: Mon-Sun: 9am-12am
-# )
+require_relative 'venue.rb'
 
+$venues_array.each do |p|
+  Venue.create!(name: p[:name], description: p[:description], suburb: p[:suburb] , country: p[:country], category: p[:category] ,phone_number: p[:phone_number] , email_address: p[:email_address] , website: p[:website], review: p[:review], capacity: p[:capacity_of_guest], price: p[:price_range] , rating: p[:rating] , operation_hour: p[:operation_hours] )
+end
 
-
-# Venue.create(
-#    name: Lakeside Manor
-#    description: Serene lakeside venue with modern amenities, providing an idyllic setting for weddings, retreats, and intimate gatherings. Panoramic views and elegant interiors create an unforgettable atmosphere.
-#    suburb: Ballarat
-#    country: Australia
-#    category: Wedding Venue
-#    Phone Number: +61 3 9876 5432
-#    email_address: events@lakesidemanor.com.au
-#    website: www.lakesidemanor.com.au
-#    Review: "A hidden gem surrounded by nature's beauty. A tranquil escape for special occasions!"
-#    Photo URL: [Link]
-#    Capacity: 150
-#    Price: $$$
-#    Operation Hours: Wed-Sun: 10am-11pm
-# )
-
-# 3. name: The Victorian Courtyard
-#    description: A boutique venue blending Victorian elegance with contemporary design, featuring a picturesque courtyard and versatile indoor spaces. Ideal for stylish events, art exhibits, and boutique gatherings.
-#    suburb: Fitzroy
-#    country: Australia
-#    category: Art Gallery & Events Space
-#    Phone Number: +61 3 2345 6789
-#    email_address: info@victoriancourtyard.com.au
-#    website: www.victoriancourtyard.com.au
-#    Review: "Chic and sophisticated venue with a charming ambiance. Perfect for art enthusiasts and intimate events!"
-#    Photo URL: [Link]
-#    Capacity: 100
-#    Price: $$
-#    Operation Hours: Tue-Sat: 11am-9pm
+puts "venue loaded"
