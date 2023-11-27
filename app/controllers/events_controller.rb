@@ -25,7 +25,6 @@ before_action:set_event, only:[:edit, :show, :destroy]
   end
 
   def show
-    @attendance = Attendance.where(event_id:params[:id])
     # @attendance.all
     authorize @event
   end

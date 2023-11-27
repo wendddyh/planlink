@@ -2,11 +2,8 @@
 <i class="fa-solid fa-dog"></i>
 
 # FONT
-$heading:
-$paragraph: 
-
-
-
+$heading: 'Anton', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
 
 
 # COLOR
