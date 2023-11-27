@@ -1,5 +1,4 @@
 class EventPolicy < ApplicationPolicy
-  
 
   def show?
     # call for the attendant if the attendance is the current user

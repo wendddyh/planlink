@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
-  get 'review/new'
-  get 'attendance/show'
-  get 'attendance/index'
-  get 'venue/show'
-  get 'venue/index'
-  get 'events/new'
-  get 'events/update'
-  get 'events/index'
-  get 'events/show'
+  # get 'review/new'
+  # get 'attendance/show'
+  # get 'attendance/index'
+  # get 'venue/show'
+  # get 'venue/index'
+  # get 'events/new'
+  # get 'events/update'
+  # get 'events/index'
+  # get 'events/show'
+  resources :events do
+    resources :attendances
+  end
+
+  resources :venue do
+    resources :reviews
+
+  end
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
@@ -17,6 +25,3 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 end
-
-
-
