@@ -10,5 +10,13 @@ class PagesController < ApplicationController
   end
 
   def home
+    @venues = Venue.all
   end
+
+  
+
+
+
+
+
 end
