@@ -5,6 +5,17 @@
 // input and has no visual effect. Here we try to fix matters by
 // applying the clear to the div wrapping the first following radio button
 // or checkbox.
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+$heading: 'Anton', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
+
+$primary: #9395D3;
+$secondary: #A2A3BB;
+$tertiary: #B3B7EE;
+$black: #000807;
+$white: #FBF9FF;
+
 legend ~ div.form-check:first-of-type {
   clear: left;
 }

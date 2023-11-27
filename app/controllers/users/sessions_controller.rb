@@ -18,7 +18,7 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
   def index
-    
+    @attendance = Attendance.where(event_id:params[:id])
   end
 
 
