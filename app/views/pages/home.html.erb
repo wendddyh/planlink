@@ -1,6 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+<p>create your own venue</p>
+<%= link_to "button", new_venue_path %>
+
 <% @venues.each do |venue| %>
   <ul>
     <li><%= link_to venue.name, venue_path(venue.id) %> </li>
