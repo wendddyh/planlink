@@ -1,5 +1,8 @@
 class AttendanceController < ApplicationController
+  def create
+    
 
+  end
 
   def index
   end

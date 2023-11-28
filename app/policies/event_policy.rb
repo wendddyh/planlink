@@ -1,13 +1,21 @@
 class EventPolicy < ApplicationPolicy
 
+  class Scope < Scope
+    def resolve
+      scope.all
+    end
+  end
+
   def show?
     # call for the attendant if the attendance is the current user
-    @attendance = Attendance.where(event_id: @event.id)
-    @attendance.user_id.include? (user.id)
+    true
   end
 
   # Event.find(parameter event_id by comparing attendant.user_id = current_user)
 
+  def new?
+    true
+  end
 
   def create?
     true
