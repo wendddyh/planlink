@@ -11,12 +11,13 @@ class PagesController < ApplicationController
 
   def home
     @venues = Venue.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_venue_html: render_to_string(partial: "info_venue", locals: {venue: venue})
+      }
+    end
   end
-
-  
-
-
-
-
-
 end

@@ -20,3 +20,25 @@ $white: #FBF9FF;
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 1180px) {
+  .desktopnavbar{
+    display:none;
+
+  }
+  .phonenavbar{
+    display:block;
+
+  }
+}
+
+@media (min-width: 1180px) {
+  .desktopnavbar{
+    display:block;
+  }
+  .phonenavbar{
+    display:none;
+  }
+}
