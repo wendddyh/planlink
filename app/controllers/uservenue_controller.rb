@@ -1,0 +1,3 @@
+class UservenueController < ApplicationController
+  
+end

@@ -47,6 +47,6 @@ before_action:set_event, only:[:edit, :show, :destroy]
   end
 
   def event_params
-    params.require(:event).permit(:event_name)
+    params.require(:event).permit(:event_name, :event_detail, :dress_code, :time, :start_date, :end_date)
   end
 end

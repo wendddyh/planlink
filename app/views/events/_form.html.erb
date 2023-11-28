@@ -1,4 +1,10 @@
 <%= simple_form_for([venue, event]) do |f| %>
   <%= f.input :event_name %>
+  <%= f.input :event_detail %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :time %>
+  <%= f.input :number_of_people %>
+  <%= f.input :dress_code %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
