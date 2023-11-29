@@ -281,7 +281,7 @@ DEPENDENCIES
   jbuilder
   json (~> 2.6)
   pg (~> 1.1)
-  pg_search
+  pg_search (~> 2.3, >= 2.3.6)
   puma (~> 5.0)
   pundit
   rails (~> 7.0.8)

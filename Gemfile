@@ -57,7 +57,7 @@ gem "sassc-rails"
 gem "devise"
 gem "pundit"
 gem "geocoder"
-
+gem 'pg_search', '~> 2.3', '>= 2.3.6'
 
 group :development, :test do
   gem "dotenv-rails"
