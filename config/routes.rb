@@ -9,14 +9,13 @@ Rails.application.routes.draw do
   # get 'events/index'
   # get 'events/show'
 
-
   resources :venue do
     resources :events do
       resources :attendances
     end
     resources :reviews
   end
-  
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }

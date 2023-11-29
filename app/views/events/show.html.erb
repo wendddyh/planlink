@@ -6,4 +6,4 @@
 <% end %>
 <!-- [...] -->
 <%# <%= button_to "Destroy this event", @event, method: :delete if policy(@event).destroy? %>
-<%# <%= link_to "Add Guests", venue_event_attendances_path(@venue, @event) %> %>
+<%= link_to "Add Guests", new_venue_event_attendance_path(@venue, @event) %>
