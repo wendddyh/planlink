@@ -24,7 +24,7 @@ puts "User created"
 require_relative 'venue.rb'
 
 $venues_array.each do |p|
-  Venue.create!(name: p[:name], description: p[:description], suburb: p[:suburb] , country: p[:country], category: p[:category] ,phone_number: p[:phone_number] , email_address: p[:email_address] , website: p[:website], review: p[:review], capacity: p[:capacity_of_guest], price: p[:price_range] , rating: p[:rating] , operation_hour: p[:operation_hours], address:"#{p[:suburb]}, #{p[:country]}")
+  Venue.create!(name: p[:name], description: p[:description], suburb: p[:suburb] , photo_url: p[:photo_url], country: p[:country], category: p[:category] ,phone_number: p[:phone_number] , email_address: p[:email_address] , website: p[:website], review: p[:review], capacity: p[:capacity_of_guest], price: p[:price_range] , rating: p[:rating] , operation_hour: p[:operation_hours], address:"#{p[:suburb]}, #{p[:country]}")
 end
 
 puts "venue loaded"

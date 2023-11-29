@@ -1,11 +1,55 @@
-.individual_card{
-  border-style: double;
-}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+$heading: 'Anton', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
 
-#tab1{
-  .active{
-    display:none
+$primary: #9395D3;
+$secondary: #A2A3BB;
+$tertiary: #B3B7EE;
+$black: #000807;
+$white: #FBF9FF;
+
+.cardownvenue{
+  p{
+    font-family: $paragraph;
+    font-weight: 500;
+    margin-top: 5px;
   }
 }
 
+.card{
+  border-style: none;
+  background-color: none;
+}
 
+.individual_card{
+  margin-bottom: 2rem;
+  transition: 0.3s;
+  img{
+    width: -webkit-fill-available;
+    transition: 0.3s;
+    &:hover{
+      filter: brightness(70%)
+    }
+
+  }
+  &:hover{
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(216, 216, 216, 0.2);
+  }
+}
+
+.card-body{
+  padding: 10px;
+  background-color: $white;
+  h3{
+    font-family: $heading;
+    a{
+      text-decoration: none;
+      font-family: $heading;
+      font-size: 6vw;
+      color: $black
+
+    }
+  }
+
+}
