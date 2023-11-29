@@ -53,3 +53,17 @@ $white: #FBF9FF;
   }
 
 }
+
+// venueshowpage
+
+#venueshowcard{
+  margin-top: 2vw;
+  padding: 2vw;
+  h3{
+    font-family: $heading;
+    font-size: 5vw;
+  }
+  p{
+    font-family: $paragraph;
+  }
+}

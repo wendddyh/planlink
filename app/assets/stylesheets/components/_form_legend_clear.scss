@@ -19,3 +19,34 @@ $white: #FBF9FF;
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+
+// new event form
+#new-event{
+  padding: 15px;
+  background-color: white;
+}
+
+#event-btn{
+  border-radius: 2px;
+  background-color: $primary;
+  color: $black;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: $paragraph;
+}
+
+.form-control{
+  border-radius: 10px;
+  background-color: white;
+}
+
+.form-select{
+  background-color: white;
+}
+
+
+
+.form-label{
+  font-family: $paragraph;
+}
