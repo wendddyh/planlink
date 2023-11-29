@@ -35,6 +35,7 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
     # @attendance.all
     @venue = Venue.find(params[:id])
     authorize @event
+    @venue = Venue.find(params[:venue_id])
   end
 
   def destroy

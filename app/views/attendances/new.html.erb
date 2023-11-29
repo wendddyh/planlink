@@ -1,0 +1,30 @@
+<h1>Events#new</h1>
+<p>Find me in app/views/events/new.html.erb</p>
+
+<div class="container">
+  <div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: new_venue_event_attendance_path(@venue_id, @event_id), method: :get, class: "d-flex" do %>
+      <%= text_field_tag :user,
+            params[:user],
+            class: "form-control",
+            placeholder: "Search for a user"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="users" data-controller="attendances" data-action="click->attendances#handleClick">
+        <% if @users.any? %>
+          <% @users.each do |user| %>
+            <h4 data-user-id="<%= user.id %>"><%= user.first_name %> <%= user.last_name %></h4>
+          <% end %>
+        <% else %>
+          <em>Sorry, no users found.</em>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

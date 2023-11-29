@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # get 'events/update'
   # get 'events/index'
   # get 'events/show'
+
   resources :venues do
     resources :events do
       resources :attendances
