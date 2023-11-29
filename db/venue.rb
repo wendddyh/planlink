@@ -7,7 +7,7 @@ $venues_array = [
     "category": "Rooftop Bar",
     "phone_number": "+61 3 1234 5678",
     "email_address": "info@celestialounge.com.au",
-    "photo_url": "https://example.com/gardenpavilion.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "www.celestialounge.com.au",
     "review": "An exceptional experience with breathtaking views! Ideal for special occasions.",
     "capacity_of_guest": 100,
@@ -24,7 +24,7 @@ $venues_array = [
     "category": "Waterfront Restaurant",
     "phone_number": "+61 3 9876 5432",
     "email_address": "events@harborbreeze.com.au",
-    "photo_url": "https://example.com/gardenpavilion.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "www.harborbreeze.com.au",
     "review": "Scenic views and delectable cuisine create an unforgettable dining experience!",
     "capacity_of_guest": 150,
@@ -40,7 +40,7 @@ $venues_array = [
     "category": "Event Hall",
     "phone_number": "+61 3 2345 6789",
     "email_address": "events@goldenhall.com.au",
-    "photo_url": "https://example.com/gardenpavilion.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1570560258879-af7f8e1447ac?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "www.goldenhall.com.au",
     "review": "Exceptional service and a grand ambiance make this venue perfect for celebrations!",
     "capacity_of_guest": 200,
@@ -57,7 +57,7 @@ $venues_array = [
     "category": "Lounge",
     "phone_number": "+61 3 8765 4321",
     "email_address": "info@sapphirelounge.com.au",
-    "photo_url": "https://example.com/gardenpavilion.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1565720490564-4ca60b055af6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "www.sapphirelounge.com.au",
     "review": "Exemplary service and an elegant ambiance. Ideal for exclusive gatherings!",
     "capacity_of_guest": 80,
@@ -73,7 +73,7 @@ $venues_array = [
     "category": "Garden Venue",
     "phone_number": "+61 3 3456 7890",
     "email_address": "events@cascadinggardens.com.au",
-    "photo_url": "https://example.com/gardenpavilion.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1505944357431-27579db47558?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "www.cascadinggardens.com.au",
     "review": "Tranquil surroundings and impeccable landscaping make this a top choice for outdoor events!",
     "capacity_of_guest": 120,
@@ -91,7 +91,7 @@ $venues_array = [
     "phone_number": "+61 3 1234 5678",
     "email_address": "info@terracelounge.com.au",
     "rating": 4.5,
-    "photo_url": "https://example.com/terracelounge.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1621275471769-e6aa344546d5?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "http://www.terracelounge.com.au",
     "review": "Fantastic ambiance with great food and attentive service. A perfect spot for celebrations!",
     "capacity": 100,
@@ -107,7 +107,7 @@ $venues_array = [
     "phone_number": "+61 3 9876 5432",
     "email_address": "events@gardenpavilion.com.au",
     "rating": 4.3,
-    "photo_url": "https://example.com/gardenpavilion.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1559625482-34b91d929ce8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "http://www.gardenpavilion.com.au",
     "review": "A charming venue with delicious food. The ambiance is perfect for a memorable celebration!",
     "capacity": 80,
@@ -123,7 +123,7 @@ $venues_array = [
     "phone_number": "+61 3 1234 5678",
     "email_address": "info@bayviewbistro.com.au",
     "rating": 4.7,
-    "photo_url": "https://example.com/bayviewbistro.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "http://www.bayviewbistro.com.au",
     "review": "Delicious food, excellent service, and a beautiful setting. Perfect for celebrations!",
     "capacity": 120,
@@ -139,7 +139,7 @@ $venues_array = [
     "phone_number": "+61 3 9876 5432",
     "email_address": "events@skylinelounge.com.au",
     "rating": 4.5,
-    "photo_url": "https://example.com/skylinelounge.jpg",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "http://www.skylinelounge.com.au",
     "review": "Breathtaking views, top-notch service, and a fantastic ambiance. Perfect for a memorable celebration!",
     "capacity": 80,
@@ -156,7 +156,7 @@ $venues_array = [
     "phone_number": "+61 3 1234 5678",
     "email_address": "info@toppaddock.com.au",
     "rating": 4.7,
-    "photo_url": "[Link to Top Paddock Photo]",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "[Top Paddock Website]",
     "review": "A must-visit for brunch lovers! Top Paddock never disappoints with its delicious dishes and excellent coffee.",
     "capacity": 80,
@@ -172,7 +172,7 @@ $venues_array = [
     "phone_number": "+61 3 9876 5432",
     "email_address": "info@babypizza.com.au",
     "rating": 4.5,
-    "photo_url": "[Link to Baby Pizza Photo]",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "[Baby Pizza Website]",
     "review": "Delicious pizzas with a fantastic vibe! Baby Pizza offers an excellent dining experience.",
     "capacity": 60,
@@ -188,7 +188,7 @@ $venues_array = [
     "phone_number": "+61 3 2345 6789",
     "email_address": "info@kongbbq.com.au",
     "rating": 4.8,
-    "photo_url": "[Link to Kong BBQ Photo]",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "[Kong BBQ Website]",
     "review": "Kong BBQ never fails to impress with its delicious fusion cuisine and vibrant atmosphere!",
     "capacity": 70,
@@ -205,7 +205,7 @@ $venues_array = [
     "phone_number": "+61 3 3456 7890",
     "email_address": "events@aviaryhotel.com.au",
     "rating": 4.6,
-    "photo_url": "[Link to Aviary Hotel Photo]",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "[Aviary Hotel Website]",
     "review": "Great venue for events! The Aviary Hotel provided excellent service for our birthday celebration.",
     "capacity": 120,
@@ -221,7 +221,7 @@ $venues_array = [
     "phone_number": "+61 3 9012 3456",
     "email_address": "info@cremornehotel.com.au",
     "rating": 4.4,
-    "photo_url": "[Link to Cremorne Hotel Photo]",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "[Cremorne Hotel Website]",
     "review": "Lovely venue! The Cremorne Hotel was the perfect setting for our birthday celebration.",
     "capacity": 50,
@@ -237,7 +237,7 @@ $venues_array = [
     "phone_number": "+61 3 6789 0123",
     "email_address": "events@terminushotel.com.au",
     "rating": 4.7,
-    "photo_url": "[Link to Terminus Hotel Photo]",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "website": "[Terminus Hotel Website]",
     "review": "Outstanding venue for events! The Terminus Hotel provided a fantastic setting for our birthday party.",
     "capacity": 200,
@@ -251,13 +251,15 @@ $venues_array = [
     "description": "Yering Station is one of the oldest wineries in Victoria, offering award-winning wines and a historic cellar door experience. The estate boasts stunning vineyard views and an elegant restaurant.",
     "features": ["Award-winning wines", "Historic cellar door", "Vineyard views", "Elegant restaurant"],
     "suburb": "Yarra Glen",
-    "country": "Australia"
+    "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "name": "De Bortoli Wines - Yarra Valley Estate",
     "description": "De Bortoli's Yarra Valley Estate is known for its high-quality wines and picturesque setting. They offer wine tastings, tours, and a restaurant serving delicious local produce.",
     "features": ["High-quality wines", "Wine tastings", "Tours", "Restaurant with local produce"],
     "suburb": "Dixons Creek",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -265,6 +267,7 @@ $venues_array = [
     "description": "Domaine Chandon, part of the Moët & Chandon group, specializes in sparkling wines. Visitors can enjoy tastings, tours, and a stylish cellar door overlooking the vineyards.",
     "features": ["Sparkling wines", "Tastings", "Tours", "Stylish cellar door"],
     "suburb": "Coldstream",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -272,6 +275,7 @@ $venues_array = [
     "description": "Oakridge Wines is acclaimed for its cool-climate wines. The winery features a modern cellar door, a renowned restaurant with seasonal menus, and beautiful views.",
     "features": ["Cool-climate wines", "Modern cellar door", "Renowned restaurant", "Beautiful views"],
     "suburb": "Coldstream",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -279,6 +283,7 @@ $venues_array = [
     "description": "TarraWarra Estate combines art, wine, and nature. This winery offers an art gallery showcasing Australian art alongside wine tastings, a restaurant, and stunning vineyard vistas.",
     "features": ["Art gallery", "Wine tastings", "Restaurant", "Vineyard vistas"],
     "suburb": "Yarra Glen",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -286,6 +291,7 @@ $venues_array = [
     "description": "Founded by the late James Halliday, Coldstream Hills produces premium wines. The cellar door offers tastings of a range of varietals, including Pinot Noir and Chardonnay.",
     "features": ["Premium wines", "Cellar door tastings", "Range of varietals"],
     "suburb": "Coldstream",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -293,6 +299,7 @@ $venues_array = [
     "description": "Dominique Portet Winery, run by a renowned winemaking family, focuses on French-style wines. Visitors can enjoy tastings, tours, and a charming cellar door experience.",
     "features": ["French-style wines", "Tastings", "Tours", "Charming cellar door"],
     "suburb": "Coldstream",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -300,6 +307,7 @@ $venues_array = [
     "description": "Rochford Wines is known for its events and concerts alongside wine tastings. The winery offers an amphitheater, a restaurant, and an extensive range of wines.",
     "features": ["Events and concerts", "Wine tastings", "Amphitheater", "Restaurant"],
     "suburb": "Coldstream",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -307,6 +315,7 @@ $venues_array = [
     "description": "Levantine Hill Estate is recognized for its premium wines and exceptional architecture. The estate offers wine tastings, a restaurant, and scenic views of the Yarra Valley.",
     "features": ["Premium wines", "Wine tastings", "Restaurant", "Scenic views"],
     "suburb": "Coldstream",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -314,6 +323,7 @@ $venues_array = [
     "description": "While not solely a winery, Innocent Bystander is popular for its wine, especially its Yarra Valley Pinot Noir and Chardonnay. They offer tastings and a bustling cafe experience.",
     "features": ["Popular wines", "Wine tastings", "Cafe experience"],
     "suburb": "Healesville",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -322,6 +332,7 @@ $venues_array = [
     "category": "Event Space",
     "suburb": "Brunswick",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Industrial-chic ambiance", "Versatile space"],
     "suitable_for": ["Weddings", "Corporate events", "Private parties"]
   },
@@ -331,6 +342,7 @@ $venues_array = [
     "category": "Meeting/Event Space",
     "suburb": "Melbourne CBD",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Stylish and modern spaces"],
     "suitable_for": ["Workshops", "Seminars", "Corporate functions"]
   },
@@ -340,6 +352,7 @@ $venues_array = [
     "category": "Rooftop Venue",
     "suburb": "South Melbourne",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["City skyline views", "Ideal for cocktail parties"],
     "suitable_for": ["Birthdays", "Special celebrations"]
   },
@@ -349,6 +362,7 @@ $venues_array = [
     "category": "Bowling Club",
     "suburb": "Brunswick",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Bowling greens", "Function spaces"],
     "suitable_for": ["Casual events", "Gatherings"]
   },
@@ -358,6 +372,7 @@ $venues_array = [
     "category": "Bowling Alley/Entertainment Center",
     "suburb": "Melbourne Central",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Party packages", "Event spaces"],
     "suitable_for": ["Corporate events", "Birthday parties", "Social gatherings"]
   },
@@ -367,6 +382,7 @@ $venues_array = [
     "category": "Karaoke Bar",
     "suburb": "Melbourne CBD",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Private karaoke rooms"],
     "suitable_for": ["Birthday parties", "Group gatherings", "Fun nights out"]
   },
@@ -377,6 +393,7 @@ $venues_array = [
     "category": "Rooftop Bar/Club",
     "suburb": "South Yarra",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Versatile spaces"],
     "suitable_for": ["Private functions", "Birthdays", "Cocktail parties"]
   },
@@ -386,6 +403,7 @@ $venues_array = [
     "category": "Event Venue",
     "suburb": "St Kilda",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Stunning view of Port Phillip Bay", "Sophisticated setting"],
     "suitable_for": ["Weddings", "Cocktail parties", "Special occasions"]
   },
@@ -395,6 +413,7 @@ $venues_array = [
     "category": "Arts/Cultural Center",
     "suburb": "Newport",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Unique and historic spaces"],
     "suitable_for": ["Events", "Performances", "Exhibitions"]
   },
@@ -404,6 +423,7 @@ $venues_array = [
     "category": "Heritage Venue",
     "suburb": "Abbotsford",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Gardens", "Galleries", "Function rooms"],
     "suitable_for": ["Weddings", "Events", "Workshops"]
   },
@@ -413,6 +433,7 @@ $venues_array = [
     "category": "Event Venue",
     "suburb": "North Melbourne",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Versatile event spaces", "Historic building"],
     "suitable_for": ["Weddings", "Corporate functions", "Cultural events"]
   },
@@ -422,6 +443,7 @@ $venues_array = [
     "category": "Waterfront Venue",
     "suburb": "South Wharf",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "features": ["Versatile event spaces", "Waterfront views"],
     "suitable_for": ["Weddings", "Corporate functions", "Special events"]
   },
@@ -430,6 +452,7 @@ $venues_array = [
     "name": "Corks and Canvas",
     "description": "Provides painting classes combined with a fun, social atmosphere. Offers guided painting sessions where participants can create their artwork while enjoying drinks and snacks.",
     "activity": "Painting classes",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "location": "Various locations around Melbourne",
     "country": "Australia"
   },
@@ -437,6 +460,7 @@ $venues_array = [
     "name": "Claydreamers Pottery Studio",
     "description": "Offers pottery classes suitable for beginners and experienced individuals. Participants can learn hand-building techniques or try their hand at throwing pottery on a wheel.",
     "activity": "Pottery making",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "location": "Richmond",
     "country": "Australia"
   },
@@ -445,6 +469,7 @@ $venues_array = [
     "description": "Hosts paint and sip sessions where participants can enjoy a relaxed atmosphere while being guided through creating their own masterpiece. Offers various painting themes and styles.",
     "activity": "Guided painting classes",
     "location": "Various venues across Melbourne",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -452,6 +477,7 @@ $venues_array = [
     "description": "Hosts creative workshops, including pottery, painting, and other arts and crafts. Offers different classes suitable for various skill levels.",
     "activity": "Pottery classes, painting workshops, arts and crafts",
     "location": "Albert Park",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -459,6 +485,7 @@ $venues_array = [
     "description": "Provides art classes for adults and children, covering various art forms such as painting, drawing, printmaking, and sculpture.",
     "activity": "Art classes",
     "location": "Bayswater",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -466,6 +493,7 @@ $venues_array = [
     "description": "Offers workshops and classes covering a wide range of crafts and arts, including painting, ceramics, sewing, and more. Hosts creative sessions for various skill levels.",
     "activity": "Workshops in crafts and arts",
     "location": "West Footscray",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -473,6 +501,7 @@ $venues_array = [
     "description": "Organizes relaxed and social painting classes suitable for all skill levels. Offers themed painting sessions led by experienced artists.",
     "activity": "Guided painting classes",
     "location": "Various locations in Melbourne",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
 
@@ -481,6 +510,7 @@ $venues_array = [
     "description": "Offers thrilling escape room experiences where participants solve puzzles and riddles to 'escape' within a set time.",
     "activity_type": "Escape Rooms",
     "location": "Melbourne CBD",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -488,6 +518,7 @@ $venues_array = [
     "description": "Guided ghost tours exploring Melbourne's haunted locations, sharing historical tales and spooky stories.",
     "activity_type": "Ghost Tours",
     "location": "Various locations in Melbourne",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -495,6 +526,7 @@ $venues_array = [
     "description": "An action-packed activity involving archery battles using safe, foam-tipped arrows, offering a challenging and adrenaline-filled experience.",
     "activity_type": "Archery Battles",
     "location": "Various venues in Melbourne",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -502,6 +534,7 @@ $venues_array = [
     "description": "Features 'The Edge,' a glass cube extending from the building, suspending visitors 88 floors above the ground for a thrilling perspective of the city.",
     "activity_type": "Skydeck Experience",
     "location": "Southbank",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -509,6 +542,7 @@ $venues_array = [
     "description": "Adventure parks offering high ropes courses, zip lines, and challenging obstacle courses set amidst beautiful natural surroundings.",
     "activity_type": "Adventure Parks",
     "location": "Various locations near Melbourne",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -516,6 +550,7 @@ $venues_array = [
     "description": "Specialized tours focusing on historical crimes, infamous criminals, and notorious locations associated with Melbourne's darker history.",
     "activity_type": "Crime Tours",
     "location": "Melbourne CBD",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -523,6 +558,7 @@ $venues_array = [
     "description": "Indoor rock climbing gym offering challenging walls suitable for climbers of all levels, providing a physically demanding and exciting activity.",
     "activity_type": "Rock Climbing",
     "location": "CBD and Nunawading",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -530,6 +566,7 @@ $venues_array = [
     "description": "Go-karting track offering high-speed thrills where participants can race against friends and family in adrenaline-pumping competitions.",
     "activity_type": "Go-Karting",
     "location": "Dandenong",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
 
   },
@@ -538,6 +575,7 @@ $venues_array = [
     "description": "Adventure course featuring obstacles and challenges testing strength, agility, and determination in a fun and competitive environment.",
     "activity_type": "Challenge Course",
     "location": "Richmond",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
   },
   {
@@ -545,6 +583,7 @@ $venues_array = [
     "description": "Guided bike tours exploring Melbourne's history, landmarks, and neighborhoods, offering a physical challenge while learning about the city.",
     "activity_type": "Bike Tours",
     "location": "Melbourne CBD",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "country": "Australia"
 
   },
@@ -555,6 +594,7 @@ $venues_array = [
     "description": "Various companies in Melbourne offer boat cruises along the Yarra River for events. Private boats or scheduled cruises available for different occasions.",
     "location": "Melbourne",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Private boat rentals", "Scheduled cruises"],
     "occasion_types": ["Parties", "Weddings", "Corporate functions"]
   },
@@ -563,6 +603,7 @@ $venues_array = [
     "description": "Offers a range of luxurious boats and yachts for private events, including parties, weddings, and corporate functions. Tailored packages available.",
     "location": "Victoria",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Luxurious boat rentals", "Customized event packages"],
     "occasion_types": ["Parties", "Weddings", "Corporate functions"]
   },
@@ -571,6 +612,7 @@ $venues_array = [
     "description": "Provides various vessels for events on Port Phillip Bay, including luxury boats, party boats, and yachts. Options for small and large groups.",
     "location": "Port Phillip Bay",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Luxury boat rentals", "Party boat rentals"],
     "occasion_types": ["Parties", "Weddings", "Corporate functions"]
   },
@@ -579,6 +621,7 @@ $venues_array = [
     "description": "Offers private charter options for weddings, birthdays, and corporate functions. Fleet of boats available for hire.",
     "location": "Victoria",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Private charter options", "Boat rentals"],
     "occasion_types": ["Weddings", "Birthdays", "Corporate functions"]
   },
@@ -587,6 +630,7 @@ $venues_array = [
     "description": "Provides boat rentals for events and leisure activities, allowing cruising around Melbourne's waterways with friends or family.",
     "location": "Melbourne",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Boat rentals"],
     "occasion_types": ["Events", "Leisure activities"]
   },
@@ -595,6 +639,7 @@ $venues_array = [
     "description": "Offers yacht rentals, potentially available for private events or special occasions.",
     "location": "Sorrento",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Yacht rentals"],
     "occasion_types": ["Private events", "Special occasions"]
   },
@@ -603,6 +648,7 @@ $venues_array = [
     "description": "May have facilities for yacht rentals or event hire. Often cater to various functions.",
     "location": "St Kilda",
     "country": "Australia",
+    "photo_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "services_offered": ["Yacht rentals", "Event hire"],
     "occasion_types": ["Functions", "Events"]
   }
