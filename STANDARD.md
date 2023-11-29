@@ -8,6 +8,9 @@
 <i class="fa-solid fa-paw"></i>
 <i class="fa-solid fa-smoking"></i>
 <i class="fa-solid fa-ferry"></i>
+<i class="fa-solid fa-wheelchair"></i>
+<i class="fa-regular fa-envelope"></i>
+<i class="fa-solid fa-computer"></i>
 
 # FONT
 $heading: 'Anton', sans-serif;

@@ -1,11 +1,40 @@
 <div class="container">
-  <div class="row"  style="background-image: url(<%= @venue.photo_url %>); height:71vw; background-size:cover;">
+  <div class="row"  style="background-image: url(<%= @venue.photo_url %>); height:50vw; background-size:cover;">
     <%= link_to root_path do %>
-      <i class="fa-solid fa-circle-arrow-left"></i>
+      <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
     <% end %>
+    <%# add to favorite icon here %>
   </div>
-  <p><%= @venue.name %></p>
-  <p><%= @venue.review %></p>
-  <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
-  <p><%= link_to "New Event", new_venue_event_path(@venue) if policy(Event).new? %> </p>
+  <div class="row" id="venueshowcard">
+    <div class="col-sm-12 d-flex" style="justify-content: space-between;">
+      <h3><%= @venue.name %></h3>
+      <p><%= @venue.rating %></p>
+    </div>
+
+    <div class="col-sm-12">
+      <p><%= @venue.description %></p>
+      <h4>type</h4>
+      <p><%= @venue.category%></p>
+      <h4>price range</h4>
+      <p>estimated price per person</p>
+      <p>$<%= @venue.price%></p>
+    </div>
+
+    <div class="col-sm-12" id ="venuecarddetail">
+      <p><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
+      <p><i class="fa-solid fa-phone"></i><%= @venue.phone_number%></p>
+      <p><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
+      <p><%= @venue.operation_hour%></p>
+    </div>
+    <div class="col-sm-12" >
+      <p><%= @venue.address%></p>
+      <h3>capacity</h3>
+      <p><%= @venue.capacity%></p>
+    </div>
+      <p><%= @venue.time_slot%></p>
+      <h3>review</h3>
+      <p>"<em><%= @venue.review %><em>"</p>
+    <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
+    <p><%= link_to "New Event", new_venue_event_path(@venue) if policy(Event).new? %> </p>
+  </div>
 </div>
