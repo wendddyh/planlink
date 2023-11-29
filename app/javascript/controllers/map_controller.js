@@ -6,18 +6,26 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
+  static targets = ["map", "list"];
 
   connect() {
-    mapboxgl.accessToken = this.apiKeyValue
-    this.map = new mapboxgl.Map({
-      container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10",
-    });
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
+    this.initializeMap();
+    this.addMarkersToMap();
+    this.fitMapToMarkers();
+
   }
 
-  #addMarkersToMap() {
+  initializeMap() {
+    mapboxgl.accessToken = this.apiKeyValue
+    this.map = new mapboxgl.Map({
+      container: this.mapTarget,
+      style: "mapbox://styles/mapbox/streets-v10",
+    });
+     //Hide map initially
+     this.mapToggle(false);
+  }
+
+  addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_venue_html)
       new mapboxgl.Marker()
@@ -26,9 +34,24 @@ export default class extends Controller {
         .addTo(this.map)
     });
   }
-  #fitMapToMarkers() {
+  fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  }
+
+  toggleView() {
+    const mapVisible = this.mapTarget.style.display !== "none";
+    this.mapToggle(!mapVisible);
+  }
+
+  mapToggle(showMap) {
+    if (showMap) {
+      this.mapTarget.style.display ="block";
+      this.listTarget.style.display ="none";
+    } else {
+      this.mapTarget.style.display ="none";
+      this.listTarget.style.display ="block";
+    }
   }
 }

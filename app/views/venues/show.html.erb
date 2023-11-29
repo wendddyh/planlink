@@ -1,4 +1,6 @@
 <h1>Venue#show</h1>
 <p>Find me in app/views/venue/show.html.erb</p>
 <p><%= @venue.name %></p>
+<p><%= @venue.review %></p>
+<p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
 <p> <%= link_to "New Event", new_venue_event_path(@venue) if policy(Event).new? %> </p>

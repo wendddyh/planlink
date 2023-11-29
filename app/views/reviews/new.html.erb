@@ -1,0 +1,7 @@
+<h1>Review#new</h1>
+<p>Find me in app/views/review/new.html.erb</p>
+<h2>Insert review here</h2>
+<%= simple_form_for ([@venue, @review]) do |f| %>
+  <%= f.input :rating %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
