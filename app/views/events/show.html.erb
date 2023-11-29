@@ -1,9 +1,12 @@
 <h1>Events#show</h1>
 <p>Find me in app/views/events/show.html.erb</p>
 <%= @event.event_name %>
-<%# <% if policy(@event).show? %>
-  <%# <%= link_to "Edit this Event", events_update_path(@event) |
+<% if policy(@event).show? %>
+  <%= link_to "Edit this Event", events_update_path(@event) |
 <% end %>
-<!-- [...] -->
+
+
 <%# <%= button_to "Destroy this event", @event, method: :delete if policy(@event).destroy? %>
 <%= link_to "Add Guests", new_venue_event_attendance_path(@venue, @event) %>
+
+

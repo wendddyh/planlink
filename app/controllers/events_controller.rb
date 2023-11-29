@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-before_action:set_event, only:[:edit, :show, :destroy]
+before_action:set_event, only:[:edit, :show, :destroy, :update]
 
   def new
     @event = Event.new
@@ -13,7 +13,7 @@ before_action:set_event, only:[:edit, :show, :destroy]
     @event.venue_id = params[:venue_id]
     authorize @event
     if @event.save!
-      redirect_to venue_event_path(params[:venue_id], @event)
+      redirect_to venue_event_path(@event.venue_id, @event.id)
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,6 +33,7 @@ before_action:set_event, only:[:edit, :show, :destroy]
 
   def show
     # @attendance.all
+    @venue = Venue.find(params[:id])
     authorize @event
     @venue = Venue.find(params[:venue_id])
   end
@@ -48,6 +49,6 @@ before_action:set_event, only:[:edit, :show, :destroy]
   end
 
   def event_params
-    params.require(:event).permit(:event_name)
+    params.require(:event).permit(:event_name, :event_detail, :dress_code, :number_of_people, :time, :start_date, :end_date)
   end
 end

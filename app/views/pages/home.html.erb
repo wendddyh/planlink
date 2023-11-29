@@ -1,15 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <p>create your own venue</p>
+  <%= link_to "button", new_venue_path %>
 
-<% @venues.each do |venue| %>
-  <ul>
-    <li><%= link_to venue.name, venue_path(venue.id) %> </li>
-  </ul>
-<% end %>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div data-controller="map">
+    <div data-target="map.map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    <div data-target="map.list">
+      <%= render 'list' %>
+    </div>
+    <button data-action="click->map#toggleView">toggle</button>
+ </div>
+
+  <%= render 'shared/footer' %>
 </div>
-
-<%= render 'shared/footer' %>

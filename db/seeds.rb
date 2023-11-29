@@ -9,6 +9,7 @@ require 'json'
 require "open-uri"
 User.destroy_all
 Venue.destroy_all
+Event.destroy_all
 
 puts "Creating User"
 

@@ -4,6 +4,15 @@ class VenuePolicy < ApplicationPolicy
   def resolve
     scope.all
   end
+  
+  def new?
+    true
+  end
+
+  def create?
+    true
+  end
+
 
   def show?
     true

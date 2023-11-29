@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-1">
+    <div class="col">
+      <div class="card">
+        <% @venues.each do |venue| %>
+          <div class="individual_card">
+              <h3><%= link_to venue.name, venue_path(venue.id) %></h3>
+              <div class="card-body">
+                <h5 class="card-title"><%= venue.category %></h5>
+                <p class="card-text"><%= venue.rating %></p>
+              </div>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
