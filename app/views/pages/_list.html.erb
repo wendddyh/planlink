@@ -1,15 +1,17 @@
-<div class="row row-cols-1 row-cols-md-1">
-    <div class="col">
-      <div class="card">
-        <% @venues.each do |venue| %>
-          <div class="individual_card">
-              <h3><%= link_to venue.name, venue_path(venue.id) %></h3>
-              <div class="card-body">
-                <h5 class="card-title"><%= venue.category %></h5>
-                <p class="card-text"><%= venue.rating %></p>
-              </div>
-            </div>
-        <% end %>
-      </div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <% @venues.each do |venue| %>
+        <div class="individual_card">
+          <%= image_tag venue.photo_url %>
+          <div class="card-body">
+            <h3><%=  link_to venue.name, venue_path(venue.id) %></h3>
+            <h5 class="card-title"><%= venue.category %></h5>
+            <p class="card-text"><%= venue.address %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
+</div>

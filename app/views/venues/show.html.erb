@@ -1,6 +1,11 @@
-<h1>Venue#show</h1>
-<p>Find me in app/views/venue/show.html.erb</p>
-<p><%= @venue.name %></p>
-<p><%= @venue.review %></p>
-<p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
-<p> <%= link_to "New Event", new_venue_event_path(@venue) if policy(Event).new? %> </p>
+<div class="container">
+  <div class="row"  style="background-image: url(<%= @venue.photo_url %>); height:71vw; background-size:cover;">
+    <%= link_to root_path do %>
+      <i class="fa-solid fa-circle-arrow-left"></i>
+    <% end %>
+  </div>
+  <p><%= @venue.name %></p>
+  <p><%= @venue.review %></p>
+  <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
+  <p><%= link_to "New Event", new_venue_event_path(@venue) if policy(Event).new? %> </p>
+</div>

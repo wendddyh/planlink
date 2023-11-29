@@ -1,6 +1,17 @@
+<%= render "shared/navbar" %>
 <div class="container">
-  <p>create your own venue</p>
-  <%= link_to "button", new_venue_path %>
+  <div class="row">
+    <div class="col-12">
+
+    </div>
+    <div class="col-12">
+      <div class="cardownvenue">
+        <p>create your own venue</p>
+        <%= link_to "button", new_venue_path %>
+      </div>
+    </div>
+  </div>
+
 
   <div data-controller="map">
     <div data-target="map.map"

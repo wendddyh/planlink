@@ -1,10 +1,15 @@
 class VenuePolicy < ApplicationPolicy
-  # class Scope < Scope
+  class Scope < Scope
   #   # NOTE: Be explicit about which records you allow access to!
-  def resolve
-    scope.all
+    def resolve
+      scope.all
+    end
   end
   
+  def index?
+    true
+  end
+
   def new?
     true
   end
@@ -13,8 +18,10 @@ class VenuePolicy < ApplicationPolicy
     true
   end
 
-
   def show?
     true
   end
+
+
+
 end
