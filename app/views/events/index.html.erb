@@ -1,3 +1,17 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
-<%= link_to "New Event", new_event_path if policy(Event).new? %>
+<div class="container">
+  <div class="row">
+    <div class="col-12 d-flex">
+      <%= link_to root_path do %>
+          <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
+        <% end %>
+      <p>list of event here</p>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <% @event.each do |e| %>
+      <%= link_to e.event_name,    %>
+      <%= e.event_detail %>
+    <% end %>
+  </div>
+  <%= render 'shared/footer' %>
+</div>

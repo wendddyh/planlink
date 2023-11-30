@@ -10,13 +10,16 @@ class PagesController < ApplicationController
   end
 
   def home
-    @venues = Venue.all
-    # The `geocoded` scope filters only flats with coordinates
+    @venues = Venue.where(user_id:nil)
+    @user = current_user
+    @event = Event.where(user_id: @user.id )
+    @venue_id = @event.map{ |event| event.venue_id}
+    # The `geocoded` scope filters only venue with coordinates
     if params[:location].present?
       sql_subquery = "suburb ILIKE :location OR country ILIKE :location"
       @venue = @venue.where(sql_subquery, location: "%#{params[:location]}%")
     end
-    
+
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
@@ -25,4 +28,9 @@ class PagesController < ApplicationController
       }
     end
   end
+
+
+
+
+
 end

@@ -28,6 +28,8 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
   end
 
   def index
+    @user = current_user
+    @event = Event.where(user_id: @user.id )
     @event = policy_scope(Event)
   end
 

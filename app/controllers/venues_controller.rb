@@ -1,5 +1,5 @@
 class VenuesController < ApplicationController
-  before_action:set_venue, only: [:show]
+  before_action:set_venue, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: :show
 
   def new
@@ -10,9 +10,10 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.new(venue_params)
     @user = current_user
+    @venue.user_id = @user.id
     authorize @venue
     if @venue.save!
-      redirect_to new_venue_event(params[:venue_id])
+      redirect_to venues_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -22,7 +23,18 @@ class VenuesController < ApplicationController
     authorize @venue
   end
 
+  def edit
+    authorize @venue
+  end
+
+  def update
+    authorize @venue
+  end
+
   def index
+    @user_id = current_user.id
+    @venue = policy_scope(Venue)
+    @venue = Venue.where(user_id:@user_id)
   end
 
   private

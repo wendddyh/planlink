@@ -1,9 +1,24 @@
 <div class="footernav">
-  <div class="footer footer-expand-sm footer-light footer-lewagon">
-    <div class="container-fluid">
-      <a href="#home" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+
+    <div class="row">
+      <div class="col-12" id="footer">
+        <%= link_to root_path do %>
+          <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
+          <p>explore</p>
+        <% end %>
+        <%= link_to root_path do %>
+          <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
+          <p>inbox</p>
+        <% end %>
+        <%= link_to root_path do %>
+          <i class="fa-regular fa-calendar" style="color: #b96cd5;"></i>
+          <p>plan</p>
+        <% end %>
+        <%= link_to users_path do %>
+          <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
+          <p>profile</p>
+        <% end %>
+      </div>
     </div>
-  </div>
+
 </div>

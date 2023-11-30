@@ -1,2 +1,28 @@
-<h1>Venue#index</h1>
-<p>Find me in app/views/venue/index.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to users_path do %>
+        <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
+      <% end %>
+      <p>Venue Listing</p>
+    </div>
+    <div class="col-md-12 d-flex" id="listing-card">
+      <% @venue.each do |v|%>
+        <div class="col-md-3" id="inner-photo">
+          <%= v.photo_url %>
+        </div>
+        <div class="col-md-6" id="inner_listing">
+          <p><strong><%= v.name %></strong></p>
+          <p><%= v.address %></p>
+          <%= link_to "Create Event", new_venue_event_path(v.id) %>
+        </div>
+        <div class="col-md-3" id="edit_button">
+          <%= link_to edit_venue_path(v.id) do %>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

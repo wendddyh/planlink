@@ -5,7 +5,7 @@ class VenuePolicy < ApplicationPolicy
       scope.all
     end
   end
-  
+
   def index?
     true
   end
@@ -22,6 +22,14 @@ class VenuePolicy < ApplicationPolicy
     true
   end
 
+  def edit
+    true
+  end
 
+  def update?
+    true
+    # record: the restaurant passed to the `authorize` method in controller
+    # user: the `current_user` signed in with Devise
+  end
 
 end

@@ -50,3 +50,15 @@ for home list
       </div>
     </div>
   </div>
+
+
+ <div data-controller="map">
+    <div data-target="map.map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    <div data-target="map.list">
+
+    </div>
+    <button data-action="click->map#toggleView">toggle</button>
+  </div>
