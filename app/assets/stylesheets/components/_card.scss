@@ -81,10 +81,33 @@ $white: #FBF9FF;
 }
 
 // users venue listing and wishlist
+
+#venuelistingtitle{
+  p{
+    font-family: $heading;
+    padding-top: 2vw;
+    font-size: 3vw;
+    padding-left: 3vw;
+  }
+  .fa-circle-arrow-left::before {
+    color: $primary;
+    font-size: 3vw;
+    padding-top: 3vw;
+    padding-top: 1.5vw;
+
+  }
+}
 #listing-card{
   border: 1px solid #d1d1d16b;
-  padding: 2vw;
+
 }
+.listinginner{
+  padding: 2vw;
+  margin: 2vw;
+  border: 1px solid;
+}
+
+
 
 #inner_listing{
   strong{
@@ -110,5 +133,27 @@ $white: #FBF9FF;
     &:hover{
       background-color: $tertiary;
     }
+  }
+}
+
+//EVENT SHOW PAGE
+
+#eventshowpage{
+  margin-top: 2vw;
+  padding: 2vw;
+  .fa-circle-arrow-left::before {
+    color: $primary;
+    font-size: 3vw;
+    padding-top: 3vw;
+    padding-top: 1.5vw;
+
+  }
+  h3{
+    font-family: $heading;
+    font-size: 5vw;
+    padding-left: 4vw;
+  }
+  p{
+    font-family: $paragraph;
   }
 }

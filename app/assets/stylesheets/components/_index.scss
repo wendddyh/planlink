@@ -7,10 +7,13 @@
 @import "map";
 @import "card";
 @import "bootstrapicon";
+@import "stimulus";
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600&family=Urbanist:wght@100;300;400;500&display=swap');
 $heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
+
 
 $primary: #9395D3;
 $secondary: #A2A3BB;

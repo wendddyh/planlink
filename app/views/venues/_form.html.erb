@@ -1,6 +1,7 @@
 <%= simple_form_for @venue do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-   <%= f.input :address, autocomplete:"address-line1" %>
+  <%= f.input :address, input_html: {data: {address_autocomplete_target: "address"}},
+  wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
