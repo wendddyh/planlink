@@ -3,17 +3,27 @@
 <%= @event.event_name %>
 <%# <% if policy(@event).show? %>
   <%# <%= link_to "Edit this Event", events_update_path(@event) %>
-<%# <% end %> %>
+<%# <% end %>
 
-
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: venue_event_path(@venue, @event), method: :get, class: "d-flex" do %>
+      <%= text_field_tag :user,
+            params[:user],
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
 <%= simple_form_for @event, url: venue_event_attendances_path(@venue, @event), method: :post, data: { controller: 'attendances' } do |f| %>
   <%= f.collection_check_boxes :user_id, @users, :id, :to_s do |b| %>
-    <%= b.label { b.check_box + b.text } %>
+    <%= b.label { b.check_box + b.object.first_name + ' ' + b.object.last_name } %>
   <% end %>
 
-  <%= f.submit 'Create Attendance' %>
+  <%= f.submit 'Send Invites' %>
 <% end %>
 
 <%# <%= button_to "Destroy this event", @event, method: :delete if policy(@event).destroy? %>
-<%# <%= link_to "Add Guests", new_venue_event_attendance_path(@venue, @event) %> %>
-
+<%# <%= link_to "Add Guests", new_venue_event_attendance_path(@venue, @event) %>

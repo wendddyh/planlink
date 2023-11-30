@@ -34,7 +34,11 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
   def show
     authorize @event
     @venue = Venue.find(params[:venue_id])
-    @users = User.all
+    @users = User.where.not(id: current_user.id)
+    if params[:user].present?
+      sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"
+      @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
+    end
   end
 
   def destroy
