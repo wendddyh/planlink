@@ -1,5 +1,21 @@
 class AttendancesController < ApplicationController
 
+
+  def new
+    @attendance = Attendance.new
+    authorize @attendance
+    @event = Event.find(params[:event_id])
+    @venue = Venue.find(params[:venue_id])
+    @users = User.all
+    @venue_id = params[:venue_id]
+    @event_id = params[:event_id]
+    if params[:user].present?
+      sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"
+      @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
+    end
+  end
+
+
   def create
     @venue = Venue.find(params[:venue_id])
     @event = Event.find(params[:event_id])
@@ -9,7 +25,7 @@ class AttendancesController < ApplicationController
       authorize @attendance
     end
     if @attendance.valid?
-      redirect_to root_path
+      redirect_to venue_event_path(@venue.id, @event.id)
     end
   end
 end
