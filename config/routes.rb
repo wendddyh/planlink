@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  # resources :users
   # get 'review/new'
   # get 'attendance/show'
   # get 'attendance/index'
@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   resources :venues do
     resources :events do
-      resources :attendances, only: [:new, :create]
+
+      resources :attendances, only: [:create, :show, :update]
     end
     resources :reviews
   end
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
+  
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
