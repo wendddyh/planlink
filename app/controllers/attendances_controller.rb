@@ -1,5 +1,6 @@
 class AttendancesController < ApplicationController
 
+
   def new
     @attendance = Attendance.new
     authorize @attendance
@@ -13,6 +14,7 @@ class AttendancesController < ApplicationController
       @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
     end
   end
+
 
   def create
     @venue = Venue.find(params[:venue_id])
