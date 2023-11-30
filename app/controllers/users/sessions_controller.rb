@@ -17,10 +17,7 @@ class Users::SessionsController < Devise::SessionsController
   # def destroy
   #   super
   # end
-  def index
-    @attendance = Attendance.where(event_id:params[:id])
-  end
-
+ 
 
   # protected
 

@@ -1,0 +1,6 @@
+<%= simple_form_for @venue do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+   <%= f.input :address, autocomplete:"address-line1" %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

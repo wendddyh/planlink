@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+$heading: 'Anton', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
+
+$primary: #9395D3;
+$secondary: #A2A3BB;
+$tertiary: #B3B7EE;
+$black: #000807;
+$white: #FBF9FF;
+
 @media (max-width: 1180px) {
   .footernav{
     display: block;
@@ -10,20 +20,43 @@
   }
 }
 
-.footer {
-  background-color: #333;
-  overflow: hidden;
-  bottom: 0;
+.footernav {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: -1px;
   width: -webkit-fill-available;
+  justify-content: space-around;
+  a{
+    color: $primary;
+    text-align: center;
+    font-size: 3vw;
+    text-decoration: none;
+  }
+}
+
+.fa-user::before{
+  color: $primary;
+  font-size: 4vw;
+}
+.fa-magnifying-glass::before{
+  color: $primary;
+  font-size: 4vw;
+}
+.fa-calendar::before{
+  color: $primary;
+  font-size: 4vw;
+}
+.fa-user::before{
+  color: $primary;
+  font-size: 4vw;
+}
+
+#footer{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1vw;
+  height: 11vw;
+  border-top: ridge;
 }
 
 /* Style the links inside the navigation bar */
-.footer a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}

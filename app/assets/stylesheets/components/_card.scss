@@ -9,10 +9,23 @@ $black: #000807;
 $white: #FBF9FF;
 
 .cardownvenue{
+  margin: 5vw;
+  text-align: center;
+
   p{
     font-family: $paragraph;
     font-weight: 500;
-    margin-top: 5px;
+
+  }
+  a{
+    text-decoration: none;
+    background-color: $paragraph;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-size: 4vw;
+    color: #000807;
+    font-family: $heading;
   }
 }
 
@@ -55,7 +68,6 @@ $white: #FBF9FF;
 }
 
 // venueshowpage
-
 #venueshowcard{
   margin-top: 2vw;
   padding: 2vw;
@@ -65,5 +77,38 @@ $white: #FBF9FF;
   }
   p{
     font-family: $paragraph;
+  }
+}
+
+// users venue listing and wishlist
+#listing-card{
+  border: 1px solid #d1d1d16b;
+  padding: 2vw;
+}
+
+#inner_listing{
+  strong{
+    font-size: 4vw;
+    font-family: $paragraph;
+  }
+  p{
+    font-size: 3vw;
+    font-family: $paragraph;
+  }
+  a{
+    background-color: $primary;
+    text-decoration: none;
+    color: $black;
+    font-family: $paragraph;
+    font-weight: 400;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 3vw;
+
+    &:hover{
+      background-color: $tertiary;
+    }
   }
 }
