@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reviews
-  has_many :events
-  has_many :attendances
-  has_many :venues
+  has_many :events, dependent: :destroy
+  has_many :attendances, dependent: :destroy
+  has_many :venues, dependent: :destroy
 
 end
