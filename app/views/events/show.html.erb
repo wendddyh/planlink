@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+
     <div class="col-md-12 d-flex" id="eventshowpage">
       <%= link_to users_path do %>
         <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
@@ -35,7 +36,11 @@
 
 
 
+
+
+<%= link_to "Go to Invites", venue_event_attendance_path(@venue, @event) %>
+
+
 <%# <%= button_to "Destroy this event", @event, method: :delete if policy(@event).destroy? %>
 
 <%# <%= link_to "Add Guests", new_venue_event_attendance_path(@venue, @event) %>
-
