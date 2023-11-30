@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :profiles
   # get 'review/new'
   # get 'attendance/show'
   # get 'attendance/index'
