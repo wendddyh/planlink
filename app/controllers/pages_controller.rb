@@ -11,15 +11,16 @@ class PagesController < ApplicationController
 
   def home
     @venues = Venue.where(user_id:nil)
-    # @user = current_user
-    # if Event.where(user_id: @user.id )
-    #   @event = Event.where(user_id: @user.id )
-    #   @venue_id = @event.map{ |event| event.venue_id}
-    # end
+    # if user_signed_in?
+    #   @user = current_user
+    #   if Event.where(user_id: @user.id )
+    #     @event = Event.where(user_id: @user.id )
+    #     @venue_id = @event.map{ |event| event.venue_id}
+    #   end
     # The `geocoded` scope filters only venue with coordinates
     if params[:location].present?
       sql_subquery = "suburb ILIKE :location OR country ILIKE :location"
-      @venue = @venue.where(sql_subquery, location: "%#{params[:location]}%")
+      @venues = @venue.where(sql_subquery, location: "%#{params[:location]}%")
     end
 
     @markers = @venues.geocoded.map do |venue|
@@ -29,6 +30,11 @@ class PagesController < ApplicationController
         info_venue_html: render_to_string(partial: "info_venue", locals: {venue: venue})
       }
     end
+    @attendances = Attendance.where(user_id: current_user.id)
+  end
+
+  def show
+    @attendances = Attendance.where(user_id: current_user.id)
   end
 
 end

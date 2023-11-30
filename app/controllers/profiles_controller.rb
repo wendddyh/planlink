@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class ProfilesController < ApplicationController
   def index
     @user = policy_scope(User)
     @user = current_user
