@@ -6,9 +6,11 @@
 // applying the clear to the div wrapping the first following radio button
 // or checkbox.
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+
 $heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
+
 
 $primary: #9395D3;
 $secondary: #A2A3BB;
@@ -22,6 +24,18 @@ legend ~ div.form-check:first-of-type {
 
 
 // new event form
+#eventform{
+  margin-top: 3vw;
+  h3{
+    font-family: $smallheading;
+    font-size: 6vw;
+    font-weight: 500;
+  }
+}
+#innereventform{
+  margin-top: 4vw;
+  padding-left: 5vw;
+}
 #new-event{
   padding: 15px;
   background-color: white;
@@ -49,4 +63,58 @@ legend ~ div.form-check:first-of-type {
 
 .form-label{
   font-family: $paragraph;
+  font-weight: 500;
+}
+
+// new venue form
+
+#new_venue{
+  padding: 4vw;
+}
+#venue_address{
+  display: none;
+}
+
+//address autocomplete
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 1vw;
+
+  border-radius: 9px;
+  justify-content: space-between;
+  input{
+    border-style: none;
+  }
+  svg{
+    width: 9vw;
+  }
+  button{
+    background-color: aliceblue;
+    border-style: none;
+  }
+
+}
+.mapboxgl-ctrl-geocoder--icon {
+  display: none;
+}
+
+.btn-primary{
+  background-color: $primary;
+  color: $black;
+  margin-left: 25vw;
+  font-family: $paragraph;
+  font-weight: 500;
+}
+
+#venueform{
+  margin-top: 5vw;
+  h3{
+    font-family: $heading;
+    font-size: 6vw;
+    font-weight: 500;
+  }
 }

@@ -1,0 +1,6 @@
+<%= simple_form_for @event, url: venue_event_attendances_path(@venue.id, @event.id), method: :post, data: { controller: 'attendances' } do |f| %>
+  <%= f.collection_check_boxes :user_id, @users, :id, :to_s do |b| %>
+    <%= b.label { b.check_box + b.text } %>
+  <% end %>
+  <%= f.submit 'Create Attendance' %>
+<% end %>
