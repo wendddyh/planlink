@@ -16,13 +16,15 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  resources :attendances, only: [:update, :index]
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
 
   root to: "pages#home"
-  get 'attendances/show', to: 'attendances#show', as: 'show_page'
-  put 'attendances/show', to: 'attendances#update', as: 'update_page'
+  # get 'attendances/show', to: 'attendances#show', as: 'show_page'
+  # patch 'attendances/update', to: 'attendances#update', as: 'update_page'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
