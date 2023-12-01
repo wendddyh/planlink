@@ -7,6 +7,7 @@
       <% end %>
       <p>Venue Listing</p>
     </div>
+
     <div class="col-md-12" id="listing-card">
       <% @venue.each do |v|%>
       <div class="listinginner d-flex" style="justify-content: space-between;">
@@ -14,7 +15,7 @@
           <%= v.photo_url %>
         </div>
         <div class="col-md-6" id="inner_listing">
-          <p><strong><%= v.name %></strong></p>
+          <h3><%= v.name %></h3>
           <p><%= v.address %></p>
           <%= link_to "Create Event", new_venue_event_path(v.id) %>
         </div>
@@ -26,5 +27,6 @@
       </div>
       <% end %>
     </div>
+
   </div>
 </div>
