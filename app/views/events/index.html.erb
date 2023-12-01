@@ -1,17 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 d-flex">
+    <div class="col-md-12 d-flex" id="eventlist">
       <%= link_to root_path do %>
           <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
         <% end %>
       <p>list of event here</p>
     </div>
-  </div>
-  <div class="col-md-12">
-    <% @event.each do |e| %>
-      <%= link_to e.event_name,    %>
-      <%= e.event_detail %>
-    <% end %>
+
+    <div class="col-md-12" id="eventlistdetail">
+      <% @event.each do |e| %>
+      <div class="eventlistcard d-flex" style="justify-content: space-between;">
+        <div class="col-md-4" id="eventlistphoto">
+        </div>
+        <div class="col-md-8" id="eventdetail">
+          <h3><%= e.event_name %></h3>
+          <p><%= e.start_date %>,<%= e.time %></p>
+          <p><%= Venue.find(e.venue_id).name%></p>
+          <p><%= Venue.find(e.venue_id).address %></p>
+          <%= link_to "View Detail", venue_event_path(Venue.find(e.venue_id), e.id) %>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
   <%= render 'shared/footer' %>
 </div>

@@ -18,18 +18,18 @@
       <h3>Description</h3>
       <%= @event.event_detail %>
     </div>
-    <div data-controller="slide" class="mt-5">
-      <button data-action="click->slide#slideUp" class="invitebutton">Invite</button>
-      <div data-slide-target="content" class="d-none">
-        <%= render 'attendances/form', event: @event %>
+    <div data-controller="toggle" class="mt-5">
+      <button data-action="click->toggle#slideUp" class="invitebutton">Invite</button>
+      <div data-toggle-target="content" class="d-none">
+        <%= render "attendances/form", event: @event %>
       </div>
     </div>
-    <%# <%= link_to "Invite",  new_venue_event_attendance_path(@venue.id, @event.id) %>
+    <%= link_to "Invite",  new_venue_event_attendance_path(@venue.id, @event.id) %>%
   </div>
 </div>
 
 
-<%= @event.event_name %>
+<%# <%= @event.event_name %>
 <%# <% if policy(@event).show? %>
   <%# <%= link_to "Edit this Event", events_update_path(@event) %>
 <%# <% end %>

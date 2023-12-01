@@ -83,6 +83,9 @@ $white: #FBF9FF;
 // users venue listing and wishlist
 
 #venuelistingtitle{
+  margin-top: 2vw;
+  padding: 2vw;
+
   p{
     font-family: $heading;
     padding-top: 2vw;
@@ -94,6 +97,7 @@ $white: #FBF9FF;
     font-size: 3vw;
     padding-top: 3vw;
     padding-top: 1.5vw;
+    padding-right: 1.5vw;
 
   }
 }
@@ -114,26 +118,22 @@ $white: #FBF9FF;
     font-size: 4vw;
     font-family: $paragraph;
   }
+  h3{
+    font-family: $heading;
+    font-size: 5vw;
+  }
   p{
     font-size: 3vw;
     font-family: $paragraph;
   }
-  a{
-    background-color: $primary;
-    text-decoration: none;
-    color: $black;
-    font-family: $paragraph;
-    font-weight: 400;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    font-size: 3vw;
 
-    &:hover{
-      background-color: $tertiary;
-    }
+  a{
+    text-decoration: none;
+    font-family: $heading;
+    font-size: 6vw;
+    color: $black
   }
+
 }
 
 //EVENT SHOW PAGE
@@ -155,5 +155,50 @@ $white: #FBF9FF;
   }
   p{
     font-family: $paragraph;
+  }
+}
+
+
+// EVENT LISTING
+#eventlist{
+  margin-top: 2vw;
+  padding: 2vw;
+  .fa-circle-arrow-left::before {
+    color: $primary;
+    font-size: 3vw;
+    padding-top: 3vw;
+    padding-top: 1.5vw;
+    padding-right: 1.5vw;
+
+  }
+}
+#eventlistdetail{
+  border: 1px solid;
+  a{
+    text-decoration: none;
+    font-family: $heading;
+    font-size: 6vw;
+    color: $black
+  }
+}
+
+#eventdetail{
+  margin-top: 2vw;
+  padding: 2vw;
+  border: 1px silver;
+  h3{
+    font-family: $heading;
+    font-size: 5vw;
+  }
+  p{
+    font-family: $paragraph;
+  }
+  a{
+    padding-right: 6vw;
+    background-color: black;
+    color: white;
+    font-size: 3vw;
+    font-weight: 400;
+    padding-left: 6vw;
   }
 }

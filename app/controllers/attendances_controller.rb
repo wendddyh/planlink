@@ -13,7 +13,7 @@ class AttendancesController < ApplicationController
     authorize @attendance
     @event = Event.find(params[:event_id])
     @venue = Venue.find(params[:venue_id])
-    @users = User.all
+    @users = User.where.not(id: current_user.id)
     @venue_id = params[:venue_id]
     @event_id = params[:event_id]
     if params[:user].present?
