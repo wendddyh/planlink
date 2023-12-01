@@ -1,14 +1,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <%= link_to users_path do %>
+    <div class="col-md-12 d-flex" id="venuelistingtitle">
+      <%= link_to profiles_path do %>
         <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
       <% end %>
       <p>Venue Listing</p>
     </div>
-    <div class="col-md-12 d-flex" id="listing-card">
+    <div class="col-md-12" id="listing-card">
       <% @venue.each do |v|%>
+      <div class="listinginner d-flex" style="justify-content: space-between;">
         <div class="col-md-3" id="inner-photo">
           <%= v.photo_url %>
         </div>
@@ -22,6 +23,7 @@
             <i class="fa-solid fa-ellipsis-vertical"></i>
           <% end %>
         </div>
+      </div>
       <% end %>
     </div>
   </div>

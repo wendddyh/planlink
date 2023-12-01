@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # resources :users
+  resources :profiles
   # get 'review/new'
   # get 'attendance/show'
   # get 'attendance/index'
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :venues do
     resources :events do
+
       resources :attendances, only: [:create, :show, :update]
     end
     resources :reviews
