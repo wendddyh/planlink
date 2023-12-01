@@ -1,8 +1,10 @@
 class AttendancesController < ApplicationController
   skip_after_action :verify_authorized
 
-  def show
+
+  def index
       @attendances = Attendance.where(user_id: current_user.id)
+      @attendances = policy_scope(Attendance)
   end
 
   def new
@@ -31,9 +33,7 @@ class AttendancesController < ApplicationController
   end
 
   def update
-    raise
     @attendance = Attendance.find(params[:id])
-
     if @attendance.update(attendance_params)
 
       # Handle successful update, e.g., redirect to another page
