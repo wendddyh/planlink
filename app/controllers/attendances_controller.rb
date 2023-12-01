@@ -3,14 +3,9 @@ class AttendancesController < ApplicationController
 
   def show
       @attendances = Attendance.where(user_id: current_user.id)
-      @venue = Venue.find(params[:venue_id])
-      @event = Event.find(params[:event_id])
   end
 
-
   def new
-    @attendance = Attendance.new
-    authorize @attendance
     @event = Event.find(params[:event_id])
     @venue = Venue.find(params[:venue_id])
     @users = User.where.not(id: current_user.id)
