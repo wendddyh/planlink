@@ -2,7 +2,7 @@
   <div class="row">
 
     <div class="col-md-12 d-flex" id="eventshowpage">
-      <%= link_to users_path do %>
+      <%= link_to profiles_path do %>
         <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
       <% end %>
       <h3>Event Details </h3>
@@ -18,13 +18,13 @@
       <h3>Description</h3>
       <%= @event.event_detail %>
     </div>
-    <div data-controller="slide">
-      <button data-action="click->slide#slideUp" data-slide-target="content">Invite</button>
-      <div data-slide-target="content" class="content">
-        <%= render 'attendances/form' %>
+    <div data-controller="slide" class="mt-5">
+      <button data-action="click->slide#slideUp" class="invitebutton">Invite</button>
+      <div data-slide-target="content" class="d-none">
+        <%= render 'attendances/form', event: @event %>
       </div>
     </div>
-    <%= link_to "Invite",  new_venue_event_attendance_path(@venue.id, @event.id) %>
+    <%# <%= link_to "Invite",  new_venue_event_attendance_path(@venue.id, @event.id) %>
   </div>
 </div>
 
