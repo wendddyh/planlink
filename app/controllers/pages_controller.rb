@@ -11,6 +11,7 @@ class PagesController < ApplicationController
 
   def home
     @venues = Venue.where(user_id:nil)
+
     # if user_signed_in?
     #   @user = current_user
     #   if Event.where(user_id: @user.id )

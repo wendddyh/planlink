@@ -2,8 +2,7 @@
   <%= f.input :event_name, placeholder:"what are you planning?" %>
   <p>Address: </p><%= @venue.name %>,   <%= @venue.address %>
   <%# useflatpicker %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
+  <%= f.input :start_date , placeholder:"Date:"%>
   <%= f.input :time %>
   <%= f.input :event_detail, placeholder:"what is the plan?" %>
   <%= f.input :number_of_people %>

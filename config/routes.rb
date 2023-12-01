@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   resources :venues do
     resources :events do
 
+
       resources :attendances, only: [:create, :new]
+
     end
     resources :reviews
   end
