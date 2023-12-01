@@ -30,11 +30,12 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
   def index
     @user = current_user
     @event = Event.where(user_id: @user.id )
-
-
     @event = policy_scope(Event)
-
-
+    if user_signed_in?
+      if Attendance.exists?(user_id: current_user.id)
+        @attendance = Attendance.where(user_id: current_user.id)
+      end
+    end
   end
 
   def show

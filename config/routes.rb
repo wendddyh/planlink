@@ -14,7 +14,6 @@ Rails.application.routes.draw do
 
 
       resources :attendances, only: [:create, :new]
-
     end
     resources :reviews
   end
@@ -24,7 +23,8 @@ Rails.application.routes.draw do
   }
 
   root to: "pages#home"
-  get 'pages/show', to: 'attendances#show', as: 'show_page'
+  get 'attendances/show', to: 'attendances#show', as: 'show_page'
+  put 'attendances/show', to: 'attendances#update', as: 'update_page'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

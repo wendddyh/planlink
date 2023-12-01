@@ -5,6 +5,11 @@ class VenuesController < ApplicationController
   def new
     @venue = Venue.new
     authorize @venue
+    if user_signed_in?
+      if Attendance.exists?(user_id: current_user.id)
+        @attendance = Attendance.where(user_id: current_user.id)
+      end
+    end
   end
 
   def create

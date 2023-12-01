@@ -31,11 +31,14 @@ class AttendancesController < ApplicationController
   end
 
   def update
+    raise
     @attendance = Attendance.find(params[:id])
 
     if @attendance.update(attendance_params)
+
       # Handle successful update, e.g., redirect to another page
       redirect_to root_path, notice: 'Attendance status updated successfully.'
+
     else
       # Handle unsuccessful update, e.g., render the show page with an error message
       render :show, alert: 'Failed to update attendance status.'

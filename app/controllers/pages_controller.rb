@@ -31,11 +31,15 @@ class PagesController < ApplicationController
         info_venue_html: render_to_string(partial: "info_venue", locals: {venue: venue})
       }
     end
-    @attendances = Attendance.where(user_id: current_user.id)
+    if user_signed_in?
+      if Attendance.exists?(user_id: current_user.id)
+        @attendance = Attendance.where(user_id: current_user.id)
+      end
+    end
   end
 
   def show
-    @attendances = Attendance.where(user_id: current_user.id)
+    @attendance = Attendance.where(user_id: current_user.id)
   end
 
 end
