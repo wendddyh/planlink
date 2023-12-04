@@ -52,17 +52,27 @@
       <p><%= @event.event_detail %></p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12 d-flex" id="invitationbutton">
-      <div data-controller="toggle" class="mt-1">
-        <button data-action="click->toggle#scroll" class ="btn btn-outline-primary" id="btn">INVITE</button>
-        <div data-toggle-target="togglableElement" class="drawer">
-          
-        </div>
-      <%# <%= link_to "INVITE", new_venue_event_attendance_path(@venue, @event) %>
-      </div>
-    </div>
+
+<!-- Full screen modal button -->
+
+
+  <button>
+    <%= link_to "add people", new_venue_event_attendance_path(@venue.id, @event.id), :remote => true %>
+  </button>
+  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
   </div>
+</div>
+  <!-- Modal Fullscreen xl -->
+
+
+
+
+
+
+
+
 
   <%= render 'shared/footer' %>
 </div>

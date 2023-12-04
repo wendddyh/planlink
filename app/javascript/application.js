@@ -5,11 +5,11 @@ import "@popperjs/core"
 import "bootstrap"
 
 // app/javascript/packs/application.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import BottomDrawer from '../components/BottomDrawer';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import BottomDrawer from '../components/BottomDrawer';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const bottomDrawerContainer = document.getElementById('bottom-drawer-container');
-  ReactDOM.render(<BottomDrawer />, bottomDrawerContainer);
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   const bottomDrawerContainer = document.getElementById('bottom-drawer-container');
+//   ReactDOM.render(<BottomDrawer />, bottomDrawerContainer);
+// });
