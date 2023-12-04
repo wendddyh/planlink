@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: new_friend_request_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :user,
+            params[:user],
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= simple_form_for @friend_request, url: friend_requests_path, method: :post, data: { controller: 'friend_requests' } do |f| %>
+  <%= f.collection_radio_buttons :friend_id, @users, :id, :to_s do |b| %>
+    <%= b.label { b.radio_button + b.object.first_name + ' ' + b.object.last_name } %>
+  <% end %>
+
+  <%= f.submit 'Send Friend Request' %>
+<% end %>
