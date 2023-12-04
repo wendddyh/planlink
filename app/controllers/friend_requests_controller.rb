@@ -25,12 +25,21 @@ class FriendRequestsController < ApplicationController
   end
 
   def update
+    @friend_request = FriendRequest.find(params[:id])
+    if @friend_request.update(request_params)
 
+      # Handle successful update, e.g., redirect to another page
+      redirect_to root_path, notice: 'Attendance status updated successfully.'
+
+    else
+      # Handle unsuccessful update, e.g., render the show page with an error message
+      render :index, alert: 'Failed to update attendance status.'
+    end
   end
 
   private
 
-  def attendance_params
+  def request_params
     params.require(:friend_request).permit(:confirmed)
   end
 
