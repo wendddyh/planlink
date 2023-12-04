@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       resources :attendances, only: [:create, :new]
     end
     resources :reviews, only: [:create, :new]
-    get 'booking_confirmation/show', to: 'bookings#confirmation', as: 'booking_confirmation'
+    get 'booking_confirmation/show', to: 'bookings#show', as: 'booking_confirmation'
   end
 
   resources :attendances, only: [:update, :index]

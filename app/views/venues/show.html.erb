@@ -6,12 +6,33 @@
     <%# add to favorite icon here %>
   </div>
   <div class="row" id="venueshowcard">
-    <div class="col-sm-12 d-flex" style="justify-content: space-between;">
-      <h3><%= @venue.name %></h3>
-      <p><%= @venue.rating %></p>
+    <div class="col-sm-12" id ="venuecarddetail">
+      <div class="col-sm-12 d-flex" style="justify-content: space-between;">
+        <h3><%= @venue.name %></h3>
+        <p><i class="fa-solid fa-star" style="color: #deb1fb;"></i><%= @venue.rating %></p>
+      </div>
+       <p><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
+      <div class="col-md-12 d-flex" style="justify-content: space-between;">
+        <p><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
+        <p><i class="fa-solid fa-phone"></i><%= @venue.phone_number%></p>
+
+      </div>
+      <div class="col-md-12 d-flex" style="justify-content: space-between;">
+        <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
+        <p><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
+      </div>
+
     </div>
 
-    <div class="col-sm-12">
+    <div class="col-sm-12" id="venuedetails">
+      <p>enter number of people and date</p>
+      <div class="navbar_search">
+        <%= form_with url: root_path, method: :get, class: "tool-form d-flex" do %>
+          <%= text_field_tag :people,params[:people], class: "form-control", placeholder: ""%>
+          <%= text_field_tag :date,params[:date], class: "form-control", placeholder: ""%>
+          <%= submit_tag "", name: "", class: "btn search-btn" %>
+        <% end %>
+      </div>
       <p><%= @venue.timeslot %></p>
       <p><%= @venue.description %></p>
       <h4>type</h4>
@@ -21,22 +42,18 @@
       <p>$<%= @venue.price%></p>
     </div>
 
-    <div class="col-sm-12" id ="venuecarddetail">
-      <p><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
-      <p><i class="fa-solid fa-phone"></i><%= @venue.phone_number%></p>
-      <p><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
-      <p><%= @venue.operation_hour%></p>
-    </div>
-    <div class="col-sm-12" >
-      <p><%= @venue.address%></p>
-      <h3>capacity</h3>
+    <div class="col-sm-12" id="capacity">
+      <h3>Capacity</h3>
       <p><%= @venue.capacity%></p>
+
     </div>
       <p><%= @venue.time_slot%></p>
-      <h3>review</h3>
+      <h4>what they say about us;</h4>
       <p>"<em><%= @venue.review %><em>"</p>
     <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
-    <%= render 'venues/bookingform' %>
+<p><%= link_to "Book Now", venue_booking_confirmation_path(@venue.id)  %></p>
+
+
 
   </div>
 </div>

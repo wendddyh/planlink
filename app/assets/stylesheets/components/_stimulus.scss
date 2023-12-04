@@ -1,7 +1,38 @@
-.content {
-  transition: transform 0.5s ease-out;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+$heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
+
+$primary: #9395D3;
+$secondary: #A2A3BB;
+$tertiary: #B3B7EE;
+$black: #000807;
+$white: #FBF9FF;
+
+#booking-description{
+  img{
+    width: -webkit-fill-available;
+  }
+  h2{
+    font-size: 4vw;
+    font-family: $smallheading;
+  }
 }
 
-.slide-up {
-  transform: translateY(-100%);
+.createevent-btn{
+  .btn{
+    background: black;
+    color: white;
+    font-weight: 500;
+    font-size: 7vw;
+  }
+
+}
+
+#bookingtitle{
+  text-align-last: center;
+  h3{
+    font-size: 5vw;
+    font-family: $smallheading;
+  }
 }

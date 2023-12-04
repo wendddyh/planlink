@@ -53,11 +53,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-10 d-flex" id="invitationbutton">
-      <p>Number of people going</p>
-      <div data-controller="toggle" class="mt-5">
-        <button class ="btn btn-outline-primary">INVITE</button>
-        <%= render 'attendances/form', attendance: @attendance %>
+    <div class="col-md-12 d-flex" id="invitationbutton">
+
+      <div data-controller="toggle" class="mt-1">
+        <button data-action="click->toggle#scroll" class ="btn btn-outline-primary" id="btn">INVITE</button>
+        <div data-toggle-target="togglableElement" class="drawer">
+          <%= render 'attendances/form', attendance: @attendance %>
+        </div>
       <%# <%= link_to "INVITE", new_venue_event_attendance_path(@venue, @event) %>
       </div>
     </div>

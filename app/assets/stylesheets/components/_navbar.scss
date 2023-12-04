@@ -47,16 +47,15 @@ $white: #FBF9FF;
   text-align: -webkit-center;
   margin-top: 2vw;
   margin-bottom: 2vw;
-  width: 83vw;
+  width: 95vw;
 
 
 }
 
 .navbar_search{
-  border-radius: 30px;
-  box-shadow: 1px 1px 7px 4px rgba(0, 0, 0, 0.08);
-  border-block: 0.25px solid rgb(170, 170, 170);
   padding: 3px;
+  justify-content: center;
+  margin-left: 10vw;
   .location-bar{
     margin-right: 2vw;
   }

@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     # The `geocoded` scope filters only venue with coordinates
     if params[:location].present?
       sql_subquery = "suburb ILIKE :location OR country ILIKE :location"
-      @venues = @venue.where(sql_subquery, location: "%#{params[:location]}%")
+      @venues = Venue.where(sql_subquery, location: "%#{params[:location]}%")
     end
 
     @markers = @venues.geocoded.map do |venue|

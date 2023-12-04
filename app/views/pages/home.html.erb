@@ -1,13 +1,15 @@
-<%= render "shared/navbar" %>
-
 <div class="container">
+  <%= render "shared/navbar" %>
+
   <div class="row">
     <div class="col-12">
     </div>
     <div class="col-12">
       <div class="cardownvenue">
         <p>create your own venue</p>
-        <%= link_to "button", new_venue_path %>
+        <%= link_to new_venue_path do%>
+          <i class="fa-regular fa-square-plus"></i>
+        <% end %>
       </div>
     </div>
   </div>

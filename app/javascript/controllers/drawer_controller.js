@@ -1,9 +1,19 @@
-import { Controller } from "@hotwired/stimulus"
+// BottomDrawer.js
+import React, { useState } from 'react';
 
-// Connects to data-controller="slide"
+const BottomDrawer = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-export default class extends Controller {
-  connect() {
-  }
-  
-}
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className={`bottom-drawer ${isOpen ? 'open' : ''}`}>
+      <button onClick={toggleDrawer}>Toggle Drawer</button>
+      {/* Content of the drawer */}
+    </div>
+  );
+};
+
+export default BottomDrawer;

@@ -1,1 +1,19 @@
-<p>Bookingconfirmation</p>
+<div class="container">
+  <div class="row" style="justify-content:center;">
+    <div class="col-md-8 mt-5" id="booking-title" style="padding: 31px;">
+      <h3> Reservation confirmed</h3>
+      <div class="col-md-6" id="booking-description" >
+        <h2>Thank you for your booking</h2>
+        <% @venue.each do |v| %>
+          <%= image_tag v.photo_url %>
+          <p><strong><%= v.name %></strong></p>
+          <p><%= v.address %></p>
+          <p>Booking for </p>
+        <% end %>
+      </div>
+      <div class="createevent-btn">
+        <%=link_to "Start Event Planning",  new_venue_event_path, class: "btn btn-flat update" %>
+      </div>
+    </div>
+  </div>
+</div>
