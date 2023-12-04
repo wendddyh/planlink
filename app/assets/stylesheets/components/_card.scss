@@ -275,6 +275,7 @@ $white: #FBF9FF;
   padding-right: 4vw;
   width: -webkit-fill-available;
   justify-content: space-around;
+  z-index: -1;
   p{
     font-family: $paragraph;
   }
