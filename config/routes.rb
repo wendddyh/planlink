@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :attendances, only: [:update, :index]
+  resources :friend_requests
 
   devise_for :users, controllers: {
     sessions: 'users/sessions'
