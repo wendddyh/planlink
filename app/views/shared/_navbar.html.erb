@@ -41,8 +41,7 @@
   <div class="navbar_search">
     <%= form_with url: root_path, method: :get, class: "tool-form d-flex" do %>
       <%= text_field_tag :location,params[:location], class: "form-control", placeholder: "Location"%>
-        <%= text_field_tag :query,params[:people], class: "form-control", placeholder: "People"%>
-        <%= text_field_tag :query,params[:query], class: "form-control", placeholder: "Date and Time"%>
+      <%= text_field_tag :query,params[:query], class: "form-control", placeholder: "Date and Time"%>
       <%= submit_tag "", name: "", class: "btn search-btn" %><i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
   </div>

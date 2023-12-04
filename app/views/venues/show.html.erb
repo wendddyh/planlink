@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row"  style="background-image: url(<%= @venue.photo_url %>); height:50vw; background-size:cover;">
+  <div class="row"  style="background-image: url(<%= @venue.photo_url %>); height:61vw; background-size:cover;">
     <%= link_to root_path do %>
       <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
     <% end %>
@@ -12,6 +12,7 @@
     </div>
 
     <div class="col-sm-12">
+      <p><%= @venue.timeslot %></p>
       <p><%= @venue.description %></p>
       <h4>type</h4>
       <p><%= @venue.category%></p>
@@ -35,6 +36,7 @@
       <h3>review</h3>
       <p>"<em><%= @venue.review %><em>"</p>
     <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
-    <p><%= link_to "New Event", new_venue_event_path(@venue) if policy(Event).new? %> </p>
+    <%= render 'venues/bookingform' %>
+
   </div>
 </div>

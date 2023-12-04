@@ -49,6 +49,7 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
   end
 
   def destroy
+    @event.destroy
     authorize @event
   end
 

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
 $heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
+
 
 $primary: #9395D3;
 $secondary: #A2A3BB;
@@ -141,20 +143,97 @@ $white: #FBF9FF;
 #eventshowpage{
   margin-top: 2vw;
   padding: 2vw;
-  .fa-circle-arrow-left::before {
-    color: $primary;
+  .fa-arrow-left::before {
+    color: $black;
     font-size: 3vw;
     padding-top: 3vw;
     padding-top: 1.5vw;
 
   }
   h3{
-    font-family: $heading;
-    font-size: 5vw;
+    font-family: $smallheading;
+    font-size: 3vw;
     padding-left: 4vw;
+    padding-top: 1.5vw;
   }
   p{
     font-family: $paragraph;
+  }
+}
+
+#eventshowpage-detail{
+  padding: 2vw;
+  h2{
+    font-family: $smallheading;
+    font-weight: 500;
+    font-size: 6vw;
+  }
+  h3{
+    font-family: $smallheading;
+    font-size: 4vw;
+
+  }
+  p{
+    font-family: $paragraph;
+    font-size: 3vw;
+  }
+}
+
+.venueaddresss{
+  padding-left: 10vw;
+  .fa-location::before {
+    color: $primary;
+    font-size: 7vw;
+  }
+  .venueaddress{
+    padding-left: 1.5vw;
+  }
+
+}
+.venuesecondetails{
+  padding-left: 10vw;
+
+  .fa-calendar::before {
+    color: $primary;
+    font-size: 5vw;
+
+  }
+  .venuesecondetail{
+    padding-left: 1.5vw;
+  }
+
+}
+
+#eventshowpage-description{
+  margin-left: 3vw;
+  h3{
+    font-family: $smallheading;
+    font-size: 4vw;
+  }
+  p{
+    font-family: $paragraph;
+  }
+}
+
+#invitationbutton{
+  background-color: $primary;
+  border-radius: 4px;
+  bottom: 26px;
+  position: absolute;
+  margin: 1.5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  width: -webkit-fill-available;
+  justify-content: space-around;
+  p{
+    font-family: $paragraph;
+  }
+  a{
+    font-family: $smallheading;
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 2vw;
   }
 }
 

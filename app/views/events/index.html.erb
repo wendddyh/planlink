@@ -18,6 +18,7 @@
           <p><%= Venue.find(e.venue_id).name%></p>
           <p><%= Venue.find(e.venue_id).address %></p>
           <%= link_to "View Detail", venue_event_path(Venue.find(e.venue_id), e.id) %>
+
         </div>
       </div>
       <% end %>

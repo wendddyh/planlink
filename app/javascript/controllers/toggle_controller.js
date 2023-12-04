@@ -5,6 +5,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ['content']
 
+  connect() {
+    console.log("hello")
+  }
+
   slideUp() {
     this.contentTarget.classList.Toggle("content");
   }
