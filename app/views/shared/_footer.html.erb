@@ -6,7 +6,7 @@
         <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
         <p>explore</p>
       <% end %>
-      
+
       <%= link_to attendances_path do %>
         <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
         <p>inbox</p>
@@ -24,8 +24,8 @@
         <% end %>
       <% else %>
         <div class="nav-item">
+          <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
           <%= link_to "Login", new_user_session_path %>
-            <p>Login</p>
         </div>
       <% end %>
     </div>
