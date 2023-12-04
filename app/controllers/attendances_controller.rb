@@ -18,7 +18,7 @@ class AttendancesController < ApplicationController
       @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
     end
   end
- 
+
 
   def create
     @venue = Venue.find(params[:venue_id])
@@ -41,7 +41,7 @@ class AttendancesController < ApplicationController
 
     else
       # Handle unsuccessful update, e.g., render the show page with an error message
-      render :show, alert: 'Failed to update attendance status.'
+      render :index, alert: 'Failed to update attendance status.'
     end
   end
 
