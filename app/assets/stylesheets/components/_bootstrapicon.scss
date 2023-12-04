@@ -9,24 +9,37 @@ $black: #000807;
 $white: #FBF9FF;
 
 .fa-circle-arrow-left::before {
-  color: #36cbc7;
+  color: $primary;
   font-size: 6vw;
   padding-top: 3vw;
+  margin-top: 2vw;
 }
 
 .fa-computer-mouse::before {
   color: black;
-  font-size: 4vw;
+  font-size: 3vw;
   padding-right: 3vw;
 }
 .fa-phone::before {
   color: black;
-  font-size: 4vw;
+  font-size: 3vw;
   padding-right: 3vw;
 }
 
 .fa-envelope::before{
   color: black;
-  font-size: 4vw;
+  font-size: 3vw;
+  padding-right: 3vw;
+}
+
+.fa-location-dot::before{
+  color: black;
+  font-size: 3vw;
+  padding-right: 3vw;
+}
+
+.fa-clock::before{
+  color: black;
+  font-size: 3vw;
   padding-right: 3vw;
 }

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= simple_form_for @venue do |f| %>
+        <%= f.input :number_of_people %>
+        <%= f.input :start_date %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

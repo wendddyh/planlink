@@ -13,6 +13,18 @@ $venues_array = [
     "capacity_of_guest": 100,
     "price_range": "$$ - $$$",
     "rating": 4.3,
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sun: 4pm-1am"
 
   },
@@ -30,6 +42,18 @@ $venues_array = [
     "capacity_of_guest": 150,
     "price_range": "$$$ - $$$$",
     "rating": 4.3,
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Tue-Sun: 12pm-10pm"
   },
   {
@@ -46,6 +70,18 @@ $venues_array = [
     "capacity_of_guest": 200,
     "price_range": "$$$ - $$$$$",
     "rating": 4.3,
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sat: 9am-12am"
   },
 
@@ -63,6 +99,18 @@ $venues_array = [
     "capacity_of_guest": 80,
     "price_range": "$$$ - $$$$",
     "rating": 4.3,
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Tue-Sun: 6pm-2am"
   },
   {
@@ -79,6 +127,18 @@ $venues_array = [
     "capacity_of_guest": 120,
     "price_range": "$$$ - $$$$$",
     "operation_hours": "Wed-Mon: 10am-6pm",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "rating": 4.3
   },
 
@@ -96,6 +156,18 @@ $venues_array = [
     "review": "Fantastic ambiance with great food and attentive service. A perfect spot for celebrations!",
     "capacity": 100,
     "price_range": "$$ - $$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sun: 12pm-12am"
   },
   {
@@ -112,6 +184,18 @@ $venues_array = [
     "review": "A charming venue with delicious food. The ambiance is perfect for a memorable celebration!",
     "capacity": 80,
     "price_range": "$$$ - $$$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Tue-Sun: 10am-11pm"
   },
   {
@@ -128,6 +212,18 @@ $venues_array = [
     "review": "Delicious food, excellent service, and a beautiful setting. Perfect for celebrations!",
     "capacity": 120,
     "price_range": "$$ - $$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sun: 11am-11pm"
   },
   {
@@ -144,6 +240,18 @@ $venues_array = [
     "review": "Breathtaking views, top-notch service, and a fantastic ambiance. Perfect for a memorable celebration!",
     "capacity": 80,
     "price_range": "$$$ - $$$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Tue-Sat: 5pm-1am"
   },
 
@@ -161,6 +269,18 @@ $venues_array = [
     "review": "A must-visit for brunch lovers! Top Paddock never disappoints with its delicious dishes and excellent coffee.",
     "capacity": 80,
     "price_range": "$$-$$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Fri: 7am-4pm, Sat-Sun: 8am-4pm"
   },
   {
@@ -177,6 +297,18 @@ $venues_array = [
     "review": "Delicious pizzas with a fantastic vibe! Baby Pizza offers an excellent dining experience.",
     "capacity": 60,
     "price_range": "$$-$$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sun: 12pm-10pm"
   },
   {
@@ -193,6 +325,12 @@ $venues_array = [
     "review": "Kong BBQ never fails to impress with its delicious fusion cuisine and vibrant atmosphere!",
     "capacity": 70,
     "price_range": "$$$",
+    "timeslot": [
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Tue-Sun: 5pm-11pm"
   },
 
@@ -210,6 +348,19 @@ $venues_array = [
     "review": "Great venue for events! The Aviary Hotel provided excellent service for our birthday celebration.",
     "capacity": 120,
     "price_range": "$$$",
+    "timeslot": [
+      '9:00AM', '10:00AM',
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sun: 9am-12am"
   },
   {
@@ -226,6 +377,18 @@ $venues_array = [
     "review": "Lovely venue! The Cremorne Hotel was the perfect setting for our birthday celebration.",
     "capacity": 50,
     "price_range": "$$-$$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Tue-Fri: 4pm-12am, Sat-Sun: 12pm-12am"
   },
   {
@@ -242,6 +405,18 @@ $venues_array = [
     "review": "Outstanding venue for events! The Terminus Hotel provided a fantastic setting for our birthday party.",
     "capacity": 200,
     "price_range": "$$$",
+    "timeslot": [
+      '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM',
+      '01:00 PM', '01:30 PM',
+      '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM',
+      '04:00 PM', '04:30 PM',
+      '05:00 PM', '05:30 PM',
+      '06:00 PM', '06:30 PM',
+      '07:00 PM', '07:30 PM',
+      '08:00 PM', '08:30 PM'
+    ],
     "operation_hours": "Mon-Sun: 10am-1am"
   },
 

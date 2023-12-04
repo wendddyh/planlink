@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
+  <div class="col-sm-8 my-3" id="attendances-search">
     <%= form_with url: new_venue_event_attendance_path(@venue, @event), method: :get, class: "d-flex" do %>
       <%= text_field_tag :user,
             params[:user],
@@ -9,11 +9,13 @@
       <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
   </div>
-</div>
-<%= simple_form_for @event, url: venue_event_attendances_path(@venue, @event), method: :post, data: { controller: 'attendances' } do |f| %>
-  <%= f.collection_check_boxes :user_id, @users, :id, :to_s do |b| %>
-    <%= b.label { b.check_box + b.object.first_name + ' ' + b.object.last_name } %>
-  <% end %>
 
-  <%= f.submit 'Send Invites' %>
-<% end %>
+  <div class="col-md-10" id="attendances_list">
+    <%= simple_form_for @event, url: venue_event_attendances_path(@venue, @event), method: :post, data: { controller: 'attendances' } do |f| %>
+      <%= f.collection_check_boxes :user_id, @users, :id, :to_s do |b| %>
+        <%= b.label { b.check_box + b.object.first_name + ' ' + b.object.last_name } %>
+      <% end %>
+      <%= f.submit 'Send Invites' %>
+    <% end %>
+  </div>
+</div>

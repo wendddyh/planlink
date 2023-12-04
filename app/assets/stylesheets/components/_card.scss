@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
 $heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
+
 
 $primary: #9395D3;
 $secondary: #A2A3BB;
@@ -9,23 +11,24 @@ $black: #000807;
 $white: #FBF9FF;
 
 .cardownvenue{
-  margin: 5vw;
+  margin: 2vw;
   text-align: center;
+  border: 1px solid $primary;
+  padding: 2vw;
 
   p{
     font-family: $paragraph;
     font-weight: 500;
-
   }
   a{
     text-decoration: none;
-    background-color: $paragraph;
     padding-left: 6px;
     padding-right: 6px;
     border-radius: 5px;
     font-size: 4vw;
-    color: #000807;
-    font-family: $heading;
+    color: $black;
+    font-family: $smallheading;
+    font-weight: 500;
   }
 }
 
@@ -136,27 +139,176 @@ $white: #FBF9FF;
 
 }
 
+#venuecarddetail{
+  border: solid 1px #e2dfdd;
+  border-radius: 2px;
+  line-height: 0.5px;
+  padding-top: 1.5vw;
+  p{
+    font-family: $paragraph;
+    font-size:3vw ;
+  }
+}
+
+#venueshowcard{
+  h3{
+    font-family: $smallheading;
+    font-weight: 500;
+
+  }
+}
+
+#venuedetails{
+  p{
+    font-weight: 400;
+    font-size: 4vw;
+  }
+  h4{
+    font-weight: 600;
+    font-size: 5vw;
+  }
+}
+
+#capacity{
+  border: 1px solid #bdbdbd;
+  h3{
+    font-family: $smallheading;
+    font-weight: 600;
+    font-size: 5vw;
+  }
+  h4{
+    font-weight: 600;
+    font-size: 5vw;
+  }
+  p{
+    p{
+      font-weight: 400;
+      font-size: 3vw;
+    }
+  }
+}
+
 //EVENT SHOW PAGE
 
 #eventshowpage{
   margin-top: 2vw;
   padding: 2vw;
-  .fa-circle-arrow-left::before {
-    color: $primary;
+  .fa-arrow-left::before {
+    color: $black;
     font-size: 3vw;
     padding-top: 3vw;
     padding-top: 1.5vw;
 
   }
   h3{
-    font-family: $heading;
-    font-size: 5vw;
+    font-family: $smallheading;
+    font-size: 3vw;
     padding-left: 4vw;
+    padding-top: 1.5vw;
   }
   p{
     font-family: $paragraph;
   }
 }
+
+#eventshowpage-detail{
+  padding: 2vw;
+  h2{
+    font-family: $smallheading;
+    font-weight: 500;
+    font-size: 6vw;
+  }
+  h3{
+    font-family: $smallheading;
+    font-size: 4vw;
+
+  }
+  p{
+    font-family: $paragraph;
+    font-size: 3vw;
+  }
+}
+
+.venueaddresss{
+  padding-left: 10vw;
+  .fa-location::before {
+    color: $primary;
+    font-size: 7vw;
+  }
+  .venueaddress{
+    padding-left: 1.5vw;
+  }
+
+}
+.venuesecondetails{
+  padding-left: 10vw;
+
+  .fa-calendar::before {
+    color: $primary;
+    font-size: 5vw;
+
+  }
+  .venuesecondetail{
+    padding-left: 1.5vw;
+  }
+
+}
+
+#eventshowpage-description{
+  margin-left: 3vw;
+  h3{
+    font-family: $smallheading;
+    font-size: 4vw;
+  }
+  p{
+    font-family: $paragraph;
+  }
+}
+
+#invitationbutton{
+  background-color: $primary;
+  border-radius: 4px;
+  bottom: 26px;
+  position: absolute;
+  margin: 1.5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  width: -webkit-fill-available;
+  justify-content: space-around;
+  p{
+    font-family: $paragraph;
+  }
+  a{
+    font-family: $smallheading;
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 2vw;
+  }
+
+}
+
+
+/* app/assets/stylesheets/application.scss */
+.drawer-container {
+  position: relative;
+}
+
+.drawer {
+
+  bottom: -100%; /* Initially hidden */
+  left: 0;
+  width: 100%;
+  height: 400vw; /* Set your desired height */
+  background-color: #fff;
+  transition: bottom 0.3s ease-out; /* Animation transition */
+  overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.drawer.open {
+  bottom: 0; /* Slide in when open */
+}
+
 
 
 // EVENT LISTING

@@ -1,49 +1,10 @@
-<div class="desktopnavbar">
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid">
-      <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag asset_path('') %>
-      <% end %>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <% if user_signed_in? %>
-            <li class="nav-item dropdown">
-              <div class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= image_tag current_user.image_url , class: "avatar", alt: "dropdown menu" %>
-              </div>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Messages",  class: "dropdown-item" %>
-                <%= link_to "Wishlist", class: "dropdown-item" %>
-                <%= link_to "Account", class: "dropdown-item" %>
-                <%= link_to "Log out", destroy_user_session_path,  data: {turbo_method: :delete}, class: "dropdown-item" %>
-
-              </div>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="phonenavbar">
-  <div class="navbar_search">
-    <%= form_with url: root_path, method: :get, class: "tool-form d-flex" do %>
-      <%= text_field_tag :location,params[:location], class: "form-control", placeholder: "Location"%>
-        <%= text_field_tag :query,params[:people], class: "form-control", placeholder: "People"%>
-        <%= text_field_tag :query,params[:query], class: "form-control", placeholder: "Date and Time"%>
-      <%= submit_tag "", name: "", class: "btn search-btn" %><i class="fa-solid fa-magnifying-glass"></i>
-    <% end %>
+  <div class="row">
+    <div class="col-md-10" id="navbar_search" style="justify-content:center;">
+      <%= form_with url: root_path, method: :get, class: "tool-form d-flex" do %>
+        <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Location"%>
+        <%= submit_tag "", name: "", class: "btn search-btn" %>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -1,24 +1,34 @@
 <div class="footernav">
 
-    <div class="row" style="background-color:#ffff">
-      <div class="col-12" id="footer">
-        <%= link_to root_path do %>
-          <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
-          <p>explore</p>
-        <% end %>
-        <%= link_to attendances_path do %>
-          <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
-          <p>inbox</p>
-        <% end %>
-        <%= link_to root_path do %>
-          <i class="fa-regular fa-calendar" style="color: #b96cd5;"></i>
-          <p>plan</p>
-        <% end %>
+  <div class="row" style="background-color:#ffff">
+    <div class="col-12" id="footer">
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
+        <p>explore</p>
+      <% end %>
+      
+      <%= link_to attendances_path do %>
+        <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
+        <p>inbox</p>
+      <% end %>
+
+      <%= link_to myevent_list_path do %>
+        <i class="fa-regular fa-calendar" style="color: #b96cd5;"></i>
+        <p>My Event</p>
+      <% end %>
+
+      <% if user_signed_in? %>
         <%= link_to profiles_path do %>
           <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
           <p>profile</p>
         <% end %>
-      </div>
+      <% else %>
+        <div class="nav-item">
+          <%= link_to "Login", new_user_session_path %>
+            <p>Login</p>
+        </div>
+      <% end %>
     </div>
+  </div>
 
 </div>
