@@ -40,7 +40,7 @@ class AttendancesController < ApplicationController
       redirect_to root_path, notice: 'Attendance status updated successfully.'
 
     else
-      # Handle unsuccessful update, e.g., render the show page with an error message
+      # Handle unsuccessful update
       render :index, alert: 'Failed to update attendance status.'
     end
   end
