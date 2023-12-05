@@ -2,8 +2,8 @@ class FriendRequestsController < ApplicationController
   skip_after_action :verify_authorized
 
   def index
-      @friend_requests = FriendRequest.where(user_id: current_user.id)
-      @friend_requests = policy_scope(FriendRequest)
+    @friend_requests = policy_scope(FriendRequest)
+    @friend_requests = FriendRequest.where(friend_id: current_user.id)
   end
 
   def new
@@ -25,15 +25,19 @@ class FriendRequestsController < ApplicationController
   end
 
   def update
+
     @friend_request = FriendRequest.find(params[:id])
-    if @friend_request.update(request_params)
+    confirmed = request_params[:confirmed] == "true"
+    @friend_request.confirmed = confirmed
+
+    if @friend_request.save!
 
       # Handle successful update, e.g., redirect to another page
-      redirect_to root_path, notice: 'Attendance status updated successfully.'
+      redirect_to root_path, notice: 'Friend status updated successfully.'
 
     else
-      # Handle unsuccessful update, e.g., render the show page with an error message
-      render :index, alert: 'Failed to update attendance status.'
+      # Handle unsuccessful update
+      render :index, alert: 'Failed to update friend status.'
     end
   end
 

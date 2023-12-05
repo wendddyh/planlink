@@ -3,8 +3,8 @@
 
 <% @friend_requests.each do |request| %>
   <% if !request.confirmed %>
-    <% @friend = FriendRequest.find(request.friend_id) %>
-    <div>
+    <% @friend = User.find(request.user_id) %>
+    <div class='invitation'>
       <p>You have a friend request from <%= @friend.first_name %> <%= @friend.last_name %></p>
 
       <%= form_for request, url: { action: "update", id: request.id }, method: :patch, remote: true do |f| %>
@@ -17,7 +17,6 @@
         <%= f.submit "Decline", class: "btn btn-danger" %>
       <% end %>
     </div>
-
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
