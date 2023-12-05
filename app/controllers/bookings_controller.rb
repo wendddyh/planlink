@@ -19,9 +19,10 @@ class BookingsController < ApplicationController
 
     authorize @booking
     if @booking.save!
-      redirect_to venue_booking_path(@booking.venue_id, @booking.id)
+      redirect_to venue_booking_path(params[:venue_id], @booking.id)
     else
       render :new, status: :unprocessable_entity
+      raise
     end
   end
 
