@@ -60,6 +60,7 @@ gem "devise"
 gem "pundit"
 gem "geocoder"
 gem "cloudinary"
+gem 'popper_js'
 
 group :development, :test do
   gem "dotenv-rails"

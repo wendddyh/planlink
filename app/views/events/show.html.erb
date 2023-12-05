@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12"  style="background-image: url(<%= @venue.photo_url %>); height:60vw; background-size:cover;" >
+    <div class="col-md-12" style="background-image: linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 30%)), url('<%= cl_image_path @event.photo.key, height:300, crop: :fit%>')" >
       <div class="col-md-12 d-flex" id="eventshowpage">
         <%= link_to profiles_path do %>
           <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
@@ -26,6 +26,10 @@
             </div>
           </div>
         </div>
+        <%= link_to icon('fa-solid fa-trash', class:'fa-shake'), venue_event_path(@venue.id, @event.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this event? Your attendees will be notify." } %>
+                <% if policy(@event).show? %>
+                  <%= link_to "Edit this Event", edit_venue_event_path(@event) %>
+                <% end %>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
@@ -34,14 +38,12 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to icon('fa-solid fa-trash', class:'fa-shake'), venue_event_path(@venue.id, @event.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this event? Your attendees will be notify." } %>
-                <% if policy(@event).show? %>
-                  <%= link_to "Edit this Event", edit_venue_event_path(@event) %>
-                <% end %>
+
               </div>
             </li>
           </ul>
         </div>
+
       </div>
     </div>
   </div>
@@ -50,21 +52,15 @@
     <div class="col-md-12" id="eventshowpage-description">
       <h3>Description</h3>
       <p><%= @event.event_detail %></p>
+      <p><%= @event.additional %></p>
+      <p><%= @event.meal_dietary %></p>
     </div>
   </div>
 
-<!-- Full screen modal button -->
 
 
-  <button>
-    <%= link_to "add people", new_venue_event_attendance_path(@venue.id, @event.id), :remote => true %>
-  </button>
-  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content"></div>
-  </div>
-</div>
-  <!-- Modal Fullscreen xl -->
+ <%= link_to 'Add user',  new_venue_event_attendance_path(@venue.id, @event.id),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+
 
 
 

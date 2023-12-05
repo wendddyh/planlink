@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600&family=Urbanist:wght@100;300;400;500&display=swap');
+$heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
+
+
+$primary: #9395D3;
+$secondary: #A2A3BB;
+$tertiary: #B3B7EE;
+$black: #000807;
+$white: #FBF9FF;
+
+#bookingnew{
+  background-color: $primary;
+}
+
+.form-check-input[type="radio"] {
+  border-color: cadetblue;
+  margin-right: 2vw;
+}
+
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $secondary;
+}
+
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  font-family: $paragraph;
+}
+
+.form-check-label{
+  font-family: $paragraph;
+  font-weight: 600;
+}
+
+.timechoose{
+  border: 1px solid cadetblue;
+  border-radius: 3px;
+  padding: 2vw;
+  margin: 2px;
+}
+
+.col-form-label {
+  font-weight: 500;
+  font-family: $smallheading;
+  padding-left: 3vw;
+  text-decoration: underline;
+}
+
+#booking-timeslot{
+  background-color: white;
+  padding: 9vw;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#bookingtitle{
+  padding-top: 5vw;
+  background-color: $primary;
+
+  h2{
+    font-family: "Urbanist", sans-serif;
+    font-size: 8vw;
+    font-weight: 500;
+    color: $white;
+    padding-left: 5vw;
+  }
+  a {
+    padding-top: 2vw;
+    color: white;
+  }
+
+}
+
+#new_booking{
+  .btn-primary{
+    border-color: none;
+    font-family: $paragraph;
+    font-weight: 500;
+    font-size: 4vw;
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
+
+//BOOKING BUTTON IN SHOW PAGE
+#floatbook{
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0px;
+  width: -webkit-fill-available;
+  justify-content: space-around;
+  text-align-last: center;
+  padding: 3vw;
+  .floatbutton{
+    background-color: $primary;
+
+    padding-left: 6vw;
+    padding-right: 6vw;
+    a{
+      text-decoration: none;
+      color: $black;
+      font-family: $paragraph;
+      font-size: 5vw;
+      font-weight: 500;
+    }
+  }
+}

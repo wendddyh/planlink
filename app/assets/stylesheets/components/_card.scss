@@ -148,13 +148,17 @@ $white: #FBF9FF;
     font-family: $paragraph;
     font-size:3vw ;
   }
+
 }
 
 #venueshowcard{
   h3{
     font-family: $smallheading;
     font-weight: 500;
-
+  }
+  a{
+    text-decoration: none;
+    color: #554ed6;
   }
 }
 
@@ -171,20 +175,19 @@ $white: #FBF9FF;
 
 #capacity{
   border: 1px solid #bdbdbd;
-  h3{
-    font-family: $smallheading;
-    font-weight: 600;
-    font-size: 5vw;
-  }
   h4{
     font-weight: 600;
     font-size: 5vw;
   }
   p{
-    p{
-      font-weight: 400;
-      font-size: 3vw;
-    }
+    font-weight: 400;
+    font-size: 3vw;
+  }
+}
+
+#venueshowtop{
+  a{
+    margin-top: 3vw;
   }
 }
 
@@ -321,7 +324,6 @@ $white: #FBF9FF;
   }
 }
 #eventlistdetail{
-  border: 1px solid;
   a{
     text-decoration: none;
     font-family: $heading;

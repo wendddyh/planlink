@@ -1,34 +1,35 @@
-<div class="footernav">
+<div class="footernav" style="border-top: 1px solid;">
+  <div class="col-12" id="footer">
+    <%= link_to front_page_path do %>
+      <i class="fa-solid fa-home" style="color: #b96cd5;"></i>
+      <p>home</p>
+    <% end %>
 
-  <div class="row" style="background-color:#ffff">
-    <div class="col-12" id="footer">
-      <%= link_to root_path do %>
-        <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
-        <p>explore</p>
-      <% end %>
+    <%= link_to root_path do %>
+      <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
+      <p>explore</p>
+    <% end %>
 
-      <%= link_to attendances_path do %>
-        <i class="fa-solid fa-magnifying-glass" style="color: #b96cd5;"></i>
-        <p>inbox</p>
-      <% end %>
+    <%= link_to attendances_path do %>
+      <i class="fa-solid fa-bell" style="color: #b96cd5;"></i>
+      <p>notification</p>
+    <% end %>
 
-      <%= link_to myevent_list_path do %>
-        <i class="fa-regular fa-calendar" style="color: #b96cd5;"></i>
-        <p>My Event</p>
-      <% end %>
+    <%= link_to myevent_list_path do %>
+      <i class="fa-regular fa-calendar" style="color: #b96cd5;"></i>
+      <p>event</p>
+    <% end %>
 
-      <% if user_signed_in? %>
-        <%= link_to profiles_path do %>
-          <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
-          <p>profile</p>
-        <% end %>
-      <% else %>
-        <div class="nav-item">
-          <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
-          <%= link_to "Login", new_user_session_path %>
-        </div>
+    <% if user_signed_in? %>
+      <%= link_to profiles_path do %>
+        <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
+        <p>profile</p>
       <% end %>
-    </div>
+    <% else %>
+      <div class="nav-item">
+        <i class="fa-regular fa-user" style="color: #b96cd5;"></i>
+        <%= link_to "Login", new_user_session_path %>
+      </div>
+    <% end %>
   </div>
-
 </div>

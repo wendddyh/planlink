@@ -23,15 +23,23 @@ $white: #FBF9FF;
 .footernav {
   background-color: #ffffff;
   position: fixed;
-  bottom: -1px;
+  bottom: 0px;
   width: -webkit-fill-available;
   justify-content: space-around;
+  
   a{
     color: $primary;
     text-align: center;
     font-size: 3vw;
     text-decoration: none;
   }
+}
+
+#footer{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1vw;
+  height: 11vw;
 }
 
 .fa-user::before{
@@ -51,12 +59,6 @@ $white: #FBF9FF;
   font-size: 4vw;
 }
 
-#footer{
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 1vw;
-  height: 11vw;
-  border-top: ridge;
-}
+
 
 /* Style the links inside the navigation bar */

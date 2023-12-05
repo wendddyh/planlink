@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_04_122101) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_05_055615) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_04_122101) do
     t.index ["user_id"], name: "index_attendances_on_user_id"
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "date"
+    t.datetime "time"
+    t.integer "people"
+    t.bigint "venue_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["venue_id"], name: "index_bookings_on_venue_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "event_name"
     t.string "location"
@@ -63,15 +73,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_04_122101) do
     t.time "time"
     t.date "start_date"
     t.date "end_date"
-    t.bigint "venue_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "additional"
     t.boolean "accommodation"
     t.string "meal_dietary"
+    t.bigint "booking_id", null: false
+    t.index ["booking_id"], name: "index_events_on_booking_id"
     t.index ["user_id"], name: "index_events_on_user_id"
-    t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
   create_table "friend_requests", force: :cascade do |t|
@@ -141,7 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_04_122101) do
     t.float "longitude"
     t.string "address"
     t.bigint "user_id"
-    t.string "timeslot"
+    t.text "timeslot", default: [], array: true
     t.index ["user_id"], name: "index_venues_on_user_id"
   end
 
@@ -149,8 +159,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_04_122101) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "users"
+  add_foreign_key "bookings", "venues"
+  add_foreign_key "events", "bookings"
   add_foreign_key "events", "users"
-  add_foreign_key "events", "venues"
   add_foreign_key "friend_requests", "users"
   add_foreign_key "invitations", "users"
   add_foreign_key "reviews", "users"

@@ -45,17 +45,16 @@ $white: #FBF9FF;
 
 .phonenavbar{
   text-align: -webkit-center;
-  margin-top: 2vw;
   margin-bottom: 2vw;
   width: 95vw;
 
 
 }
 
-.navbar_search{
-  padding: 3px;
+#navbar_search{
   justify-content: center;
-  margin-left: 10vw;
+  margin-left: 3vw;
+  margin-top: 3vw;
   .location-bar{
     margin-right: 2vw;
   }

@@ -4,9 +4,34 @@ class BookingsController < ApplicationController
     @venue = Venue.where(id: @venue_id)
     authorize @venue
     # raise
+  end
 
+  def new
+    @booking = Booking.new
+    authorize @booking
+    @venue = Venue.find(params[:venue_id])
 
+  end
 
+  def create
+    @booking = Booking.new(book_params)
+    @venue = Venue.find(params[:venue_id])
 
+    authorize @booking
+    if @booking.save!
+      redirect_to venue_booking_path(@booking.venue_id, @booking.id)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def book_params
+    params.require(:booking).permit(:date, :time, :people)
   end
 end

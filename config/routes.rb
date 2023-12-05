@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # get 'events/index'
   # get 'events/show'
   resources :venues do
+    resources :bookings
     resources :events do
       resources :attendances, only: [:create, :new]
     end
@@ -20,13 +21,14 @@ Rails.application.routes.draw do
   resources :attendances, only: [:update, :index]
   resources :friend_requests
 
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
 
   root to: "pages#home"
   get 'events/index', to: 'events#index', as:'myevent_list'
-
+  get 'pages/show', to: 'pages#show', as:'front_page'
 
   # patch 'attendances/update', to: 'attendances#update', as: 'update_page'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

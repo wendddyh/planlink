@@ -296,6 +296,7 @@ DEPENDENCIES
   jbuilder
   json (~> 2.6)
   pg (~> 1.1)
+  popper_js
   puma (~> 5.0)
   pundit
   rails (~> 7.0.8)

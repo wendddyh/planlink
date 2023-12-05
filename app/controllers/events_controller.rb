@@ -50,6 +50,7 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
 
   def destroy
     @event.destroy
+    redirect_to myevent_list_path
     authorize @event
   end
 
@@ -60,6 +61,6 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
   end
 
   def event_params
-    params.require(:event).permit(:event_name, :event_detail, :dress_code, :number_of_people, :time, :start_date, :end_date, :photo)
+    params.require(:event).permit(:event_name, :event_detail, :dress_code, :number_of_people, :time, :start_date, :end_date, :photo, :additional, :accomodation, :meal_dietary )
   end
 end

@@ -4,12 +4,10 @@ import "controllers"
 import "@popperjs/core"
 import "bootstrap"
 
-// app/javascript/packs/application.js
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import BottomDrawer from '../components/BottomDrawer';
+//= require jquery
+//= require popper
+//= require turbolinks
+//= require bootstrap
+//= require_tree.
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const bottomDrawerContainer = document.getElementById('bottom-drawer-container');
-//   ReactDOM.render(<BottomDrawer />, bottomDrawerContainer);
-// });
+

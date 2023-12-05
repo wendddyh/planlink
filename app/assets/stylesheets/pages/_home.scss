@@ -10,6 +10,39 @@ $black: #000807;
 $white: #FBF9FF;
 
 
-.container{
-  padding-top: 1.5vw;
+
+
+#front-page{
+  padding: 10vw;
+  padding-top: 9vw;
+  background-color: #9395D3;
+
+  h2{
+    font-family: $heading;
+    font-size: 8vw;
+  }
+  em{
+    color: yellow;
+  }
+  h3{
+    font-size: 5vw;
+    font-family: $paragraph;
+    font-weight: 600;
+  }
+  button{
+    margin-top: 2vw;
+    border-radius: 5px;
+    color: $white;
+    background-color: black;
+    padding: 1vw;
+    font-family: $paragraph;
+    font-size: 3vw;
+  }
+}
+
+#photo{
+  width: max-content;
+  img{
+    width: 66vw;
+  }
 }
