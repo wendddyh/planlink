@@ -1,24 +1,33 @@
 <div class="container">
   <div class="row">
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
-    <% end %>
-    <div class="col-md-12">
-      <div class="profile d-flex">
-        <%= @user.image_url %>
-        <i class="fa-regular fa-bell"></i>
-        <%= link_to "Log out", destroy_user_session_path,  data: {turbo_method: :delete}, class: "dropdown-item" %>
+    <div class="profile-header d-flex">
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
+      <% end %>
+      <h3>Profile</h3>
+      <i class="fa-regular fa-bell"></i>
+    </div>
+    <div class="col-md-12 d-flex">
+      <div class="profile-photo">
+        <%= image_tag @user.image_url %>
       </div>
-
-
+      <div class="profile-info">
+        <h4><%= @user.first_name %> <%= @user.last_name %></h4>
+        <p><%= @user.email %></p>
+        <p><%= @user.phone_number %></p>
+        <p><%= @user.dietary %></p>
+      </div>
     </div>
-    <div class="col-md-8">
-      <h3>Booking Information??</h3>
-
+    <div class="col-md-12 d-flex" id="profilebox" style="justify-content:space-around;">
+      <p class="venue"><%= link_to "Private Venue", venues_path%><i class="fa-solid fa-arrow-right" id="arrow_right"></i></p>
+      <p class="event"><%= link_to "Event", myevent_list_path %><i class="fa-solid fa-arrow-right" id="arrow_right"></i></p>
     </div>
+    <div class="col-md-12">
+      <p><%= link_to "Booking List", booking_listing_path_path %><i class="fa-solid fa-arrow-right" id="arrow_right"></i></p>
+    </div>
+    <%= link_to "Log out", destroy_user_session_path,  data: {turbo_method: :delete}, class: "dropdown-item" %>
   </div>
-     <p><%= link_to "myvenue", venues_path%></p>
-       <p><%= link_to "eventlist", myevent_list_path %></p>
-  <%= render 'shared/footer' %>
-
+  <div class="row">
+    <%= render 'shared/footer' %>
+  </div>
 </div>

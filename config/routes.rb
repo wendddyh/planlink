@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       resources :attendances, only: [:create, :new]
     end
     resources :reviews, only: [:create, :new]
-    get 'booking_confirmation/show', to: 'bookings#show', as: 'booking_confirmation'
+
   end
 
   resources :attendances, only: [:update, :index]
@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'events/index', to: 'events#index', as:'myevent_list'
   get 'pages/show', to: 'pages#show', as:'front_page'
+  get 'booking/index', to: 'bookings#index', as: 'booking_listing_path'
 
   # patch 'attendances/update', to: 'attendances#update', as: 'update_page'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

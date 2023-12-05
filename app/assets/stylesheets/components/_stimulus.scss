@@ -36,3 +36,50 @@ $white: #FBF9FF;
     font-family: $smallheading;
   }
 }
+
+
+// PROFILE PAGE
+
+.profile-photo{
+  padding-top: 3vw;
+  padding-left: 3vw;
+  img{
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+.profile-info{
+  h4{
+    font-size: 4vw;
+    font-weight: 600;
+    font-family: $smallheading;
+  }
+  p{
+    font-size: 4vw;
+    font-weight: 600;
+    font-family: $paragraph;
+  }
+}
+
+#profilebox{
+  .venue{
+    background: $primary;
+    padding: 2vw;
+    a{
+      text-decoration: none;
+      font-family: $paragraph;
+      color: $black;
+      font-weight: 600;
+    }
+  }
+  .event{
+    background: $tertiary;
+    padding: 2vw;
+    a{
+      text-decoration: none;
+      font-family: $paragraph;
+      color: $black;
+      font-weight: 600;
+    }
+  }
+}
