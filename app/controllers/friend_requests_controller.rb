@@ -8,7 +8,11 @@ class FriendRequestsController < ApplicationController
 
   def new
     @friend_request = FriendRequest.new
-    @users = User.where.not(id: current_user.id)
+    @friends_and_i = current_user.friends + [current_user]
+    @friends_and_i_ids = @friends_and_i.map do |object|
+      object.id
+    end
+    @users = User.where.not(id: @friends_and_i_ids)
     if params[:user].present?
       sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"
       @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
