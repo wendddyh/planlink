@@ -41,7 +41,7 @@
       <p><%= @venue.time_slot%></p>
       <h4>what they say about us;</h4>
       <p>"<em><%= @venue.review %><em>"</p>
-      <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p>
+      <%# <p><%= link_to "add review",  new_venue_review_path(@venue)  %></p> %>
   </div>
   <div class="row">
     <%= render 'bookingform' %>
