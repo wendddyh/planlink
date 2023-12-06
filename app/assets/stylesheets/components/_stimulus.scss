@@ -40,15 +40,24 @@ $white: #FBF9FF;
 
 // PROFILE PAGE
 
+#profile{
+  margin: 2vw;
+  width: -webkit-fill-available;
+  margin-top: 5vw;
+}
+
 .profile-photo{
   padding-top: 3vw;
   padding-left: 3vw;
+  width: 23vw;
   img{
-    border-radius: 50%;
-    width: 50%;
+    border-radius: 10px;
+    width: -webkit-fill-available;
   }
 }
 .profile-info{
+  padding-top: 2vw;
+  margin-left: 5vw;
   h4{
     font-size: 4vw;
     font-weight: 600;
@@ -65,6 +74,9 @@ $white: #FBF9FF;
   .venue{
     background: $primary;
     padding: 2vw;
+    width: 40vw;
+    height: 21vw;
+    text-align-last: center;
     a{
       text-decoration: none;
       font-family: $paragraph;
@@ -75,11 +87,39 @@ $white: #FBF9FF;
   .event{
     background: $tertiary;
     padding: 2vw;
+    width: 40vw;
+    height: 21vw;
+    text-align-last: center;
     a{
       text-decoration: none;
       font-family: $paragraph;
       color: $black;
       font-weight: 600;
     }
+  }
+}
+
+#bookinglist{
+  width: -webkit-fill-available;
+  height: 23vw;
+  background-color: rgb(187, 141, 187);
+  border-radius: 10px;
+  text-align-last: center;
+  margin: 7vw;
+  a{
+    text-decoration: none;
+    font-family: $smallheading;
+    color: $black;
+    font-weight: 600;
+  }
+}
+
+.profile-header{
+  padding-right: 9vw;
+  .fa-arrow-left::before {
+    color: $black;
+    font-size: 4vw;
+    padding-top: 3vw;
+    margin-top: 2vw;
   }
 }

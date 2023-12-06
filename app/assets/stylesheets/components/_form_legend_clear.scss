@@ -23,9 +23,10 @@ legend ~ div.form-check:first-of-type {
 }
 
 
-// new event form
+// NEW EVENT FORM
 #eventform{
-  margin-top: 3vw;
+  padding: 5vw;
+  background-color: $tertiary;
   h3{
     font-family: $smallheading;
     font-size: 6vw;
@@ -33,8 +34,12 @@ legend ~ div.form-check:first-of-type {
   }
 }
 #innereventform{
-  margin-top: 4vw;
-  padding-left: 5vw;
+  margin: 5vw;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  strong{
+    font-family: $paragraph;
+  }
 }
 #new-event{
   padding: 15px;
@@ -48,6 +53,7 @@ legend ~ div.form-check:first-of-type {
   font-size: 5vw;
   font-weight: 500;
   font-family: $smallheading;
+  border: none;
 }
 
 .form-control{
@@ -59,12 +65,23 @@ legend ~ div.form-check:first-of-type {
   background-color: white;
 }
 
-
-
 .form-label{
   font-family: $paragraph;
   font-weight: 500;
 }
+
+fieldset{
+  .col-form-label{
+    font-family: $paragraph;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .form-check-label{
+    font-weight: 500;
+    font-family: $paragraph;
+  }
+}
+
 
 // new venue form
 

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action:set_booking, only:[:edit, :show, :destroy, :update]
 
   def index
     @bookings = policy_scope(Booking)
@@ -15,7 +16,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     authorize @booking
     @venue = Venue.find(params[:venue_id])
-
   end
 
 

@@ -3,7 +3,7 @@ $heading: 'Anton', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
 
 $primary: #9395D3;
-$secondary: #A2A3BB;
+$secondary: #a38ed5;
 $tertiary: #B3B7EE;
 $black: #000807;
 $white: #FBF9FF;
@@ -26,7 +26,7 @@ $white: #FBF9FF;
   bottom: 0px;
   width: -webkit-fill-available;
   justify-content: space-around;
-  
+
   a{
     color: $primary;
     text-align: center;
@@ -42,10 +42,6 @@ $white: #FBF9FF;
   height: 11vw;
 }
 
-.fa-user::before{
-  color: $primary;
-  font-size: 4vw;
-}
 .fa-magnifying-glass::before{
   color: $primary;
   font-size: 4vw;
@@ -55,7 +51,15 @@ $white: #FBF9FF;
   font-size: 4vw;
 }
 .fa-user::before{
-  color: $primary;
+  color: $secondary;
+  font-size: 4vw;
+}
+.fa-home::before{
+  color: $secondary;
+  font-size: 4vw;
+}
+.fa-bell::before{
+  color: $secondary;
   font-size: 4vw;
 }
 

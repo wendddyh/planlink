@@ -1,24 +1,29 @@
-<div class="col-md-10" id="booking-timeslot">
+
+<div class="col-md-12" id="booking-timeslot" data-controller="toggle">
   <%= simple_form_for ([@venue, @booking ]) do |f| %>
     <%= f.input :date , as: :string, input_html: { data: { controller: "datepicker" } } %>
-    <%= f.input :people, collection: 1..300  %>
-    <div class="row d-flex">
-      <div class="col-md-12">
-        <%= f.input :time, as: :radio_buttons, collection: [
-            ['11:00 AM', '11:00 AM', disabled:true],
-            ['12:00 PM', '12:00 PM', disabled:false],
-            ['01:00 PM', '01:00 PM', disabled:false],
-            ['02:00 PM', '02:00 PM', disabled:true],
-            ['03:00 PM', '03:00 PM', disabled:false],
-            ['04:00 PM', '04:00 PM', disabled:true],
-            ['05:00 PM', '05:00 PM', disabled:false],
-            ['06:00 PM', '06:00 PM', disabled:true],
-            ['07:00 PM', '07:00 PM', disabled:false],
-            ['08:00 PM', '08:00 PM', disabled:false],
-            ['09:00 PM', '09:00 PM', disabled:false],
-          ], :item_wrapper_class => 'timechoose'%>
-      </div>
+    <%= f.input :people, collection: 1..300, input_html: {data: {action:'blur->toggle#fire'} }  %>
+    <div class="fbutton d-flex" style="justify-content:end;">
+      <p>check availability</p>
+      <i class="fa-solid fa-arrow-right-long" id="arrow_right"></i>
     </div>
-    <%= f.button :submit, "Book", class: "btn btn-primary" %>
+      <div data-toggle-target="togglableElement" class="d-none">
+        <div class="col-md-12">
+          <%= f.input :time, as: :radio_buttons, collection: [
+              ['11:00 AM', '11:00 AM', disabled:true],
+              ['12:00 PM', '12:00 PM', disabled:false],
+              ['01:00 PM', '01:00 PM', disabled:false],
+              ['02:00 PM', '02:00 PM', disabled:true],
+              ['03:00 PM', '03:00 PM', disabled:false],
+              ['04:00 PM', '04:00 PM', disabled:true],
+              ['05:00 PM', '05:00 PM', disabled:false],
+              ['06:00 PM', '06:00 PM', disabled:true],
+              ['07:00 PM', '07:00 PM', disabled:false],
+              ['08:00 PM', '08:00 PM', disabled:false],
+              ['09:00 PM', '09:00 PM', disabled:false],
+            ], :item_wrapper_class => 'timechoose'%>
+        </div>
+        <%= f.button :submit, "Make a Reservation", class: "btn btn-primary" %>
+      </div>
   <% end %>
 </div>

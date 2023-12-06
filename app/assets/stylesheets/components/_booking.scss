@@ -28,6 +28,10 @@ $white: #FBF9FF;
   font-family: $paragraph;
 }
 
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  opacity: 0.25;
+}
+
 .form-check-label{
   font-family: $paragraph;
   font-weight: 600;
@@ -54,34 +58,38 @@ $white: #FBF9FF;
   border-top-right-radius: 20px;
 }
 
-#bookingtitle{
-  padding-top: 5vw;
-  background-color: $primary;
 
-  h2{
-    font-family: "Urbanist", sans-serif;
-    font-size: 8vw;
-    font-weight: 500;
-    color: $white;
-    padding-left: 5vw;
-  }
-  a {
-    padding-top: 2vw;
-    color: white;
-  }
-
-}
 
 #new_booking{
   .btn-primary{
-    border-color: none;
+    border: none;
     font-family: $paragraph;
     font-weight: 500;
-    font-size: 4vw;
+    font-size: 5vw;
     padding-left: 17vw;
     padding-right: 17vw;
+    color: white;
+    float: inline-end;
   }
 }
+
+.fbutton{
+  p{
+    color: black;
+    font-size: 4vw;
+    float: right;
+    font-style: oblique;
+    margin-right: 3vw;
+  }
+  .fa-arrow-right-long::before{
+    color: black;
+    font-size: 3vw;
+  }
+}
+
+
+
+
 
 //BOOKING BUTTON IN SHOW PAGE
 #floatbook{
@@ -104,5 +112,68 @@ $white: #FBF9FF;
       font-size: 5vw;
       font-weight: 500;
     }
+  }
+}
+
+
+// BOOKING CONFIRMATION
+
+#bookingtitle{
+  padding-top: 5vw;
+  background-color: $primary;
+  p{
+    padding-top: 2vw;
+    color: white;
+    margin-left: 5vw;
+    font-family: $paragraph;
+    padding-bottom: 6vw;
+    font-size: 5vw;
+  }
+
+}
+
+#booking-titles{
+  background-color: #dfe1ff;
+  padding: 10px;
+  margin: 6vw;
+  border-radius: 10px;
+}
+
+
+#reserve{
+  .fa-circle-check::before{
+    color: rgb(3, 110, 3);
+    font-size: 15vw;
+  }
+  h3{
+    color: green;
+    font-size: 6vw;
+    padding-left: 9vw;
+    font-weight: 700;
+  }
+
+}
+
+.reserveinfo{
+  border-radius: 5px;
+  margin-top: 9vw;
+  padding: 4vw;
+  padding-top: 5vw;
+
+  p{
+    font-family: $paragraph;
+    font-weight: 500;
+    font-size: 4vw;
+  }
+}
+
+#createevent-btn{
+  text-align: -webkit-center;
+  .btn{
+    color:$white;
+    font-family: $paragraph;
+    font-size: 6vw;
+    background: black;
+    border-radius: 11px;
   }
 }
