@@ -1,10 +1,16 @@
-<%= simple_form_for([venue, event]) do |f| %>
+<%= simple_form_for([@booking, @event]) do |f| %>
   <p><%= f.input :event_name, placeholder:"what are you planning?" %></p>
   <p><%= f.input :photo, as: :file %></p>
-  <p>Address: <%= @venue.name %>,  <%= @venue.address %> </p>
+  <p><strong>Address:</strong> <%= @venue.name %>,  <%= @venue.address %> </p>
   <%# useflatpicker %>
-  <%= f.input :start_date , as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :time %>
+  <% if @booking.present? %>
+    <p><strong>Date:</strong> <%= @booking.date %></p>
+    <p><strong>Time:</strong> <%= @booking.time %></p>
+  <% else %>
+    <%= f.input :start_date , as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :time %>
+  <% end %>
+
   <%= f.input :event_detail, as: :text, placeholder:"what is the plan?"%>
   <%= f.input :meal_dietary, collection:[
   "Vegetarian",
@@ -13,10 +19,11 @@
   "Dairy-Free",
   "Low-Carb/Keto",
   "Allergen-Free"], as: :check_boxes , placeholder:"Meal options" %>
+
   <%= f.input :additional, collection:['Dog-Friendly', 'Kid-friendly', 'BYO', 'Cash Required'], as: :check_boxes %>
   <%= f.input :number_of_people, collection: 1..300  %>
   <%= f.input :dress_code, collection:
-  ["smart", "casual", "Colour Theme", "Haloween",
+  ["Smart", "Casual", "Colour Theme", "Haloween",
   "Formal",
   "Business Formal",
   "Business Casual",
@@ -27,5 +34,6 @@
   "Cocktail Attire",
   "Festive Attire",
   "Semi-Formal"] %>
+
   <%= f.submit class: "btn btn-primary", id:"event-btn" %>
 <% end %>

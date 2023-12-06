@@ -3,17 +3,20 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
 
   def new
     @event = Event.new
-    @venue = Venue.find(params[:venue_id])
+    @booking= Booking.find(params[:booking_id])
+    @venue = Venue.find(@booking.venue_id)
     authorize @event # Add this line
   end
 
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-    @event.venue_id = params[:venue_id]
+    @event.booking_id = params[:booking_id]
+    @event.booking = @booking
     authorize @event
+    raise
     if @event.save!
-      redirect_to venue_event_path(@event.venue_id, @event.id)
+      redirect_to venue_event_path(@event.booking_id, @event.id)
     else
       render :new, status: :unprocessable_entity
     end

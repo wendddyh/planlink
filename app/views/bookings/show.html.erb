@@ -1,19 +1,27 @@
 <div class="container">
-  <div class="row" style="justify-content:center;">
-    <div class="col-md-8 mt-5" id="booking-title" style="padding: 31px;">
-      <h3> Reservation confirmed</h3>
-      <div class="col-md-6" id="booking-description" >
-        <h2>Thank you for your booking</h2>
-        <% @venue.each do |v| %>
-          <%= image_tag v.photo_url %>
-          <p><strong><%= v.name %></strong></p>
-          <p><%= v.address %></p>
-          <p>Booking for </p>
-        <% end %>
-      </div>
-      <div class="createevent-btn">
-        <%=link_to "Start Event Planning",  new_venue_event_path, class: "btn btn-flat update" %>
-      </div>
+
+    <div class="col-md-12 pt-3 ml-2" id="bookingtitle">
+      <p>Booking Confirmation</p>
     </div>
-  </div>
+
+
+    <div class="col-md-12" id="booking-titles" style="padding: 31px;">
+      <% @venue.each do |v| %>
+        <div class="col d-flex" id="reserve">
+          <i class="fa-regular fa-circle-check"></i>
+          <h3>Reservation Confirmed.</h3>
+        </div>
+        <div class="reserveinfo">
+          <p>Address: <%= v.name %>, <%= v.address %></p>
+          <p>Booking Id: <%= @booking.id %></p>
+          <p>Date: <%= @booking.date %></p>
+          <p>Time: <%= @booking.time %></p>
+          <p>For: <%= @booking.people %> person</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-12" id="createevent-btn">
+      <%=link_to "Start Event Planning",   new_booking_event_path(@booking.id), class: "btn btn-flat update" %>
+    </div>
+
 </div>
