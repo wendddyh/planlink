@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   # get 'events/index'
   # get 'events/show'
   resources :venues do
-    resources :bookings do
-      resources :events do
+    resources :bookings, only: [:create, :new, :show, :edit, :destroy] do
+      resources :events, only: [:create, :new, :show, :edit, :destroy] do
         resources :attendances, only: [:create, :new]
       end
     end

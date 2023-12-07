@@ -12,12 +12,20 @@ $white: #FBF9FF;
 .friend-requests {
   text-align: left;
   color: $black;
+  font-family: $heading;
+  font-size: 6vw;
 }
 
 .find-friends {
   text-align: right;
-
+  font-family: $heading;
+  font-size: 4vw;
   color: $primary;
+  padding-top: 6px;
+}
+
+#placeholder_friend_search {
+  font-family: $paragraph;
 }
 
 .btn-success {
@@ -27,4 +35,28 @@ $white: #FBF9FF;
 a {
   text-decoration: none;
 
+}
+
+#friend_search {
+  background-color: $white;
+  margin-right: 15px;
+  border-color: $secondary;
+  font-family: $paragraph;
+}
+
+#request_name {
+  margin-left: 15px;
+  font-family: $paragraph;
+}
+
+#friend_name_index {
+  font-family: $paragraph;
+}
+
+#confirm_button {
+  font-family: $paragraph;
+}
+
+#send_request {
+  font-family: $paragraph;
 }
