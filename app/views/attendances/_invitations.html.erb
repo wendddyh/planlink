@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <!-- Single column layout -->
+  <div class="row">
+    <div class="col">
+      <% if @attendance %>
+        <% @attendances.each do |attendance| %>
+          <% if !attendance.status %>
+            <% @event = Event.find(attendance.event_id) %>
+            <% @booking = Booking.find(@event.booking_id) %>
+            <% @venue = Venue.find(@booking.venue_id) %>
+            <!-- Image section -->
+            <div class="row">
+              <div class="col">
+                <div class="image-section" style="background-image: url('<%= cl_image_path @event.photo.key %>');">
+                  <!-- Content inside the image section -->
+                </div>
+              </div>
+            </div>
+            <!-- Information section -->
+            <div class="row">
+              <div class="col info-section">
+                <h2>You have been invited for <%= @event.event_name %>!</h2>
+                <p>at <%= @venue.name %>, <%= @venue.address %> </p>
+                <p>on <%= @booking.date %> </p>
+                <p>Hosted by</p>
+                <div class="d-flex align-items-center">
+                  <!-- User Image with Margin -->
+                  <div class="user-image-container">
+                    <%= image_tag User.find(@event.user_id).image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
+                  </div>
+                  <!-- User Name -->
+                  <span id="request_name"><%= User.find(@event.user_id).first_name + ' ' + User.find(@event.user_id).last_name %></span>
+                </div>
+                <!-- Add more content as needed -->
+              </div>
+            </div>
+            <div class="row">
+              <p id="are-you-going">Are you going?</p>
+            </div>
+            <div class="row" >
+              <div class="button-container" style="display: flex; border-bottom: solid;">
+                <!-- Button 1 -->
+                <%= form_for attendance, url: { action: "update", id: attendance.id }, method: :patch, remote: true do |f| %>
+                  <%= f.hidden_field :status, value: true %>
+                  <%= f.submit "Yes", class: "btn btn-success", id: "going-event" %>
+                <% end %>
+                <!-- Button 2 -->
+                <%= form_for attendance, url: { action: "update", id: attendance.id }, method: :patch, remote: true do |f| %>
+                  <%= f.hidden_field :status, value: false %>
+                  <%= f.submit "No", class: "btn btn-success", id: "not-going-event" %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <div class="noinvitation">
+          <h4><em>oppps...nothing for now</em></h4>
+          <%= image_tag asset_path('empty.png') %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
