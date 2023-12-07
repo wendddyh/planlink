@@ -197,8 +197,8 @@ $white: #FBF9FF;
   margin-top: 2vw;
   padding: 2vw;
   .fa-arrow-left::before {
-    color: $black;
-    font-size: 3vw;
+    color: $white;
+    font-size: 4vw;
     padding-top: 3vw;
     padding-top: 1.5vw;
 
@@ -208,14 +208,23 @@ $white: #FBF9FF;
     font-size: 3vw;
     padding-left: 4vw;
     padding-top: 1.5vw;
+    color: white;
   }
   p{
     font-family: $paragraph;
   }
 }
 
+
+.imgshow{
+  background-image{
+    height: 54vw;
+  }
+}
+
 #eventshowpage-detail{
-  padding: 2vw;
+  margin-left: 5vw;
+  margin-top: 2vw;
   h2{
     font-family: $smallheading;
     font-weight: 500;
@@ -232,29 +241,39 @@ $white: #FBF9FF;
   }
 }
 
+
+.venuesecondetails{
+  padding-left: 5vw;
+  line-height: 0;
+  .fa-calendar::before {
+    color: $black;
+    font-size: 5vw;
+    padding-top: 2vw;
+
+  }
+  .venuesecondetail{
+    padding-left: 4.5vw;
+  }
+}
+
 .venueaddresss{
-  padding-left: 10vw;
-  .fa-location::before {
-    color: $primary;
-    font-size: 7vw;
+  margin-top: 1vw;
+  padding-left: 5vw;
+  line-height: 0;
+  .fa-location-dot::before {
+    color: $black;
+    font-size: 5vw;
+    padding-top: 2vw;
   }
   .venueaddress{
     padding-left: 1.5vw;
   }
 
 }
-.venuesecondetails{
-  padding-left: 10vw;
 
-  .fa-calendar::before {
-    color: $primary;
-    font-size: 5vw;
-
-  }
-  .venuesecondetail{
-    padding-left: 1.5vw;
-  }
-
+#attendances{
+  border-top-style:1px solid #7c7c7c;
+  border-bottom-style:1px solid #7c7c7c
 }
 
 #eventshowpage-description{
@@ -265,10 +284,29 @@ $white: #FBF9FF;
   }
   p{
     font-family: $paragraph;
+    font-size: 3vw;
+    padding-right: 3vw;
   }
 }
 
 // INVITATION BUTTON IN EVENT SHOW PAGE
+
+.floatbutton{
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right:0;
+  width: -webkit-fill-available;
+  justify-content: space-around;
+  .btn-primary{
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: $paragraph;
+    font-size: 5vw;
+  }
+}
 
 
 @mixin modal-fullscreen() {

@@ -10,15 +10,14 @@ Rails.application.routes.draw do
   # get 'events/index'
   # get 'events/show'
   resources :venues do
-    resources :bookings do
-      resources :events do
+    resources :bookings, only: [:create, :new, :show, :edit, :destroy] do
+      resources :events, only: [:create, :new, :show, :edit, :destroy] do
         resources :attendances, only: [:create, :new]
       end
     end
   end
   resources :reviews, only: [:create, :new]
-
-  resources :attendances, only: [:update, :index]
+  resources :attendances, only: [:update, :show, :index]
   resources :friend_requests
 
 

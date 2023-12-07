@@ -1,0 +1,13 @@
+<div class="col-sm-12">
+  <% if @attendance %>
+    <% @attendance.each do |a| %>
+      <% if a.status == "true" %>
+        <% @user = User.find(a.user_id) %>
+        <div class="going d-flex">
+          <%= image_tag @user.image_url %>
+          <p><%= @user.first_name %><p>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
