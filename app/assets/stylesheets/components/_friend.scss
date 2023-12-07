@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
+$heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
+$paragraph: 'Urbanist', sans-serif;
+
+$primary: #9395D3;
+$secondary: #A2A3BB;
+$tertiary: #B3B7EE;
+$black: #000807;
+$white: #FBF9FF;
+
+.friend-requests {
+  text-align: left;
+  color: $black;
+  font-family: $heading;
+  font-size: 6vw;
+}
+
+.find-friends {
+  text-align: right;
+  font-family: $heading;
+  font-size: 4vw;
+  color: $primary;
+  padding-top: 6px;
+}
+
+#placeholder_friend_search {
+  font-family: $paragraph;
+}
+
+.btn-success {
+  background-color: $primary;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+#friend_search {
+  background-color: $white;
+  margin-right: 15px;
+  border-color: $secondary;
+  font-family: $paragraph;
+}
+
+#request_name {
+  margin-left: 15px;
+  font-family: $paragraph;
+}
+
+#friend_name_index {
+  font-family: $paragraph;
+}
+
+#confirm_button {
+  font-family: $paragraph;
+}
+
+#send_request {
+  font-family: $paragraph;
+}

@@ -33,7 +33,9 @@
             <p><%= @booking.time %></p>
           <% end %>
         </div>
+
       </div>
+
 
       <div class="venueaddresss d-flex">
         <i class="fa-solid fa-location-dot"></i>
@@ -62,7 +64,12 @@
       <p><%= @event.dress_code%></p>
     </div>
   </div>
+
   <div class="floatbutton">
     <%= link_to 'Add user',  new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id, ),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
   </div>
+
+
+
+
 </div>

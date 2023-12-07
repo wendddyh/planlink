@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <!-- Top Row -->
+  <div class="row bg-light p-2">
+    <div class="col-6 friend-requests">
+      Friend Requests
+    </div>
+    <div class="col-6 find-friends">
+      <%= link_to "Find Friends", new_friend_request_path %>
+    </div>
+  </div>
+
+  <% @friend_requests.each do |request| %>
+    <% if !request.confirmed %>
+      <% @friend = User.find(request.user_id) %>
+      <div class="row mt-3">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <!-- Circular div holding image aligned to the left -->
+              <div class="d-flex align-items-center">
+              <!-- User Image with Margin -->
+              <div class="user-image-container">
+                <%= image_tag @friend.image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
+              </div>
+              <!-- User Name -->
+              <span id="request_name"><%= @friend.first_name + ' ' + @friend.last_name %></span>
+            </div>
+              <!-- Confirm button aligned to the right with increased size -->
+              <div class="d-flex align-items-center">
+                <%= form_for request, url: { action: "update", id: request.id }, method: :patch, remote: true do |f| %>
+                  <%= f.hidden_field :confirmed, value: true %>
+                  <%= f.submit "Confirm", class: "btn btn-success btn-sm ml-2 px-3 py-2", id: "confirm_button" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

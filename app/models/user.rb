@@ -10,4 +10,11 @@ class User < ApplicationRecord
   has_many :venues, dependent: :destroy
   has_many :friend_requests, dependent: :destroy
 
+  def friends
+    friends_i_sent_request = FriendRequest.where(user_id: id, confirmed: true).pluck(:friend_id)
+    friends_i_got_request = FriendRequest.where(friend_id: id, confirmed: true).pluck(:user_id)
+    ids = friends_i_sent_request + friends_i_got_request
+    User.where(id: ids)
+  end
+
 end

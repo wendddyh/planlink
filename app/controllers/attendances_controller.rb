@@ -17,10 +17,14 @@ class AttendancesController < ApplicationController
 
   def new
     @event = Event.find(params[:event_id])
+
     @venue = Venue.find(params[:venue_id])
     @event.booking_id = params[:booking_id]
+
+    @booking = Booking.find(params[:booking_id])
+
     @users = User.where.not(id: current_user.id)
-    @venue_id = params[:venue_id]
+    @booking_id = params[:booking_id]
     @event_id = params[:event_id]
     if params[:user].present?
       sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"
@@ -30,7 +34,7 @@ class AttendancesController < ApplicationController
 
 
   def create
-    @venue = Venue.find(params[:venue_id])
+    @booking = Booking.find(params[:booking_id])
     @event = Event.find(params[:event_id])
     @event.booking_id = params[:booking_id]
     @user_ids = params[:event][:user_id].reject(&:empty?).map(&:to_i)
