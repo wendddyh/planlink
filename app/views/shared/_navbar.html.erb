@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-md-10" id="navbar_search" style="justify-content:center;">
       <%= form_with url: root_path, method: :get, class: "tool-form d-flex" do %>
-        <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Location"%>
+        <i class="fa-solid fa-location-dot" id="location-nav"></i>
+        <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Search.." %>
         <%= submit_tag "", name: "", class: "btn search-btn" %>
       <% end %>
     </div>

@@ -6,7 +6,7 @@
           <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
         <% end %>
         <h3>Event Details </h3>
-        
+
       </div>
     </div>
 
@@ -48,12 +48,19 @@
         <% end %>
       <% end %>
       <h3>Who's going?</h3>
-      <div class="attstatus d-flex">
-        <%= link_to attendance_path do %>
+      <% if @number %>
+        <div class="attstatus d-flex">
+          <%= link_to attendance_path do %>
+            <i class="fa-solid fa-users"></i>
+          <% end %>
+          <p><%= @number %> peoples are going </p>
+        </div>
+      <% else %>
+        <div class="attempty d-flex">
           <i class="fa-solid fa-users"></i>
-        <% end %>
-        <p><%= @number %> peoples are going </p>
-      </div>
+          <p>Start Invite</p>
+        </div>
+      <% end %>
     </div>
   </div>
 
@@ -66,10 +73,12 @@
       <p>Dress Code: <%= @event.dress_code%></p>
     </div>
   </div>
-
-  <div class="floatbutton">
-    <%= link_to 'Add user',  new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id, ),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+  <div class="row">
+    <div class="floatbutton">
+      <%= link_to 'Add user',  new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id, ),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+    </div>
   </div>
+
 
 
 

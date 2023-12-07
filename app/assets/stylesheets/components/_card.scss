@@ -10,65 +10,7 @@ $tertiary: #B3B7EE;
 $black: #000807;
 $white: #FBF9FF;
 
-.cardownvenue{
-  margin: 2vw;
-  text-align: center;
-  border: 1px solid $primary;
-  padding: 2vw;
 
-  p{
-    font-family: $paragraph;
-    font-weight: 500;
-  }
-  a{
-    text-decoration: none;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 5px;
-    font-size: 4vw;
-    color: $black;
-    font-family: $smallheading;
-    font-weight: 500;
-  }
-}
-
-.card{
-  border-style: none;
-  background-color: none;
-}
-
-.individual_card{
-  margin-bottom: 2rem;
-  transition: 0.3s;
-  img{
-    width: -webkit-fill-available;
-    transition: 0.3s;
-    &:hover{
-      filter: brightness(70%)
-    }
-
-  }
-  &:hover{
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(216, 216, 216, 0.2);
-  }
-}
-
-.card-body{
-  padding: 10px;
-  background-color: $white;
-  h3{
-    font-family: $heading;
-    a{
-      text-decoration: none;
-      font-family: $heading;
-      font-size: 6vw;
-      color: $black
-
-    }
-  }
-
-}
 
 // venueshowpage
 #venueshowcard{
@@ -295,7 +237,7 @@ $white: #FBF9FF;
 
 #eventshowpage-description{
   margin-left: 5vw;
-  margin-top: 6vw;
+  margin-top: 3vw;
   h3{
     font-family: $smallheading;
     font-size: 4vw;
@@ -307,52 +249,7 @@ $white: #FBF9FF;
   }
 }
 
-// Dropdown Button Styling
-.dropdown {
-  position: relative;
-  display: inline-block;
 
-  .fa-ellipsis-vertical::before {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #2980b9;
-    }
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-
-    a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-
-      &:hover {
-        background-color: #f1f1f1;
-      }
-    }
-  }
-
-  &:hover .dropdown-content {
-    display: block;
-  }
-
-  &:hover .fa-ellipsis-vertical::before {
-    background-color: #2980b9;
-  }
-}
 
 
 
@@ -362,10 +259,9 @@ $white: #FBF9FF;
   background-color: #ffffff;
   position: fixed;
   bottom: 0px;
-  left: 0;
-  right:0;
   width: -webkit-fill-available;
   justify-content: space-around;
+  box-shadow: 0 -2px 5px -2px #c1bdbd;
   .btn-primary{
     border: none;
     background-color: black;

@@ -9,11 +9,16 @@ $tertiary: #B3B7EE;
 $black: #000807;
 $white: #FBF9FF;
 
+//HOMEPAGE
+
+#homepage{
+  background-color: $primary;
+}
+
 
 #front-page{
   padding: 10vw;
   padding-top: 9vw;
-  background-color: #9395D3;
 
   h2{
     font-family: $heading;

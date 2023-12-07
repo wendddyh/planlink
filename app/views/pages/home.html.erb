@@ -1,20 +1,25 @@
 <div class="container">
-  <%= render "shared/navbar" %>
-
   <div class="row">
-    <div class="col-12">
-    </div>
-    <div class="col-12">
+    <div class="col-12 d-flex" id="navbarheader">
+      <%= image_tag asset_path('PL_logo3.png') %>
       <div class="cardownvenue">
-        <p>create your own venue</p>
-        <%= link_to new_venue_path do%>
-          <i class="fa-regular fa-square-plus"></i>
+        <%= link_to new_venue_path do %>
+          <i class="fa-solid fa-circle-plus"></i>
         <% end %>
       </div>
     </div>
+    <div class="col-sm-12">
+      <%= render "shared/navbar" %>
+    </div>
   </div>
-  <%= render 'list' %>
-<div class ="row"><%= render 'shared/footer'%>
-</div>
 
+  <div class="row">
+    <div class="col-sm-12">
+      <%= render 'list' %>
+    </div>
+  </div>
+
+  <div class ="row">
+    <%= render 'shared/footer'%>
+  </div>
 </div>

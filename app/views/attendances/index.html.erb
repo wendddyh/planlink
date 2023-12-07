@@ -1,41 +1,33 @@
 <div class="container">
-  <div class="row pt-3">
-    <h2>Notification</h2>
-    <div class="col-md-12">
-      <% @attendances.each do |attendance| %>
-        <% if !attendance.status %>
-          <% @event = Event.find(attendance.event_id) %>
-          <% @booking = Booking.find(@event.booking_id) %>
-          <% @venue = Venue.find(@booking.venue_id) %>
-          <div class="invitation">
-            <p>You have an invitation for <%= @event.event_name %> at <%= @venue.name %> from <%= User.find(@event.user_id).first_name %></p>
+  <div class="row pt-3" id="notiheader">
+    <h3>Notification</h3>
+  </div>
 
-            <%= form_for attendance, url: { action: "update", id: attendance.id }, method: :patch, remote: true do |f| %>
-              <%= f.hidden_field :status, value: true %>
-              <%= f.submit "Yes", class: "btn btn-success" %>
-            <% end %>
+  <div class="col-sm-12" id="boxcontrol">
+    <div
+    data-controller="tabs"
+    data-tabs-active-class="activebtn"
+    data-tabs-default-tab-value="tab1"
+    >
+    <!-- buttons to toggle between tabs -->
+    <div class="notbtn">
+      <button id="tab1" data-tabs-target="btn" data-action="click->tabs#select">Event Invitation</button>
+      <button id="tab2" data-tabs-target="btn" data-action="click->tabs#select">Friend Request</button>
+    </div>
 
-            <%= form_for attendance, url: { action: "update", id: attendance.id }, method: :patch, remote: true do |f| %>
-              <%= f.hidden_field :status, value: false %>
-              <%= f.submit "No", class: "btn btn-danger" %>
-            <% end %>
-          </div>
+    <!-- the tabs -->
+    <div class="notilist">
+      <div data-tabs-target="tab" id="tab1">
+        <%= render 'attnotification'  %>
+      </div>
 
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const form = document.querySelector(".invitation form");
-
-              form.addEventListener("ajax:success", function () {
-                // Hide the form on successful submission
-                form.closest(".invitation").style.display = "none";
-              });
-            });
-          </script>
-
-        <% end %>
-      <% end %>
+      <!-- tab 2 is hidden by default, to prevent 'flashing in' -->
+      <div data-tabs-target="tab" id="tab2" class='hidden'>
+        <%= render 'friend_requests/index' %>
+      </div>
     </div>
   </div>
+
   <div class="row">
     <%= render 'shared/footer' %>
   </div>

@@ -9,20 +9,102 @@ $tertiary: #B3B7EE;
 $black: #000807;
 $white: #FBF9FF;
 
-.friend-requests {
-  text-align: left;
-  color: $black;
-  font-family: $heading;
-  font-size: 6vw;
+// NOTIFICATION
+
+#notiheader{
+  background-color: $primary;
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+    padding-bottom: 3vw;
+  }
 }
 
-.find-friends {
-  text-align: right;
-  font-family: $heading;
-  font-size: 4vw;
-  color: $primary;
-  padding-top: 6px;
+.notificationbox{
+  background-color: $white;
 }
+
+
+#friend-header{
+  background-color: #ffffff;
+  .friend-requests {
+    text-align: left;
+    color: $black;
+    font-family: $heading;
+    font-size: 4vw;
+  }
+  .find-friends {
+    text-align: right;
+    font-family: $heading;
+    font-size: 4vw;
+    color: $primary;
+  }
+}
+.norequest{
+  text-align: -webkit-center;
+  margin-top: 20vw;
+  img{
+    width: 60vw;
+  }
+  h4{
+    opacity: 0.5;
+    font-style: oblique;
+    font-size: 5vw;
+  }
+}
+
+.noinvitation{
+  text-align: -webkit-center;
+  margin-top: 25vw;
+  img{
+    width: 34vw;
+  }
+  h4{
+    opacity: 0.5;
+    font-style: oblique;
+    font-size: 5vw;
+    margin-top: 5vw;
+  }
+}
+
+
+#boxcontrol{
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  background-color: #ffffff;
+  padding-top: 4vw;
+  .activebtn{
+    font-family: $smallheading;
+    border: none;
+    background-color: #e2e2e2;
+    color: rgb(212, 34, 212);
+    font-weight: 600;
+    font-size: 5vw;
+  }
+}
+
+.notbtn{
+  border-bottom: 1px solid #9395D3;
+  #tab2{
+    font-family: $smallheading;
+    color: $black;
+    background: none;
+    border: none;
+  }
+  #tab1{
+    font-family: $smallheading;
+    color: $black;
+    background: none;
+    border: none;
+  }
+
+}
+
+
+
+
 
 #placeholder_friend_search {
   font-family: $paragraph;
@@ -59,4 +141,9 @@ a {
 
 #send_request {
   font-family: $paragraph;
+}
+
+.notilist{
+  border: none;
+  padding-top: 2vw;
 }
