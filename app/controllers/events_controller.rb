@@ -14,7 +14,9 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
     @event.booking_id = params[:booking_id]
     authorize @event
     if @event.save!
+
       redirect_to venue_booking_event_path(params[:venue_id], @event.booking_id, @event.id)
+
     else
       render :new, status: :unprocessable_entity
     end
@@ -41,7 +43,8 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
 
   def show
     authorize @event
-    @venue = Venue.find(params[:venue_id])
+    @booking = Booking.find(params[:booking_id])
+    @venue = Venue.find(Booking.find(params[:booking_id]).venue_id)
     @users = User.where.not(id: current_user.id)
     if params[:user].present?
       sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"

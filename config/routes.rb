@@ -16,8 +16,6 @@ Rails.application.routes.draw do
       end
     end
   end
-  resources :reviews, only: [:create, :new]
-
   resources :attendances, only: [:update, :index]
   resources :friend_requests
 
