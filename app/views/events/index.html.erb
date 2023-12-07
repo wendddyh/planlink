@@ -1,36 +1,39 @@
 <div class="container">
-  <div class="row">
+  <div class="row" id="eventlistrow">
     <div class="col-md-12 d-flex" id="eventlist">
       <%= link_to root_path do %>
-          <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
+          <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
         <% end %>
-      <p>Event List</p>
+      <h3>Event Lists</h3>
     </div>
 
-    <div class="col-md-12" id="eventlistdetail">
-      <% @event.each do |e| %>
-      <div class="eventlistcard d-flex" style="justify-content: space-between;">
-        <div class="col-md-4" id="eventlistphoto" style="align-self: center;">
-          <% if e.photo.key  %>
-            <%= cl_image_tag e.photo.key, height: 160, width: 160, crop: :fill %>
-          <% else %>
-            <%= image_tag "https://placehold.co/160x160/png" %>
-          <% end %>
+    <% if @event %>
+      <div class="col-md-12" id="eventlistdetail">
+        <% @event.each do |e| %>
+        <div class="eventlistcard d-flex mt-3" style="justify-content: space-between;">
+          <div class="col-md-3" id="eventlistphoto" style="align-self: center;">
+            <% if e.photo.key  %>
+              <%= cl_image_tag e.photo.key, height: 100, width: 100, crop: :fill %>
+            <% else %>
+              <%= image_tag "https://placehold.co/100x100/png" %>
+            <% end %>
+          </div>
+          <div class="col-md-9" id="eventdetail">
+            <h3><%= e.event_name %></h3>
+            <p><%= e.start_date %></p>
+            <% @booking = Booking.find(e.booking_id) %>
+            <% @venue = Venue.find(@booking.venue_id) %>
+            <p><%= @venue.address %></p>
+            <p><%= @venue.name %></p>
+            <%= link_to "View Detail", venue_booking_event_path(@venue.id, @booking.id, e.id) %>
+          </div>
         </div>
-        <div class="col-md-8" id="eventdetail">
-          <h3><%= e.event_name %></h3>
-          <p><%= e.start_date %>,<%= e.time %></p>
-          <% @booking = Booking.find(e.booking_id) %>
-          <% @venue = Venue.find(@booking.venue_id) %>
-          <p><%= @venue.address %></p>
-          <p><%= @venue.name %></p>
-          <%= link_to "View Detail", venue_booking_event_path(@venue.id, @booking.id, e.id) %>
-        </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
-
+    <% else %>
+      <h3><em>No event.Start planning.</em></h3>
+    <% end %>
   </div>
   <div class ="row"><%= render 'shared/footer'%>
-</div>
+  </div>
 </div>

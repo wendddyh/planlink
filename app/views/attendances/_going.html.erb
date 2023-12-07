@@ -1,11 +1,25 @@
-<div class="col-sm-12">
+<div class="container-fluid">
   <% if @attendance %>
     <% @attendance.each do |a| %>
       <% if a.status == "true" %>
         <% @user = User.find(a.user_id) %>
-        <div class="going d-flex">
-          <%= image_tag @user.image_url %>
-          <p><%= @user.first_name %><p>
+        <div class="row mt-1">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <!-- Circular div holding image aligned to the left -->
+                <div class="d-flex align-items-center">
+                <!-- User Image with Margin -->
+                <div class="user-image-container">
+                  <%= image_tag @user.image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
+                </div>
+                <!-- User Name -->
+                <span id="user_name"><%= @user.first_name + ' ' + @user.last_name %></span>
+              </div>
+                <!-- Confirm button aligned to the right with increased size -->
+              </div>
+            </div>
+          </div>
         </div>
       <% end %>
     <% end %>

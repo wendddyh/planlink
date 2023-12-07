@@ -105,6 +105,8 @@ fieldset{
   justify-content: space-between;
   input{
     border-style: none;
+    width: -webkit-fill-available;
+
   }
   svg{
     width: 9vw;
@@ -114,7 +116,17 @@ fieldset{
     border-style: none;
   }
 
+
 }
+
+
+.mapboxgl-ctrl-geocoder--suggestions {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+
+
 .mapboxgl-ctrl-geocoder--icon {
   display: none;
 }
@@ -127,11 +139,45 @@ fieldset{
   font-weight: 500;
 }
 
+
+// MY PRIVATE VENUE
+
+#myvenue{
+  background-color: $primary;
+}
+
 #venueform{
   margin-top: 5vw;
+  padding: 3vw;
+  .fa-arrow-left::before{
+    color: white;
+  }
   h3{
-    font-family: $heading;
-    font-size: 6vw;
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+  }
+}
+#createvenue{
+  background-color: white;
+  padding: 9vw;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  .btn-primary{
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 5vw;
+    background-color: $black;
+    margin-left: 16vw;
+  }
+}
+
+.suggestions{
+  list-style-type: none;
+  li{
+    font-size: 4vw;
     font-weight: 500;
   }
 }

@@ -1,28 +1,34 @@
-<div class="col-sm-12">
-  <%= link_to  venue_booking_event_path(@venue.id, @booking.id, @event.id) do %>
-    <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
-  <% end %>
-  <h3>Attendees</h3>
-  <div
-  data-controller="tabs"
-  data-tabs-active-class="activebtn"
-  data-tabs-default-tab-value="tab1"
->
-  <!-- buttons to toggle between tabs -->
-  <div class="flex">
-    <button id="tab1" data-tabs-target="btn" data-action="click->tabs#select">Going</button>
-    <button id="tab2" data-tabs-target="btn" data-action="click->tabs#select">Not Going</button>
+<div class="row" id="attshow">
+  <div class="col-sm-12 d-flex" id="attheader">
+    <%= link_to  venue_booking_event_path(@venue.id, @booking.id, @event.id) do %>
+      <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
+    <% end %>
+    <h3>Attendees</h3>
   </div>
 
-  <!-- the tabs -->
-  <div class="rounded-lg border">
-    <div data-tabs-target="tab" id="tab1">
-      <%= render 'going'  %>
+
+  <div class="col-sm-12" id="btncontrol">
+    <div
+    data-controller="tabs"
+    data-tabs-active-class="activebtn"
+    data-tabs-default-tab-value="tab1"
+    >
+    <!-- buttons to toggle between tabs -->
+    <div class="flex">
+      <button id="tab1" data-tabs-target="btn" data-action="click->tabs#select">Going</button>
+      <button id="tab2" data-tabs-target="btn" data-action="click->tabs#select">Not Going</button>
     </div>
 
-    <!-- tab 2 is hidden by default, to prevent 'flashing in' -->
-    <div data-tabs-target="tab" id="tab2" class='hidden'>
-      <%= render 'notgoing' %>
+    <!-- the tabs -->
+    <div class="listofpeople">
+      <div data-tabs-target="tab" id="tab1">
+        <%= render 'going'  %>
+      </div>
+
+      <!-- tab 2 is hidden by default, to prevent 'flashing in' -->
+      <div data-tabs-target="tab" id="tab2" class='hidden'>
+        <%= render 'notgoing' %>
+      </div>
     </div>
   </div>
 </div>

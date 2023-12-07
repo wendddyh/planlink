@@ -35,6 +35,7 @@ $white: #FBF9FF;
   }
 }
 
+
 .larger-checkbox {
   width: 30px;
   height: 30px;
@@ -56,4 +57,72 @@ $white: #FBF9FF;
 #invites_button {
   font-family: $paragraph;
   margin-top: 525px;
+}
+
+
+// ATTENDANCE SHOW PAGE
+.flex{
+  padding-left: 5vw;
+  margin-top: 3vw;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+#btncontrol{
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  background-color: #FBF9FF;
+  padding-top: 4vw;
+  border-bottom: 1px solid #9395D3;
+  #tab2{
+    font-family: $smallheading;
+    color: #ee3c3c;
+    background: none;
+    border: none;
+  }
+  #tab1{
+    font-family: $smallheading;
+    color: #383e84;
+    background: none;
+    border: none;
+  }
+
+  .activebtn{
+    font-family: $smallheading;
+    border: none;
+    background-color: #e2e2e2;
+    color: rgb(212, 34, 212);
+    font-weight: 600;
+    font-size: 5vw;
+  }
+}
+
+
+
+.listofpeople{
+  border:none;
+  padding: 5vw;
+}
+
+#user_name{
+  padding-left: 7vw;
+}
+
+#attshow{
+  background-color: $primary;
+  .fa-arrow-left::before{
+    color: white;
+  }
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+    padding-bottom: 3vw;
+  }
+}
+
+#attheader{
+  padding-left: 8vw;
+  padding-top: 5vw;
+
 }

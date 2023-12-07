@@ -26,6 +26,7 @@ $white: #FBF9FF;
   bottom: 0px;
   width: -webkit-fill-available;
   justify-content: space-around;
+  box-shadow: 0 -2px 5px -2px #c1bdbd;
 
   a{
     color: $primary;
@@ -37,30 +38,34 @@ $white: #FBF9FF;
 
 #footer{
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 1vw;
+  justify-content: space-around;
+  padding-top: 2.5vw;
   height: 11vw;
 }
 
 .fa-magnifying-glass::before{
   color: $primary;
-  font-size: 4vw;
+  font-size: 6vw;
 }
 .fa-calendar::before{
   color: $primary;
-  font-size: 4vw;
+  font-size: 6vw;
 }
 .fa-user::before{
   color: $secondary;
-  font-size: 4vw;
+  font-size: 6vw;
 }
 .fa-home::before{
   color: $secondary;
-  font-size: 4vw;
+  font-size: 6vw;
 }
 .fa-bell::before{
   color: $secondary;
-  font-size: 4vw;
+  font-size: 6vw;
+}
+.fa-user-lock::before{
+  color: $secondary;
+  font-size: 6vw;
 }
 
 

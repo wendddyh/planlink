@@ -10,65 +10,7 @@ $tertiary: #B3B7EE;
 $black: #000807;
 $white: #FBF9FF;
 
-.cardownvenue{
-  margin: 2vw;
-  text-align: center;
-  border: 1px solid $primary;
-  padding: 2vw;
 
-  p{
-    font-family: $paragraph;
-    font-weight: 500;
-  }
-  a{
-    text-decoration: none;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 5px;
-    font-size: 4vw;
-    color: $black;
-    font-family: $smallheading;
-    font-weight: 500;
-  }
-}
-
-.card{
-  border-style: none;
-  background-color: none;
-}
-
-.individual_card{
-  margin-bottom: 2rem;
-  transition: 0.3s;
-  img{
-    width: -webkit-fill-available;
-    transition: 0.3s;
-    &:hover{
-      filter: brightness(70%)
-    }
-
-  }
-  &:hover{
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(216, 216, 216, 0.2);
-  }
-}
-
-.card-body{
-  padding: 10px;
-  background-color: $white;
-  h3{
-    font-family: $heading;
-    a{
-      text-decoration: none;
-      font-family: $heading;
-      font-size: 6vw;
-      color: $black
-
-    }
-  }
-
-}
 
 // venueshowpage
 #venueshowcard{
@@ -196,19 +138,14 @@ $white: #FBF9FF;
 #eventshowpage{
   margin-top: 2vw;
   padding: 2vw;
-  .fa-arrow-left::before {
-    color: $white;
-    font-size: 4vw;
-    padding-top: 3vw;
-    padding-top: 1.5vw;
-
+  .fa-arrow-left::before{
+    color: white;
   }
   h3{
     font-family: $smallheading;
-    font-size: 3vw;
-    padding-left: 4vw;
-    padding-top: 1.5vw;
     color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
   }
   p{
     font-family: $paragraph;
@@ -216,15 +153,14 @@ $white: #FBF9FF;
 }
 
 
-.imgshow{
-  background-image{
-    height: 54vw;
-  }
+#imgshow{
+  height: 33vw;
 }
 
 #eventshowpage-detail{
   margin-left: 5vw;
   margin-top: 2vw;
+  padding-bottom: 3vw;
   h2{
     font-family: $smallheading;
     font-weight: 500;
@@ -246,7 +182,7 @@ $white: #FBF9FF;
   padding-left: 5vw;
   line-height: 0;
   .fa-calendar::before {
-    color: $black;
+    color: $primary;
     font-size: 5vw;
     padding-top: 2vw;
 
@@ -259,9 +195,9 @@ $white: #FBF9FF;
 .venueaddresss{
   margin-top: 1vw;
   padding-left: 5vw;
-  line-height: 0;
+  line-height: 0.5;
   .fa-location-dot::before {
-    color: $black;
+    color: $primary;
     font-size: 5vw;
     padding-top: 2vw;
   }
@@ -272,12 +208,36 @@ $white: #FBF9FF;
 }
 
 #attendances{
-  border-top-style:1px solid #7c7c7c;
-  border-bottom-style:1px solid #7c7c7c
+    margin-left: 5vw;
+    margin-top: 2vw;
+    padding-bottom: 3vw;
+  h3{
+    font-family: $smallheading;
+    font-size: 4vw;
+
+  }
+
 }
 
+.attstatus{
+  margin-right: 12vw;
+  p{
+    font-family: $paragraph;
+    font-size: 3vw;
+    padding-left: 5vw;
+  }
+  .fa-users::before{
+    color: $primary;
+    font-size: 5vw;
+    padding-top: 2vw;
+    padding-left: 5vw;
+  }
+}
+
+
 #eventshowpage-description{
-  margin-left: 3vw;
+  margin-left: 5vw;
+  margin-top: 3vw;
   h3{
     font-family: $smallheading;
     font-size: 4vw;
@@ -289,23 +249,32 @@ $white: #FBF9FF;
   }
 }
 
+
+
+
+
 // INVITATION BUTTON IN EVENT SHOW PAGE
 
 .floatbutton{
   background-color: #ffffff;
   position: fixed;
-  bottom: 0px;
-  left: 0;
-  right:0;
+  bottom: -3px;
   width: -webkit-fill-available;
   justify-content: space-around;
+  box-shadow: 0 -2px 5px -2px #c1bdbd;
+  padding-right: 29vw;
   .btn-primary{
     border: none;
     background-color: black;
     color: white;
     font-family: $paragraph;
-    font-size: 5vw;
+    font-size: 3vw;
+    width: -webkit-fill-available;
+    &:hover{
+      background-color: #835fd1;
+    }
   }
+
 }
 
 
@@ -349,19 +318,29 @@ $white: #FBF9FF;
 
 
 // EVENT LISTING
-#eventlist{
-  margin-top: 2vw;
-  padding: 2vw;
-  .fa-circle-arrow-left::before {
-    color: $primary;
-    font-size: 3vw;
-    padding-top: 3vw;
-    padding-top: 1.5vw;
-    padding-right: 1.5vw;
+#eventlistrow{
+  background-color: $primary;
+}
 
+#eventlist{
+  padding-left: 8vw;
+  padding-top: 5vw;
+  padding-bottom: 4vw;
+  .fa-arrow-left::before{
+    color: white;
+  }
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
   }
 }
 #eventlistdetail{
+  background-color: white;
+  padding: 9vw;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   a{
     text-decoration: none;
     font-family: $heading;
@@ -374,6 +353,8 @@ $white: #FBF9FF;
   margin-top: 2vw;
   padding: 2vw;
   border: 1px silver;
+  line-height: 0.5;
+
   h3{
     font-family: $heading;
     font-size: 5vw;

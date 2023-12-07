@@ -3,6 +3,7 @@
 
 $heading: 'Anton', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
+$smallheading: 'Oswald', sans-serif;
 
 $primary: #9395D3;
 $secondary: #A2A3BB;
@@ -11,3 +12,32 @@ $black: #000807;
 $white: #FBF9FF;
 
 
+//LOGIN FORM
+
+#login{
+  margin: 4vw;
+  padding: 3vw;
+  img{
+    width: 40vw;
+    margin-left: 19vw;
+  }
+  h2{
+    font-family: $smallheading;
+    font-size: 6vw;
+    margin-top: 5vw;
+  }
+}
+#new_user{
+  margin-right: 9vw;
+  [type="submit"]:not(:disabled) {
+    background-color: $primary;
+    padding: 3vw;
+    color: black;
+    font-family: $paragraph;
+  }
+  a{
+    font-family: $paragraph;
+    font-weight: 500;
+    font-size: 4vw;
+  }
+}
