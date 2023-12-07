@@ -11,14 +11,20 @@
       <% @event.each do |e| %>
       <div class="eventlistcard d-flex" style="justify-content: space-between;">
         <div class="col-md-4" id="eventlistphoto" style="align-self: center;">
-          <%= cl_image_tag e.photo.key, height: 160, width: 160, crop: :fill %>
+          <% if e.photo.key  %>
+            <%= cl_image_tag e.photo.key, height: 160, width: 160, crop: :fill %>
+          <% else %>
+            <%= image_tag "https://placehold.co/160x160/png" %>
+          <% end %>
         </div>
         <div class="col-md-8" id="eventdetail">
           <h3><%= e.event_name %></h3>
           <p><%= e.start_date %>,<%= e.time %></p>
-          <p><%= Venue.find(e.venue_id).name%></p>
-          <p><%= Venue.find(e.venue_id).address %></p>
-          <%= link_to "View Detail", venue_event_path(Venue.find(e.venue_id), e.id) %>
+          <% @booking = Booking.find(e.booking_id) %>
+          <% @venue = Venue.find(@booking.venue_id) %>
+          <p><%= @venue.address %></p>
+          <p><%= @venue.name %></p>
+          <%= link_to "View Detail", venue_booking_event_path(@venue.id, @booking.id, e.id) %>
         </div>
       </div>
       <% end %>

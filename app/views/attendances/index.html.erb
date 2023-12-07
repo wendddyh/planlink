@@ -5,7 +5,8 @@
       <% @attendances.each do |attendance| %>
         <% if !attendance.status %>
           <% @event = Event.find(attendance.event_id) %>
-          <% @venue = Venue.find(@event.venue_id) %>
+          <% @booking = Booking.find(@event.booking_id) %>
+          <% @venue = Venue.find(@booking.venue_id) %>
           <div class="invitation">
             <p>You have an invitation for <%= @event.event_name %> at <%= @venue.name %> from <%= User.find(@event.user_id).first_name %></p>
 

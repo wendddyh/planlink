@@ -16,7 +16,9 @@ Rails.application.routes.draw do
       end
     end
   end
-  resources :attendances, only: [:update, :index]
+
+  resources :attendances, only: [:update, :show, :index]
+
   resources :friend_requests
 
 

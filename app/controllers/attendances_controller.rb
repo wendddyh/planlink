@@ -7,6 +7,14 @@ class AttendancesController < ApplicationController
       @attendances = policy_scope(Attendance)
   end
 
+  def show
+    @event = Event.find(params[:id])
+    @attendance = Attendance.where(event_id: @event.id)
+    @booking = Booking.find(@event.booking_id)
+    @venue = Venue.find(@booking.venue_id)
+
+  end
+
   def new
     @event = Event.find(params[:event_id])
 
