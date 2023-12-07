@@ -1,4 +1,4 @@
-<%= simple_form_for([@booking, @event]) do |f| %>
+<%= simple_form_for([@venue, @booking, @event]) do |f| %>
   <p><%= f.input :event_name, placeholder:"what are you planning?" %></p>
   <p><%= f.input :photo, as: :file %></p>
   <p><strong>Address:</strong> <%= @venue.name %>,  <%= @venue.address %> </p>

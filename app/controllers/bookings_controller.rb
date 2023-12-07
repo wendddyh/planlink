@@ -7,9 +7,9 @@ class BookingsController < ApplicationController
 
   def show
     @venue_id = params[:venue_id]
-    @venue = Venue.where(id: @venue_id)
+    # @venue = Venue.where(id: @venue_id)
+    @venue= Venue.find(@booking.venue_id)
     authorize @venue
-    # raise
   end
 
   def new

@@ -1,27 +1,25 @@
 <div class="container">
-
+  <% if @venue.user_id %>
+    <p>show this</p>
+  <% else %>
     <div class="col-md-12 pt-3 ml-2" id="bookingtitle">
       <p>Booking Confirmation</p>
     </div>
-
-
     <div class="col-md-12" id="booking-titles" style="padding: 31px;">
-      <% @venue.each do |v| %>
         <div class="col d-flex" id="reserve">
           <i class="fa-regular fa-circle-check"></i>
           <h3>Reservation Confirmed.</h3>
         </div>
         <div class="reserveinfo">
-          <p>Address: <%= v.name %>, <%= v.address %></p>
+          <p>Address: <%= @venue.name %>, <%= @venue.address %></p>
           <p>Booking Id: <%= @booking.id %></p>
           <p>Date: <%= @booking.date %></p>
           <p>Time: <%= @booking.time %></p>
           <p>For: <%= @booking.people %> person</p>
         </div>
-      <% end %>
+      <div class="col-md-12" id="createevent-btn">
+      <%=link_to "Start Event Planning",   new_venue_booking_event_path( @venue.id, @booking.id), class: "btn btn-flat update" %>
     </div>
-    <div class="col-md-12" id="createevent-btn">
-      <%=link_to "Start Event Planning",   new_booking_event_path(@booking.id), class: "btn btn-flat update" %>
     </div>
-
+  <% end %>
 </div>

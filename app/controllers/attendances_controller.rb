@@ -10,6 +10,7 @@ class AttendancesController < ApplicationController
   def new
     @event = Event.find(params[:event_id])
     @venue = Venue.find(params[:venue_id])
+    @event.booking_id = params[:booking_id]
     @users = User.where.not(id: current_user.id)
     @venue_id = params[:venue_id]
     @event_id = params[:event_id]
@@ -23,12 +24,13 @@ class AttendancesController < ApplicationController
   def create
     @venue = Venue.find(params[:venue_id])
     @event = Event.find(params[:event_id])
+    @event.booking_id = params[:booking_id]
     @user_ids = params[:event][:user_id].reject(&:empty?).map(&:to_i)
     @user_ids.each do |id|
       @attendance = Attendance.create(user_id: id, event_id: params[:event_id])
     end
     if @attendance.valid?
-      redirect_to venue_event_path(@venue.id, @event.id)
+      redirect_to venue_booking_event_path(@venue.id,@event.booking_id, @event.id)
     end
   end
 
