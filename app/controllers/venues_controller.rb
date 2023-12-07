@@ -4,6 +4,7 @@ class VenuesController < ApplicationController
 
   def new
     @venue = Venue.new
+    @booking = Booking.new
     authorize @venue
     if user_signed_in?
       if Attendance.exists?(user_id: current_user.id)
@@ -18,7 +19,8 @@ class VenuesController < ApplicationController
     @venue.user_id = @user.id
     authorize @venue
     if @venue.save!
-      redirect_to venues_path
+      @booking = Booking.create(venue_id: @venue.id)
+      redirect_to booking_path(@booking.id)
     else
       render :new, status: :unprocessable_entity
     end
@@ -44,6 +46,9 @@ class VenuesController < ApplicationController
   end
 
   private
+  def booking_params
+    params.require(:booking).permit(:date, :time, :people)
+  end
 
   def venue_params
     params.require(:venue).permit(:name, :description, :address)

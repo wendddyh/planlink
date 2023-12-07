@@ -10,11 +10,13 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
 
   def create
     @event = Event.new(event_params)
-    @event.user = current_user
+    @event.user_id = current_user.id
     @event.booking_id = params[:booking_id]
     authorize @event
     if @event.save!
-      redirect_to booking_event_path(@event.booking_id, @event.id)
+
+      redirect_to venue_booking_event_path(params[:venue_id], @event.booking_id, @event.id)
+
     else
       render :new, status: :unprocessable_entity
     end
@@ -51,6 +53,7 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
   end
 
   def destroy
+    @event.booking_id = params[:booking_id]
     @event.destroy
     redirect_to myevent_list_path
     authorize @event

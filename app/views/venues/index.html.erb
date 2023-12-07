@@ -16,7 +16,8 @@
         <div class="col-md-6" id="inner_listing">
           <h3><%= v.name %></h3>
           <p><%= v.address %></p>
-          <%= link_to "Create Event", new_venue_event_path(v.id) %>
+          <p>booking id need to be created first</p>
+          <%# <%= link_to "Create Event", new_venue_event_path(v.id) %> %>
         </div>
         <div class="col-md-3" id="edit_button">
           <%= link_to edit_venue_path(v.id) do %>
