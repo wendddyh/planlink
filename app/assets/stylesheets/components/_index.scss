@@ -27,7 +27,7 @@ $white: #FBF9FF;
 
 
 .container{
-  background-color: #f8fbff;
+  background-color: #ffff;
   height: 100%;
   width: -webkit-fill-available;
 
@@ -35,7 +35,10 @@ $white: #FBF9FF;
 
 html, body {
   height:100%;
-  margin:0;
-  padding:0;
-  background-color: #f8fbff;
+  background-color: #ffff;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative
 }

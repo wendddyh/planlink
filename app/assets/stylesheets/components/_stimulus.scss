@@ -40,10 +40,29 @@ $white: #FBF9FF;
 
 // PROFILE PAGE
 
+#profileall{
+  background-color: $primary;
+}
+.profile-header{
+  .fa-arrow-left::before{
+    color: white;
+  }
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+    padding-bottom: 3vw;
+  }
+}
+
 #profile{
-  margin: 2vw;
   width: -webkit-fill-available;
   margin-top: 5vw;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  background-color: #ffff;
+
 }
 
 .profile-photo{
@@ -73,28 +92,40 @@ $white: #FBF9FF;
 #profilebox{
   .venue{
     background: $primary;
-    padding: 2vw;
+    padding-top: 7vw;
     width: 40vw;
     height: 21vw;
     text-align-last: center;
     a{
       text-decoration: none;
       font-family: $paragraph;
-      color: $black;
+      color: white;
       font-weight: 600;
+    }
+    .fa-arrow-right::before{
+      color: white;
+      font-size: 4vw;
+      margin-left: 3vw;
+      padding-top: 5vw;
     }
   }
   .event{
     background: $tertiary;
-    padding: 2vw;
     width: 40vw;
+    padding-top: 7vw;
     height: 21vw;
     text-align-last: center;
     a{
       text-decoration: none;
       font-family: $paragraph;
-      color: $black;
+      color: white;
       font-weight: 600;
+    }
+    .fa-arrow-right::before{
+      color: white;
+      font-size: 4vw;
+      margin-left: 3vw;
+      padding-top: 5vw;
     }
   }
 }
@@ -114,12 +145,13 @@ $white: #FBF9FF;
   }
 }
 
-.profile-header{
-  padding-right: 9vw;
-  .fa-arrow-left::before {
-    color: $black;
-    font-size: 4vw;
-    padding-top: 3vw;
-    margin-top: 2vw;
+#logout{
+  margin-left: 53vw;
+  a{
+    background: #f17a7a;
+    color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 3px;
   }
 }

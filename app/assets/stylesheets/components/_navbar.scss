@@ -55,8 +55,12 @@ $white: #FBF9FF;
   justify-content: center;
   margin-left: 3vw;
   margin-top: 3vw;
-  .location-bar{
-    margin-right: 2vw;
+  .fa-solid{
+    padding-top: 1vw;
+  }
+  .fa-location-dot::before{
+    font-size: 6vw;
+    padding-right: 2vw;
   }
 
 }
@@ -65,4 +69,82 @@ $white: #FBF9FF;
   .form-control{
     border-block: none;
   }
+}
+
+#navbarheader{
+  padding-top: 2vw;
+  justify-content: space-between;
+  padding-right: 6vw;
+  padding-bottom: 2vw;
+  background-color: $primary;
+  img{
+    width: 28vw;
+    height: 8vw;
+  }
+  .fa-circle-plus::before{
+    color: $white;
+    font-size: 6vw;
+    padding-top: 1vw;
+  }
+}
+
+.cardownvenue{
+  a{
+    text-decoration: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-size: 4vw;
+    color: #1d1d1d;
+    font-family: $smallheading;
+    font-weight: 500;
+  }
+}
+
+#homecard{
+  border-style: none;
+  --bs-card-bg: none;
+  h3{
+    font-family: $smallheading;
+    font-weight: 600;
+    font-size: 5vw;
+  }
+}
+
+.individual_card{
+  margin-bottom: 2rem;
+  transition: 0.3s;
+  img{
+    width: -webkit-fill-available;
+    transition: 0.3s;
+    &:hover{
+      filter: brightness(70%)
+    }
+
+  }
+  &:hover{
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(216, 216, 216, 0.2);
+  }
+}
+
+.card-body{
+  padding: 10px;
+  background-color: $white;
+  h3{
+    font-family: $heading;
+    a{
+      text-decoration: none;
+      font-family: $heading;
+      font-size: 6vw;
+      color: $black
+
+    }
+  }
+
+}
+
+#location{
+  height: 8vw;
+  border: 1px solid #b7b7b7;
 }

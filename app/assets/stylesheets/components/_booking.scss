@@ -98,21 +98,17 @@ $white: #FBF9FF;
   bottom: 0px;
   width: -webkit-fill-available;
   justify-content: space-around;
-  text-align-last: center;
-  padding: 3vw;
-  .floatbutton{
-    background-color: $primary;
-
-    padding-left: 6vw;
-    padding-right: 6vw;
-    a{
-      text-decoration: none;
-      color: $black;
-      font-family: $paragraph;
-      font-size: 5vw;
-      font-weight: 500;
-    }
+  box-shadow: 0 -2px 5px -2px #c1bdbd;
+  a{
+    background: black;
+    color: white;
+    padding: 2vw;
+    text-decoration: none;
+    font-family: $paragraph;
+    font-size: 5vw;
+    font-weight: 500;
   }
+
 }
 
 

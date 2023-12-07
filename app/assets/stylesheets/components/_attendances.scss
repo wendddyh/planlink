@@ -41,33 +41,41 @@ $white: #FBF9FF;
   margin-top: 3vw;
   border-bottom: 1px solid #c6c6c6;
 }
-.activebtn{
-  border: none;
-  background-color: #3f3cd1;
-  color: white;
-  padding: 1vw;
-  font-family: $smallheading;
-  text-decoration: underline;
-  font-size: 5vw;
 
-}
 #btncontrol{
-  button{
-    border: none;
-    color: black;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  background-color: #FBF9FF;
+  padding-top: 4vw;
+  border-bottom: 1px solid #9395D3;
+  #tab2{
     font-family: $smallheading;
-    font-size: 5vw;
-    opacity: 0.25;
-
+    color: #ee3c3c;
+    background: none;
+    border: none;
+  }
+  #tab1{
+    font-family: $smallheading;
+    color: #383e84;
+    background: none;
+    border: none;
   }
 
+  .activebtn{
+    font-family: $smallheading;
+    border: none;
+    background-color: #e2e2e2;
+    color: rgb(212, 34, 212);
+    font-weight: 600;
+    font-size: 5vw;
+  }
 }
 
 
 
 .listofpeople{
   border:none;
-  margin: 5vw;
+  padding: 5vw;
 }
 
 #user_name{
@@ -75,6 +83,7 @@ $white: #FBF9FF;
 }
 
 #attshow{
+  background-color: $primary;
   .fa-arrow-left::before{
     color: white;
   }
@@ -83,11 +92,12 @@ $white: #FBF9FF;
     color: white;
     font-size: 5vw;
     padding-left: 5vw;
+    padding-bottom: 3vw;
   }
 }
 
 #attheader{
-  background-color: $primary;
   padding-left: 8vw;
   padding-top: 5vw;
+
 }
