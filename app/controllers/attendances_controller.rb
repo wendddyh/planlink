@@ -38,6 +38,7 @@ class AttendancesController < ApplicationController
     @event = Event.find(params[:event_id])
     @event.booking_id = params[:booking_id]
     @user_ids = params[:event][:user_id].reject(&:empty?).map(&:to_i)
+    @venue = Venue.find(params[:venue_id])
     @user_ids.each do |id|
       @attendance = Attendance.create(user_id: id, event_id: params[:event_id])
     end

@@ -11,6 +11,7 @@
 @import "attendances";
 @import "booking";
 @import "friend";
+@import "invitation";
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600&family=Urbanist:wght@100;300;400;500&display=swap');
 $heading: 'Anton', sans-serif;
@@ -29,8 +30,6 @@ $white: #FBF9FF;
 .container{
   background-color: #f8fbff;
   height: 100%;
-  margin: 0;
-  padding: 0;
   width: -webkit-fill-available;
 
 }
