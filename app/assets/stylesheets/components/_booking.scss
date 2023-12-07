@@ -121,6 +121,8 @@ $white: #FBF9FF;
 #bookingtitle{
   padding-top: 5vw;
   background-color: $primary;
+  padding-left: 8vw;
+  padding-bottom: 4vw;
   p{
     padding-top: 2vw;
     color: white;
@@ -128,6 +130,15 @@ $white: #FBF9FF;
     font-family: $paragraph;
     padding-bottom: 6vw;
     font-size: 5vw;
+  }
+  .fa-arrow-left::before{
+    color: white;
+  }
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
   }
 
 }

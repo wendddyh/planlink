@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # get 'events/show'
   resources :venues do
     resources :bookings, only: [:create, :new, :show, :edit, :destroy] do
-      resources :events, only: [:create, :new, :show, :edit, :destroy] do
+      resources :events, only: [:create, :new, :show, :edit, :destroy, :update] do
         resources :attendances, only: [:create, :new]
       end
     end

@@ -33,3 +33,61 @@ $white: #FBF9FF;
     padding-top: 2vw;
   }
 }
+
+
+// ATTENDANCE SHOW PAGE
+.flex{
+  padding-left: 5vw;
+  margin-top: 3vw;
+  border-bottom: 1px solid #c6c6c6;
+}
+.activebtn{
+  border: none;
+  background-color: #3f3cd1;
+  color: white;
+  padding: 1vw;
+  font-family: $smallheading;
+  text-decoration: underline;
+  font-size: 5vw;
+
+}
+#btncontrol{
+  button{
+    border: none;
+    color: black;
+    font-family: $smallheading;
+    font-size: 5vw;
+    opacity: 0.25;
+
+  }
+
+}
+
+
+
+.listofpeople{
+  border:none;
+  margin: 5vw;
+}
+
+#user_name{
+  padding-left: 7vw;
+}
+
+#attshow{
+  .fa-arrow-left::before{
+    color: white;
+  }
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+  }
+}
+
+#attheader{
+  background-color: $primary;
+  padding-left: 8vw;
+  padding-top: 5vw;
+}
