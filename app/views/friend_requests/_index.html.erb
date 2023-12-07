@@ -17,23 +17,19 @@
           <div class="card">
             <div class="card-body d-flex justify-content-between align-items-center">
               <!-- Circular div holding image aligned to the left -->
-              <div class="circular-div">
-                <!-- Replace 'your_image_url' with the actual image URL -->
-                <%= image_tag @friend.image_url, alt: "User Image", class: "img-fluid rounded-circle", style: "width: 50px; height: 50px;" %>
+              <div class="d-flex align-items-center">
+              <!-- User Image with Margin -->
+              <div class="user-image-container">
+                <%= image_tag @friend.image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
               </div>
-
-              <!-- Paragraph aligned to the right of the image -->
-              <p class="text-right ml-3">
-                <span style="font-weight: bold;">
-                  <%= @friend.first_name %> <%= @friend.last_name %>
-                </span>
-              </p>
-
+              <!-- User Name -->
+              <span id="request_name"><%= @friend.first_name + ' ' + @friend.last_name %></span>
+            </div>
               <!-- Confirm button aligned to the right with increased size -->
               <div class="d-flex align-items-center">
                 <%= form_for request, url: { action: "update", id: request.id }, method: :patch, remote: true do |f| %>
                   <%= f.hidden_field :confirmed, value: true %>
-                  <%= f.submit "Confirm", class: "btn btn-success btn-sm ml-2 px-3 py-2" %>
+                  <%= f.submit "Confirm", class: "btn btn-success btn-sm ml-2 px-3 py-2", id: "confirm_button" %>
                 <% end %>
               </div>
             </div>
