@@ -72,7 +72,7 @@ $white: #FBF9FF;
 }
 
 #navbarheader{
-  padding-top: 2vw;
+  padding-top: 3vw;
   justify-content: space-between;
   padding-right: 6vw;
   padding-bottom: 2vw;
@@ -131,17 +131,23 @@ $white: #FBF9FF;
 .card-body{
   padding: 10px;
   background-color: $white;
-  h3{
-    font-family: $heading;
-    a{
-      text-decoration: none;
-      font-family: $heading;
-      font-size: 6vw;
-      color: $black
+  line-height: 0;
+  a{
+    text-decoration: none;
+    font-size: 5vw;
+    color: $black;
+    font-family: $smallheading;
 
-    }
   }
 
+
+}
+.card-title{
+  font-family: $paragraph;
+  font-size: 5vw;
+}
+.card-text{
+  font-family: $paragraph;
 }
 
 #location{

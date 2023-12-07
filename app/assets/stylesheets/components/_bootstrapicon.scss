@@ -43,3 +43,9 @@ $white: #FBF9FF;
   font-size: 3vw;
   padding-right: 3vw;
 }
+
+
+.fa-xmark::before{
+  color: $primary;
+  font-size: 7vw;
+}

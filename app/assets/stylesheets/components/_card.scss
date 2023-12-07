@@ -258,17 +258,23 @@ $white: #FBF9FF;
 .floatbutton{
   background-color: #ffffff;
   position: fixed;
-  bottom: 0px;
+  bottom: -3px;
   width: -webkit-fill-available;
   justify-content: space-around;
   box-shadow: 0 -2px 5px -2px #c1bdbd;
+  padding-right: 29vw;
   .btn-primary{
     border: none;
     background-color: black;
     color: white;
     font-family: $paragraph;
-    font-size: 5vw;
+    font-size: 3vw;
+    width: -webkit-fill-available;
+    &:hover{
+      background-color: #835fd1;
+    }
   }
+
 }
 
 

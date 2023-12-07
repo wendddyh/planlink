@@ -42,11 +42,13 @@
     </div>
 
     <div class="col-sm-12" id="attendances">
+      <% @number = 0 %>
       <% @attendance.each do |e| %>
         <% if e.status == "true" %>
-          <% @number =  @attendance.count %>
+          <% @number += 1 %>
         <% end %>
       <% end %>
+
       <h3>Who's going?</h3>
       <% if @number %>
         <div class="attstatus d-flex">

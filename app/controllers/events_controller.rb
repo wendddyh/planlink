@@ -48,6 +48,7 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
     @users = User.where.not(id: current_user.id)
     @booking = Booking.find(@event.booking_id)
     @attendance = Attendance.where(event_id: @event.id)
+
     if params[:user].present?
       sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"
       @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
