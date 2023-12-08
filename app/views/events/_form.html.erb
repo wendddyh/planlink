@@ -5,7 +5,7 @@
   <%# useflatpicker %>
 
   <% if !(@booking.date == nil) %>
-    <p><strong>Date:</strong><%= @booking.date.strftime("%A, %e %B %Y") %></p>
+    <p><strong>Date:</strong> <%= @booking.date.strftime("%A, %e %B %Y") %></p>
     <p><strong>Time:</strong> <%= @booking.time.strftime("%l %P") %></p>
     <p><strong>People:</strong> <%= @booking.people %></p>
 

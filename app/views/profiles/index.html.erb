@@ -26,6 +26,16 @@
       <p class="venue"><%= link_to "Venue Listing", venues_path%><i class="fa-solid fa-arrow-right" id="arrow_right"></i></p>
       <p class="event"><%= link_to "Event", myevent_list_path %><i class="fa-solid fa-arrow-right" id="arrow_right"></i></p>
     </div>
+    <div class="col-12" id="listoffriend">
+      <h3>Friend Listing</h3>
+      <% @friendlist = current_user.friends %>
+      <div class="list d-flex" style="justify-content:space-around;">
+        <% @friendlist.each do|f| %>
+          <%= image_tag f.image_url %>
+          <p><%= f.first_name %> <%= f.last_name %></p>
+        <% end %>
+      </div>
+    </div>
 
 
   <div class="row">
