@@ -32,8 +32,9 @@ $white: #FBF9FF;
   [type="submit"]:not(:disabled) {
     background-color: $primary;
     padding: 3vw;
-    color: black;
+    color: white;
     font-family: $paragraph;
+    font-size: 5vw;
   }
   a{
     font-family: $paragraph;

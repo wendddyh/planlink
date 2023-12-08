@@ -14,6 +14,7 @@
     <%= f.input :time %>
     <%= f.input :number_of_people, collection: 1..300  %>
   <% end %>
+  <%= f.input :event_detail, as: :text, placeholder:"what is the plan?"%>
 
 
   <%= f.input :meal_dietary, collection:[
