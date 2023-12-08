@@ -149,6 +149,7 @@ a {
 .notilist{
   border: none;
   padding-top: 2vw;
+  margin-bottom: 80px;
 }
 
 #friendheader{
@@ -178,5 +179,24 @@ a {
     color: #1d1d1d;
     font-family: $smallheading;
     font-weight: 500;
+  }
+}
+
+
+#listoffriend{
+  margin: 4vw;
+  h3{
+    font-size: 4vw;
+    font-weight: 600;
+  }
+}
+
+.list{
+  img{
+    border-radius: 50%;
+  }
+  p{
+    font-family: $paragraph;
+    margin-left: 4vw;
   }
 }

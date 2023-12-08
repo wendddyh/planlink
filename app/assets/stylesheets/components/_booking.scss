@@ -66,8 +66,6 @@ $white: #FBF9FF;
     font-family: $paragraph;
     font-weight: 500;
     font-size: 5vw;
-    padding-left: 17vw;
-    padding-right: 17vw;
     color: white;
     float: inline-end;
     margin-right: 4vw;
@@ -195,4 +193,13 @@ $white: #FBF9FF;
   padding-top: 5vw;
   background-color: #9395D3;
   justify-content: space-between;
+  .fa-arrow-left::before{
+    color: white;
+  }
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+  }
 }

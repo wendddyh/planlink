@@ -27,6 +27,7 @@
 
     <div class="col-sm-12 mt-2" id="venuedetails">
       <p><%= @venue.description %></p>
+
       <h5><em>Type -</em></h5>
       <p><%= @venue.category%></p>
       <h5><em>$$ -</em></h5>
@@ -35,11 +36,13 @@
     </div>
 
     <div class="col-sm-12" id="capacity">
+
       <h5><em>Capacity -</em></h5>
       <p><%= @venue.capacity%> people</p>
     </div>
     <div class="reviewbox">
       <h5><em>What they say about us:</em></h5>
+
       <p class='review'>"<em><%= @venue.review %><em>"</p>
     </div>
   </div>

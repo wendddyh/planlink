@@ -5,6 +5,7 @@
       <%= link_to "Find Friends", new_friend_request_path %>
     </div>
   </div>
+
   <% if FriendRequest.where(confirmed: false).length > 0 %>
     <% @friend_requests.each do |request| %>
       <% if !request.confirmed %>
