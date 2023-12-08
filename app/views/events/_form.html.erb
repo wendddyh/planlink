@@ -3,10 +3,12 @@
   <p><%= f.input :photo, as: :file %></p>
   <p><strong>Address:</strong> <%= @venue.name %>,  <%= @venue.address %> </p>
   <%# useflatpicker %>
+
   <% if !(@booking.date == nil) %>
-    <p><strong>Date:</strong> <%= @booking.date %></p>
-    <p><strong>Time:</strong> <%= @booking.time %></p>
+    <p><strong>Date:</strong><%= @booking.date.strftime("%A, %e %B %Y") %></p>
+    <p><strong>Time:</strong> <%= @booking.time.strftime("%l %P") %></p>
     <p><strong>People:</strong> <%= @booking.people %></p>
+
   <% else %>
     <%= f.input :start_date , as: :string, input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :time %>
@@ -30,7 +32,6 @@
   "Business Formal",
   "Business Casual",
   "Smart Casual",
-  "Casual",
   "Black Tie",
   "White Tie",
   "Cocktail Attire",

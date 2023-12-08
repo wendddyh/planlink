@@ -28,11 +28,13 @@
           <h3>Reservation Confirmed.</h3>
         </div>
         <div class="reserveinfo">
-          <p><strong>Address: </strong><%= @venue.name %>, <%= @venue.address %></p>
+
+          <p><strong>Address:</strong> <%= @venue.name %>, <%= @venue.address %></p>
           <p><strong>Booking Id:</strong> <%= @booking.id %></p>
-          <p><strong>Date:</strong> <%= @booking.date %></p>
-          <p><strong>Time:</strong> <%= @booking.time %></p>
+          <p><strong>Date:</strong> <%= @booking.date.strftime("%A, %e %B %Y") %></p>
+          <p><strong>Time: </strong><%= @booking.time.strftime("%l %P") %></p>
           <p><strong>For:</strong> <%= @booking.people %> person</p>
+
         </div>
         <div class="col-md-12" id="createevent-btn">
         <%=link_to "Start Event Planning",   new_venue_booking_event_path( @venue.id, @booking.id), class: "btn btn-flat update" %>
