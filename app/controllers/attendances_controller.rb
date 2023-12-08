@@ -4,6 +4,7 @@ class AttendancesController < ApplicationController
 
   def index
       @attendances = Attendance.where(user_id: current_user.id)
+      @friend_requests = FriendRequest.where(friend_id: current_user.id)
       @attendances = policy_scope(Attendance)
   end
 
