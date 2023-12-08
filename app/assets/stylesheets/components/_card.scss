@@ -285,6 +285,7 @@ $white: #FBF9FF;
 #eventshowpage-description{
   margin-left: 5vw;
   margin-top: 3vw;
+  margin-bottom: 70px;
   h3{
     font-family: $smallheading;
     font-size: 4vw;
@@ -296,6 +297,10 @@ $white: #FBF9FF;
   }
 }
 
+.fa-trash-can::before{
+  padding-left: 53vw;
+  color: white;
+}
 
 
 
