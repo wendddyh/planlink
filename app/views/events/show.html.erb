@@ -11,26 +11,33 @@
     </div>
 
     <div class="col-sm-12 col-md-6" id="eventshowpage-detail">
-      <p>Organized by <%= current_user.first_name%></p>
       <h3><%= @event.event_name %></h3>
+      <p>Hosted by</p>
+      <div class="d-flex align-items-center" style="margin-bottom: 20px;">
+        <!-- User Image with Margin -->
+        <div class="user-image-container">
+          <%= image_tag User.find(@event.user_id).image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
+        </div>
+        <!-- User Name -->
+        <span id="request_name"><%= User.find(@event.user_id).first_name + ' ' + User.find(@event.user_id).last_name %></span>
+      </div>
 
       <div class="venuesecondetails d-flex">
         <i class="fa-regular fa-calendar"></i>
         <div class="venuesecondetail">
           <% if @event.start_date %>
-            <p><strong><%= @event.start_date %></strong></p>
+            <p><strong><%= @event.start_date.strftime("%A, %e %B %Y") %></strong></p>
           <% else %>
-            <p><strong><%= @booking.date %></strong></p>
+            <p><strong><%= @booking.date.strftime("%A, %e %B %Y") %></strong></p>
           <% end %>
           <% if @event.time %>
-            <p><%= @event.time %></p>
+            <p><%= @event.time.strftime("at %l %P") %></p>
           <% else %>
-            <p><%= @booking.time %></p>
+            <p><%= @booking.time.strftime("at %l %P") %></p>
           <% end %>
         </div>
 
       </div>
-
 
       <div class="venueaddresss d-flex">
         <i class="fa-solid fa-location-dot"></i>
@@ -49,13 +56,13 @@
         <% end %>
       <% end %>
 
-      <h3>Who's going?</h3>
+      <h3 style="margin-bottom: 20px;">Who's going?</h3>
       <% if @number %>
         <div class="attstatus d-flex">
           <%= link_to attendance_path do %>
             <i class="fa-solid fa-users"></i>
           <% end %>
-          <p><%= @number %> peoples are going </p>
+          <p><%= @number %> people are going </p>
         </div>
       <% else %>
         <div class="attempty d-flex">
@@ -70,19 +77,18 @@
     <div class="col-md-12" id="eventshowpage-description">
       <h3>Event Details</h3>
       <p><%= @event.event_detail %></p>
-      <p>Additional Information: <%= @event.additional %></p>
-      <p>Catering Information: <%= @event.meal_dietary %></p>
+      <p>Additional Information: </p>
+      <p><%= @event.additional.reject(&:empty?).join(' - ') %></p>
+      <p>Catering Information:  </p>
+        <p><%= @event.meal_dietary.reject(&:empty?).join(' - ') %></p>
       <p>Dress Code: <%= @event.dress_code%></p>
     </div>
   </div>
   <div class="row">
     <div class="floatbutton">
-      <%= link_to 'Add user',  new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id, ),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+      <%= link_to 'Invite Guests',  new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id, ),  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
     </div>
+    <%= link_to 'Delete event',  venue_booking_event_path(@venue.id, @event.booking_id, @event.id, ), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this event?" }  %>
   </div>
-
-
-
-
 
 </div>
