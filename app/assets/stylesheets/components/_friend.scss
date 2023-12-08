@@ -37,9 +37,11 @@ $white: #FBF9FF;
   }
   .find-friends {
     text-align: right;
-    font-family: $heading;
     font-size: 4vw;
-    color: $primary;
+    a{
+      color: $primary;
+      font-family: $smallheading;
+    }
   }
 }
 .norequest{
@@ -141,9 +143,40 @@ a {
 
 #send_request {
   font-family: $paragraph;
+  --bs-btn-border-color: none;
 }
 
 .notilist{
   border: none;
   padding-top: 2vw;
+}
+
+#friendheader{
+  padding-top: 3vw;
+  justify-content: space-between;
+  padding-right: 6vw;
+  padding-bottom: 2vw;
+  background-color: $primary;
+  img{
+    width: 28vw;
+    height: 8vw;
+  }
+  .fa-arrow-left::before{
+    color: $white;
+    font-size: 6vw;
+    padding-top: 1vw;
+  }
+}
+
+.cardownfriend{
+  a{
+    text-decoration: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-size: 4vw;
+    color: #1d1d1d;
+    font-family: $smallheading;
+    font-weight: 500;
+  }
 }

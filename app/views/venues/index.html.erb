@@ -1,32 +1,32 @@
 <div class="container">
-  <div class="row">
+  <div class="row" id="venuerow">
     <div class="col-md-12 d-flex" id="venuelistingtitle">
       <%= link_to profiles_path do %>
-        <i class="fa-solid fa-circle-arrow-left" id="arrow_left"></i>
+        <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
       <% end %>
-      <p>Venue Listing</p>
+      <h3>Venue Listing</h3>
     </div>
-
-    <div class="col-md-12" id="listing-card">
-      <% @venue.each do |v|%>
-      <div class="listinginner d-flex" style="justify-content: space-between;">
-        <div class="col-md-3" id="inner-photo">
-          <%= v.photo_url %>
-        </div>
-        <div class="col-md-6" id="inner_listing">
-          <h3><%= v.name %></h3>
-          <p><%= v.address %></p>
-          <p>booking id need to be created first</p>
-          <%# <%= link_to "Create Event", new_venue_event_path(v.id) %> %>
-        </div>
-        <div class="col-md-3" id="edit_button">
-          <%= link_to edit_venue_path(v.id) do %>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          <% end %>
-        </div>
+    <% if @venue.length > 0  %>
+      <div class="col-md-12" id="listing-card">
+        <% @venue.each do |v|%>
+          <div class="listinginner d-flex" style="justify-content: space-between;">
+            <div class="col-md-12" id="inner_listing">
+              <h3><%= v.name %></h3>
+              <p><%= v.address %></p>
+            </div>
+            <div class="col-md-3" id="edit_button">
+              <%= link_to edit_venue_path(v.id) do %>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
-
+      <% else %>
   </div>
+        <div class="row" id="novenue">
+          <h3>No venue. <%= link_to "Start creating.", new_venue_path %></h3>
+          <%= image_tag asset_path('nothing-here.png') %>
+        </div>
+      <% end %>
 </div>

@@ -132,7 +132,7 @@ $white: #FBF9FF;
   padding: 10px;
   background-color: $white;
   line-height: 0;
-  a{
+  h3{
     text-decoration: none;
     font-size: 5vw;
     color: $black;
@@ -144,10 +144,13 @@ $white: #FBF9FF;
 }
 .card-title{
   font-family: $paragraph;
-  font-size: 5vw;
+  font-size: 4vw;
+  color:$black;
 }
 .card-text{
   font-family: $paragraph;
+  color: $black;
+  font-size: 3vw;
 }
 
 #location{

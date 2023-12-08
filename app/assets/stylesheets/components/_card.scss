@@ -28,26 +28,24 @@ $white: #FBF9FF;
 // users venue listing and wishlist
 
 #venuelistingtitle{
-  margin-top: 2vw;
-  padding: 2vw;
-
-  p{
-    font-family: $heading;
-    padding-top: 2vw;
-    font-size: 3vw;
-    padding-left: 3vw;
+  padding-top: 4vw;
+  .fa-arrow-left::before{
+    color: white;
   }
-  .fa-circle-arrow-left::before {
-    color: $primary;
-    font-size: 3vw;
-    padding-top: 3vw;
-    padding-top: 1.5vw;
-    padding-right: 1.5vw;
-
+  h3{
+    font-family: $smallheading;
+    color: white;
+    font-size: 5vw;
+    padding-left: 5vw;
+    padding-bottom: 3vw;
   }
 }
 #listing-card{
-  border: 1px solid #d1d1d16b;
+  width: -webkit-fill-available;
+  margin-top: 5vw;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  background-color: #ffff;
 
 }
 .listinginner{
@@ -56,6 +54,32 @@ $white: #FBF9FF;
   border: 1px solid;
 }
 
+#novenue{
+  width: -webkit-fill-available;
+  margin-top: 5vw;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  background-color: #ffff;
+  text-align: -webkit-center;
+  margin-top: 25vw;
+  img{
+    width: 95vw;
+  }
+  h3{
+    opacity: 0.5;
+    font-style: oblique;
+    font-size: 5vw;
+    margin-top: 5vw;
+  }
+  a{
+    font-weight: 600;
+    color: rgb(40, 40, 126);
+  }
+}
+
+#venuerow{
+  background-color: $primary;
+}
 
 
 #inner_listing{
@@ -90,6 +114,10 @@ $white: #FBF9FF;
     font-family: $paragraph;
     font-size:3vw ;
   }
+  .fa-star::before{
+    padding-right: 2vw;
+    color: $primary;
+  }
 
 }
 
@@ -102,6 +130,22 @@ $white: #FBF9FF;
     text-decoration: none;
     color: #554ed6;
   }
+  p.review{
+
+      margin-bottom: 60px;
+      font-family: $paragraph;
+      font-size: 13px;
+  }
+
+}
+
+
+.reviewbox{
+  h4{
+    font-weight: 600;
+    font-size: 5vw;
+    font-family: $smallheading;
+  }
 }
 
 #venuedetails{
@@ -112,18 +156,21 @@ $white: #FBF9FF;
   h4{
     font-weight: 600;
     font-size: 5vw;
+    font-family: $smallheading;
   }
 }
 
+
 #capacity{
-  border: 1px solid #bdbdbd;
   h4{
     font-weight: 600;
     font-size: 5vw;
+    font-family: $smallheading;
   }
   p{
     font-weight: 400;
-    font-size: 3vw;
+    font-size: 4vw;
+
   }
 }
 
@@ -353,7 +400,7 @@ $white: #FBF9FF;
   margin-top: 2vw;
   padding: 2vw;
   border: 1px silver;
-  line-height: 0.5;
+  line-height: 1;
 
   h3{
     font-family: $heading;
@@ -369,5 +416,19 @@ $white: #FBF9FF;
     font-size: 3vw;
     font-weight: 400;
     padding-left: 6vw;
+  }
+}
+
+#noevent{
+  text-align: -webkit-center;
+  margin-top: 25vw;
+  img{
+    width: 95vw;
+  }
+  h3{
+    opacity: 0.5;
+    font-style: oblique;
+    font-size: 5vw;
+    margin-top: 5vw;
   }
 }
