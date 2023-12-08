@@ -2,7 +2,7 @@
   <!-- Single column layout -->
   <div class="row">
     <div class="col" id="receivein">
-      <% if Attendance.where(status: nil).length > 0 %>
+      <% if Attendance.where(id: current_user.id, status: nil).length > 0 %>
         <% @attendances.each do |attendance| %>
           <% if !attendance.status %>
               <% @event = Event.find(attendance.event_id) %>
