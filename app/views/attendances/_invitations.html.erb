@@ -1,13 +1,8 @@
 <div class="container-fluid">
   <!-- Single column layout -->
   <div class="row">
-
-    <%# <div class="col" id="receivein">
-      <% if @attendances.length > 0 %>
-
-    <div class="col">
+    <div class="col" id="receivein">
       <% if Attendance.where(status: nil).length > 0 %>
-
         <% @attendances.each do |attendance| %>
           <% if !attendance.status %>
               <% @event = Event.find(attendance.event_id) %>
@@ -43,7 +38,7 @@
                 <p id="are-you-going">Are you going?</p>
               </div>
               <div class="row" id="questionbool" >
-                <div class="button-container" style="display: flex; border-bottom: solid;">
+                <div class="button-container" style="display: flex; border-bottom: 0.25px solid;">
                   <!-- Button 1 -->
                   <%= form_for attendance, url: { action: "update", id: attendance.id }, method: :patch, remote: true do |f| %>
                     <%= f.hidden_field :status, value: true %>
