@@ -24,15 +24,13 @@ class FriendRequestsController < ApplicationController
   end
 
   def update
-
     @friend_request = FriendRequest.find(params[:id])
     confirmed = request_params[:confirmed] == "true"
     @friend_request.confirmed = confirmed
-
     if @friend_request.save!
 
       # Handle successful update, e.g., redirect to another page
-      redirect_to root_path, notice: 'Friend status updated successfully.'
+      redirect_to attendances_path, notice: 'Friend status updated successfully.'
 
     else
       # Handle unsuccessful update
@@ -45,5 +43,4 @@ class FriendRequestsController < ApplicationController
   def request_params
     params.require(:friend_request).permit(:confirmed)
   end
-
 end
