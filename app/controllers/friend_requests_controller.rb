@@ -1,11 +1,6 @@
 class FriendRequestsController < ApplicationController
   skip_after_action :verify_authorized
 
-  def index
-    @friend_requests = policy_scope(FriendRequest)
-    @friend_requests = FriendRequest.where(friend_id: current_user.id)
-  end
-
   def new
     @friend_request = FriendRequest.new
     @friends_and_i = current_user.friends + [current_user]
