@@ -3,15 +3,19 @@
   <p><%= f.input :photo, as: :file %></p>
   <p><strong>Address:</strong> <%= @venue.name %>,  <%= @venue.address %> </p>
   <%# useflatpicker %>
-  <% if @booking.present? %>
-    <p><strong>Date:</strong> <%= @booking.date.strftime("%A, %e %B %Y") %></p>
+
+  <% if !(@booking.date == nil) %>
+    <p><strong>Date:</strong><%= @booking.date.strftime("%A, %e %B %Y") %></p>
     <p><strong>Time:</strong> <%= @booking.time.strftime("%l %P") %></p>
+    <p><strong>People:</strong> <%= @booking.people %></p>
+
   <% else %>
     <%= f.input :start_date , as: :string, input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :time %>
+    <%= f.input :number_of_people, collection: 1..300  %>
   <% end %>
 
-  <%= f.input :event_detail, as: :text, placeholder:"what is the plan?"%>
+
   <%= f.input :meal_dietary, collection:[
   "Vegetarian",
   "Vegan",
@@ -21,7 +25,7 @@
   "Allergen-Free"], as: :check_boxes , placeholder:"Meal options" %>
 
   <%= f.input :additional, collection:['Dog-Friendly', 'Kid-friendly', 'BYO', 'Cash Required'], as: :check_boxes %>
-  <%= f.input :number_of_people, collection: 1..300  %>
+
   <%= f.input :dress_code, collection:
   ["Smart", "Casual", "Colour Theme", "Haloween",
   "Formal",
@@ -33,6 +37,7 @@
   "Cocktail Attire",
   "Festive Attire",
   "Semi-Formal"] %>
+
 
   <%= f.submit class: "btn btn-primary", id:"event-btn" %>
 <% end %>

@@ -1,25 +1,44 @@
 <div class="container">
   <% if @venue.user_id %>
-    <p>show this</p>
-  <% else %>
-    <div class="col-md-12 pt-3 ml-2" id="bookingtitle">
-      <p>Booking Confirmation</p>
+    <div class="row" style="background-color:#9395D3">
+      <div class="col-md-12 pt-3 " id="bookingtitle">
+          <%= image_tag asset_path('PL_logo3.png') %>
+      </div>
+      <div class="col-md-12" id="booking-titles" style="padding: 31px;">
+        <div class="col d-flex" id="reserve">
+          <i class="fa-regular fa-circle-check"></i>
+          <h3>Venue succesfully created.</h3>
+        </div>
+        <div class="reserveinfo">
+          <p><strong>Name: </strong><%= @venue.name %></p>
+          <p><strong>Address:</strong> <%= @venue.address%></p>
+        </div>
+        <div class="col-md-12" id="createevent-btn">
+        <%=link_to "Start Event Planning",   new_venue_booking_event_path( @venue.id, @booking.id), class: "btn btn-flat update" %>
+      </div>
     </div>
-    <div class="col-md-12" id="booking-titles" style="padding: 31px;">
+  <% else %>
+    <div class="row" style="background-color:#9395D3">
+      <div class="col-md-12 pt-3 d-flex " id="bookingtitle">
+         <%= image_tag asset_path('PL_logo3.png') %>
+      </div>
+      <div class="col-md-12" id="booking-titles" style="padding: 31px;">
         <div class="col d-flex" id="reserve">
           <i class="fa-regular fa-circle-check"></i>
           <h3>Reservation Confirmed.</h3>
         </div>
         <div class="reserveinfo">
-          <p>Address: <%= @venue.name %>, <%= @venue.address %></p>
-          <p>Booking Id: <%= @booking.id %></p>
-          <p>Date: <%= @booking.date.strftime("%A, %e %B %Y") %></p>
-          <p>Time: <%= @booking.time.strftime("%l %P") %></p>
-          <p>For: <%= @booking.people %> person</p>
+
+          <p><strong>Address:</strong> <%= @venue.name %>, <%= @venue.address %></p>
+          <p><strong>Booking Id:</strong> <%= @booking.id %></p>
+          <p><strong>Date:</strong> <%= @booking.date.strftime("%A, %e %B %Y") %></p>
+          <p><strong>Time: </strong><%= @booking.time.strftime("%l %P") %></p>
+          <p><strong>For:</strong> <%= @booking.people %> person</p>
+
         </div>
-      <div class="col-md-12" id="createevent-btn">
-      <%=link_to "Start Event Planning",   new_venue_booking_event_path( @venue.id, @booking.id), class: "btn btn-flat update" %>
-    </div>
+        <div class="col-md-12" id="createevent-btn">
+        <%=link_to "Start Event Planning",   new_venue_booking_event_path( @venue.id, @booking.id), class: "btn btn-flat update" %>
+      </div>
     </div>
   <% end %>
 </div>

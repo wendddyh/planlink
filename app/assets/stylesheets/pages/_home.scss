@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@100;300;400;500&display=swap');
 $heading: 'Anton', sans-serif;
+$smallheading: 'Oswald', sans-serif;
 $paragraph: 'Urbanist', sans-serif;
 
 $primary: #9395D3;
@@ -17,8 +18,8 @@ $white: #FBF9FF;
 
 
 #front-page{
-  padding: 10vw;
-  padding-top: 9vw;
+  padding-left: 10vw;
+  padding-top: 20vw;
 
   h2{
     font-family: $heading;
@@ -35,11 +36,15 @@ $white: #FBF9FF;
   button{
     margin-top: 2vw;
     border-radius: 5px;
-    color: $white;
     background-color: black;
-    padding: 1vw;
+    padding: 2vw;
     font-family: $paragraph;
-    font-size: 3vw;
+    font-size: 5vw;
+    a{
+      color: white;
+      font-family: $smallheading;
+      font-size: 4vw;
+    }
   }
 }
 

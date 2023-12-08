@@ -26,17 +26,19 @@ legend ~ div.form-check:first-of-type {
 // NEW EVENT FORM
 #eventform{
   padding: 5vw;
-  background-color: $tertiary;
   h3{
     font-family: $smallheading;
     font-size: 6vw;
     font-weight: 500;
+    color: $white;
   }
 }
 #innereventform{
-  margin: 5vw;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: white;
+  padding-left: 5vw;
+  padding-right: 5vw;
   strong{
     font-family: $paragraph;
   }

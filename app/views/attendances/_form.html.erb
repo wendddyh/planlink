@@ -1,5 +1,13 @@
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" id="attendanceinvitemain">
+    <div class="col-12 d-flex" id="attendanceinvite">
+      <div class="cardownfriend">
+        <%= link_to attendances_path do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+      </div>
+      <%= image_tag asset_path('PL_logo3.png') %>
+    </div>
     <div class="col-sm-12 my-3" id="attendances-search">
       <%= form_with url: new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id), method: :get, class: "d-flex" do %>
         <%= text_field_tag :user,
@@ -10,27 +18,26 @@
           %>
         <%= submit_tag "Search", name: "", class: "btn btn-primary", id: "friend_search" %>
       <% end %>
-    </div>
-  </div>
-
-  <div class="row justify-content-center", id="invites-container">
-    <div class="col-sm-12" id="attendances_list">
-      <%= simple_form_for @event, url: venue_booking_event_attendances_path(@venue.id, @event.booking_id, @event.id), method: :post, data: { controller: 'attendances' } do |f| %>
-        <% @users.each do |user| %>
-          <div class="form-check d-flex align-items-center justify-content-between mb-2">
-            <div class="d-flex align-items-center">
-              <%= f.check_box :user_id, { multiple: true, class: 'form-check-input larger-checkbox' }, user.id, nil %>
-              <%= f.label class: "form-check-label larger-checkbox-label" do %>
-                <%= "#{user.first_name} #{user.last_name}" %>
-              <% end %>
-            </div>
-            <div id="send-invites-user-img">
-              <%= image_tag user.image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
-            </div>
-          </div>
-        <% end %>
-        <%= f.submit 'Send Invites', class: "btn btn-success btn-sm ml-2 px-3 py-2", id: "invites_button" %>
-      <% end %>
+      <div class="row justify-content-center", id="invites-container">
+        <div class="col-sm-12" id="attendances_list">
+          <%= simple_form_for @event, url: venue_booking_event_attendances_path(@venue.id, @event.booking_id, @event.id), method: :post, data: { controller: 'attendances' } do |f| %>
+            <% @users.each do |user| %>
+              <div class="form-check d-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex align-items-center">
+                  <%= f.check_box :user_id, { multiple: true, class: 'form-check-input larger-checkbox' }, user.id, nil %>
+                  <%= f.label class: "form-check-label larger-checkbox-label" do %>
+                    <%= "#{user.first_name} #{user.last_name}" %>
+                  <% end %>
+                </div>
+                <div id="send-invites-user-img">
+                  <%= image_tag user.image_url, alt: "User Image", class: "img-fluid rounded-circle mr-3", style: "width: 50px; height: 50px;" %>
+                </div>
+              </div>
+            <% end %>
+            <%= f.submit 'Send Invites', class: "btn btn-success btn-sm ml-2 px-3 py-2", id: "invites_button" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
