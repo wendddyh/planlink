@@ -8,7 +8,7 @@
       </div>
       <%= image_tag asset_path('PL_logo3.png') %>
     </div>
-    <div class="col-sm-12 my-3" id="attendances-search">
+    <div class="col-sm-12 " id="attendances-search">
       <%= form_with url: new_venue_booking_event_attendance_path(@venue.id, @event.booking_id, @event.id), method: :get, class: "d-flex" do %>
         <%= text_field_tag :user,
               params[:user],
@@ -22,7 +22,7 @@
         <div class="col-sm-12" id="attendances_list">
           <%= simple_form_for @event, url: venue_booking_event_attendances_path(@venue.id, @event.booking_id, @event.id), method: :post, data: { controller: 'attendances' } do |f| %>
             <% @users.each do |user| %>
-              <div class="form-check d-flex align-items-center justify-content-between mb-2">
+              <div class="form-check d-flex align-items-center justify-content-between mb-2" style="padding-bottom:4vw;">
                 <div class="d-flex align-items-center">
                   <%= f.check_box :user_id, { multiple: true, class: 'form-check-input larger-checkbox' }, user.id, nil %>
                   <%= f.label class: "form-check-label larger-checkbox-label" do %>

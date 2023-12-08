@@ -19,7 +19,7 @@ class FriendRequestsController < ApplicationController
     @friend_request = FriendRequest.create(user_id: current_user.id, friend_id: @friend_id)
 
     if @friend_request.valid?
-      redirect_to root_path
+      redirect_to attendances_path
     end
   end
 

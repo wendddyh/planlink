@@ -8,4 +8,12 @@ class ProfilesController < ApplicationController
     # add if no event raise currently no event
 
   end
+  def show
+    @user = User.find(params[:id])
+    authorize @user
+  end
+
+
+
+
 end

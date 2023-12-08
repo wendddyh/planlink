@@ -1,16 +1,26 @@
-<div class="container" id="homepage">
-  <div class="row">
-    <div class="col-md-12" id="front-page">
-      <h2>So,</h2>
-      <h2>what is</h2>
-      <h2>the <em>plan?</em></h2>
-      <h3>streamline your event planning in one place</h3>
-      <button><%= link_to "Plan LInk Your Event", root_path %></button>
-      <div class=" col-md-12" id="photo">
-        <%= image_tag asset_path('footer2.png') %>
-      </div>
 
+<div class="container">
+  <div class="row" id="pagesshow">
+    <div class="col-12 d-flex" id="navbarheader">
+      <%= image_tag asset_path('PL_logo3.png') %>
+      <div class="cardownvenue">
+        <%= link_to new_venue_path do %>
+          <i class="fa-solid fa-circle-plus"></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <%= render "shared/navbar" %>
     </div>
   </div>
-  <div class ="row"><%= render 'shared/footer'%>
+
+  <div class="row" id="listofvenue">
+    <div class="col-sm-12 mt-2">
+      <%= render 'list' %>
+    </div>
+  </div>
+
+  <div class ="row">
+    <%= render 'shared/footer'%>
+  </div>
 </div>

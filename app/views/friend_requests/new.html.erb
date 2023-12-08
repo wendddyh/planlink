@@ -1,6 +1,6 @@
 <div class="container">
   <!-- Search Bar -->
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" id="friendrequestheader">
     <div class="col-12 d-flex" id="friendheader">
       <div class="cardownfriend">
         <%= link_to attendances_path do %>
@@ -22,7 +22,7 @@
   </div>
 
   <!-- User List with Send Friend Request Button -->
-  <div class="row mt-3">
+  <div class="row mt-3" id="friendrequestarea">
     <% @users.each do |user| %>
       <div class="col-sm-12 mb-3">
         <div class="card">
@@ -35,6 +35,7 @@
               </div>
               <!-- User Name -->
               <span id="request_name"><%= user.first_name + ' ' + user.last_name %></span>
+
             </div>
             <!-- Friend Request Form with Smaller Button -->
             <%= simple_form_for @friend_request, url: friend_requests_path, method: :post, data: { controller: 'friend_requests' } do |f| %>

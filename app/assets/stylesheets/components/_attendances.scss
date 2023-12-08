@@ -47,7 +47,7 @@ $white: #FBF9FF;
 }
 
 #send-invites-user-img {
-  padding-right: 90px;
+  padding-right: 42px;
 }
 
 #invites-container {
@@ -57,6 +57,7 @@ $white: #FBF9FF;
 #invites_button {
   font-family: $paragraph;
   margin-top: 525px;
+  font-size: 4vw;
 }
 
 
@@ -163,6 +164,7 @@ $white: #FBF9FF;
   padding: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  margin-bottom: 50px;
 }
 
 #invites_button {
@@ -172,4 +174,55 @@ $white: #FBF9FF;
   position: fixed;
   bottom: -1px;
   width: -webkit-fill-available;
+}
+
+
+// ATTENDANCE CARD RECEIVE
+
+#receivein{
+  // box-shadow: 0 -2px 5px -2px #828080;
+  padding: 2vw;
+  margin-top: 4vw;
+  h2{
+    font-weight: 600;
+    font-size: 6vw;
+    font-family: $smallheading;
+  }
+  p{
+    font-family: $paragraph;
+    font-size: 4vw;
+  }
+}
+
+#question{
+  p{
+    font-size: 5vw;
+    font-weight: 600;
+    font-family: $paragraph;
+  }
+}
+
+#questionbool{
+  .button-container{
+    justify-content: center;
+  }
+}
+
+#going-event{
+  --bs-btn-border-color: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 5vw;
+  background: #2a7c2a;
+}
+#not-going-event{
+  --bs-btn-border-color: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 5vw;
+  background: #733724;
 }

@@ -201,7 +201,7 @@ $white: #FBF9FF;
 
 
 #imgshow{
-  height: 33vw;
+  height: 40vw;
 }
 
 #eventshowpage-detail{
@@ -215,12 +215,12 @@ $white: #FBF9FF;
   }
   h3{
     font-family: $smallheading;
-    font-size: 4vw;
+    font-size: 6vw;
 
   }
   p{
     font-family: $paragraph;
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 
@@ -270,7 +270,7 @@ $white: #FBF9FF;
   margin-right: 12vw;
   p{
     font-family: $paragraph;
-    font-size: 3vw;
+    font-size: 4vw;
     padding-left: 5vw;
   }
   .fa-users::before{
@@ -288,17 +288,17 @@ $white: #FBF9FF;
   margin-bottom: 70px;
   h3{
     font-family: $smallheading;
-    font-size: 4vw;
+    font-size: 5vw;
   }
   p{
     font-family: $paragraph;
-    font-size: 3vw;
+    font-size: 4vw;
     padding-right: 3vw;
   }
 }
 
 .fa-trash-can::before{
-  padding-left: 53vw;
+  padding-left: 50vw;
   color: white;
 }
 
@@ -308,7 +308,7 @@ $white: #FBF9FF;
 // INVITATION BUTTON IN EVENT SHOW PAGE
 
 .floatbutton{
-  background-color: #ffffff;
+  background-color: #000000;
   position: fixed;
   bottom: -3px;
   width: -webkit-fill-available;
@@ -320,7 +320,7 @@ $white: #FBF9FF;
     background-color: black;
     color: white;
     font-family: $paragraph;
-    font-size: 3vw;
+    font-size: 5vw;
     width: -webkit-fill-available;
     &:hover{
       background-color: #835fd1;

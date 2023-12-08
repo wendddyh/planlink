@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   end
 
-  def home
+  def show
     @venues = Venue.where(user_id:nil)
 
     # if user_signed_in?

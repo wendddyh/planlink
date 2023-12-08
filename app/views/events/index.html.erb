@@ -33,7 +33,7 @@
     <% else %>
   </div>
       <div class="row" id="noevent">
-        <h3>No event. Start planning.</h3>
+        <h3>No event. <%= link_to "Start planning.", front_page_path %></h3>
         <%= image_tag asset_path('nothing-here.png') %>
       </div>
     <% end %>

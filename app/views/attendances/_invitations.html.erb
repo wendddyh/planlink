@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <!-- Single column layout -->
   <div class="row">
-    <div class="col">
+    <div class="col" id="receivein">
       <% if @attendances.length > 0 %>
         <% @attendances.each do |attendance| %>
           <% if !attendance.status %>
@@ -21,7 +21,7 @@
                 <div class="col info-section">
                   <h2>You have been invited for <%= @event.event_name %>!</h2>
                   <p>at <%= @venue.name %>, <%= @venue.address %> </p>
-                  <p>on <%= @booking.date %> </p>
+                  <p>on <%= @booking.date %>, <%= @booking.time  %></p>
                   <p>Hosted by</p>
                   <div class="d-flex align-items-center">
                     <!-- User Image with Margin -->
@@ -34,10 +34,10 @@
                   <!-- Add more content as needed -->
                 </div>
               </div>
-              <div class="row">
+              <div class="row" id="question">
                 <p id="are-you-going">Are you going?</p>
               </div>
-              <div class="row" >
+              <div class="row" id="questionbool" >
                 <div class="button-container" style="display: flex; border-bottom: solid;">
                   <!-- Button 1 -->
                   <%= form_for attendance, url: { action: "update", id: attendance.id }, method: :patch, remote: true do |f| %>

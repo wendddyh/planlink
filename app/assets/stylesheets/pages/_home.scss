@@ -60,3 +60,15 @@ $white: #FBF9FF;
     width: 66vw;
   }
 }
+
+#pagesshow{
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+}
+
+#listofvenue{
+  position: relative;
+  top: 115px;
+  background-color: white;
+}

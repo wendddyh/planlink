@@ -1,2 +1,25 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+  <div class="row" id="profileall">
+    <div class="profile-header d-flex mt-3">
+      <%= link_to profiles_path do %>
+        <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
+      <% end %>
+      <h3>Profile</h3>
+      <div class="col-md-3" id="logout">
+        <%= link_to "Log out", destroy_user_session_path,  data: {turbo_method: :delete}, class: "dropdown-item" %>
+      </div>
+    </div>
+
+    <div class="col-md-12" id="profile">
+      <div class="profile-photo">
+        <%= image_tag @user.image_url %>
+      </div>
+      <div class="profile-info">
+        <h3><%= @user.first_name %> <%= @user.last_name %></h4>
+        <h4><%= @user.email %></p>
+        <p><%= @user.phone_number %></p>
+        <p><%= @user.dietary %></p>
+      </div>
+    </div>
+  </div>
+</div>
