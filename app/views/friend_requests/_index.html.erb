@@ -5,8 +5,7 @@
       <%= link_to "Find Friends", new_friend_request_path %>
     </div>
   </div>
-
-  <% if @friend_requests %>
+  <% if @friend_requests.length > 0 %>
     <% @friend_requests.each do |request| %>
       <% if !request.confirmed %>
         <% @friend = User.find(request.user_id) %>
@@ -25,7 +24,7 @@
               </div>
                 <!-- Confirm button aligned to the right with increased size -->
                 <div class="d-flex align-items-center">
-                  <%= form_for request, url: { action: "update", id: request.id }, method: :patch, remote: true do |f| %>
+                  <%= form_for request, url: friend_request_path(request.id), id: request.id , method: :patch, remote: true do |f| %>
                     <%= f.hidden_field :confirmed, value: true %>
                     <%= f.submit "Confirm", class: "btn btn-success btn-sm ml-2 px-3 py-2", id: "confirm_button" %>
                   <% end %>
@@ -34,6 +33,7 @@
             </div>
           </div>
         </div>
+
       <% end %>
     <% end %>
   <% else %>

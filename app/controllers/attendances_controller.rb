@@ -3,9 +3,10 @@ class AttendancesController < ApplicationController
 
 
   def index
-      @attendances = Attendance.where(user_id: current_user.id)
-      @friend_requests = FriendRequest.where(friend_id: current_user.id)
-      @attendances = policy_scope(Attendance)
+
+    @attendances = policy_scope(Attendance)
+    @attendances = Attendance.where(user_id: current_user.id)
+    @friend_requests = FriendRequest.where(friend_id: current_user.id)
   end
 
   def show
@@ -53,11 +54,23 @@ class AttendancesController < ApplicationController
     if @attendance.update(attendance_params)
 
       # Handle successful update, e.g., redirect to another page
-      redirect_to root_path, notice: 'Attendance status updated successfully.'
+      redirect_to attendances_path, notice: 'Attendance status updated successfully.'
 
     else
       # Handle unsuccessful update
       render :index, alert: 'Failed to update attendance status.'
+    end
+    @friend_request = FriendRequest.find(params[:id])
+    confirmed = request_params[:confirmed] == "true"
+    @friend_request.confirmed = confirmed
+    if @friend_request.save!
+
+      # Handle successful update, e.g., redirect to another page
+      redirect_to attendances_path, notice: 'Friend status updated successfully.'
+
+    else
+      # Handle unsuccessful update
+      render :index, alert: 'Failed to update friend status.'
     end
   end
 
@@ -65,6 +78,10 @@ class AttendancesController < ApplicationController
 
   def attendance_params
     params.require(:attendance).permit(:status)
+  end
+
+  def request_params
+    params.require(:friend_request).permit(:confirmed)
   end
 
 end
