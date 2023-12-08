@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <% if @friend_requests.length > 0 %>
+  <% if FriendRequest.where(confirmed: false).length > 0 %>
     <% @friend_requests.each do |request| %>
       <% if !request.confirmed %>
         <% @friend = User.find(request.user_id) %>

@@ -6,40 +6,43 @@
     <%# add to favorite icon here %>
   </div>
   <div class="row" id="venueshowcard">
-    <div class="col-sm-12" id ="venuecarddetail">
-      <div class="col-sm-12 d-flex" style="justify-content: space-between;">
-        <h3><%= @venue.name %></h3>
-        <p><i class="fa-solid fa-star" style="color: #deb1fb;"></i><%= @venue.rating %></p>
+    <div class="col-sm-12" id="venuecarddetail">
+      <div class="col-sm-12 d-flex mb-2 " style="justify-content: space-between;">
+        <h3 style="margin-bottom: 0;"><%= @venue.name %></h3>
+        <p style="font-size: 13px;"><i class="fa-solid fa-star" style="color: #deb1fb;"></i><%= @venue.rating %></p>
       </div>
       <div class="venueshowinfo">
-        <p><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
+        <p style="font-size: 13px;"><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
         <div class="col-md-12 d-flex" style="justify-content: space-between;">
-          <p><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
-          <p class="phone" style="padding-right:8vw"><i class="fa-solid fa-phone"></i><%= @venue.phone_number%></p>
-
+          <p style="font-size: 13px;"><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
+          <p class="phone" style="font-size: 13px;"><i class="fa-solid fa-phone" ></i><%= @venue.phone_number%></p>
         </div>
         <div class="col-md-12 d-flex" style="justify-content: space-between;">
-          <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
-          <p><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
+          <p style="font-size: 13px;"><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
+          <p style="font-size: 13px;"><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="col-sm-12" id="venuedetails">
+    <div class="col-sm-12 mt-2" id="venuedetails">
       <p><%= @venue.description %></p>
-      <h4>Type</h4>
+
+      <h5><em>Type -</em></h5>
       <p><%= @venue.category%></p>
-      <h4>Price range</h4>
-      <p>estimated price per person</p>
+      <h5><em>$$ -</em></h5>
+      <p style="margin-bottom: 2px;">Estimated price per person</p>
       <p>$<%= @venue.price%></p>
     </div>
 
     <div class="col-sm-12" id="capacity">
-      <h4>Capacity</h4>
-      <p><%= @venue.capacity%></p>
+
+      <h5><em>Capacity -</em></h5>
+      <p><%= @venue.capacity%> people</p>
     </div>
     <div class="reviewbox">
-      <h4>What they say about us;</h4>
+      <h5><em>What they say about us:</em></h5>
+
       <p class='review'>"<em><%= @venue.review %><em>"</p>
     </div>
   </div>

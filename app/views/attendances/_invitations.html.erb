@@ -1,8 +1,13 @@
 <div class="container-fluid">
   <!-- Single column layout -->
   <div class="row">
-    <div class="col" id="receivein">
+
+    <%# <div class="col" id="receivein">
       <% if @attendances.length > 0 %>
+
+    <div class="col">
+      <% if Attendance.where(status: nil).length > 0 %>
+
         <% @attendances.each do |attendance| %>
           <% if !attendance.status %>
               <% @event = Event.find(attendance.event_id) %>

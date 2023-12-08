@@ -25,12 +25,12 @@ class AttendancesController < ApplicationController
 
     @booking = Booking.find(params[:booking_id])
 
-    @users = User.where.not(id: current_user.id)
+    @users = current_user.friends
     @booking_id = params[:booking_id]
     @event_id = params[:event_id]
     if params[:user].present?
       sql_subquery = "first_name ILIKE :user OR last_name ILIKE :user"
-      @users = @users.where(sql_subquery, user: "%#{params[:user]}%")
+      @users = User.where(sql_subquery, user: "%#{params[:user]}%")
     end
   end
 
