@@ -16,7 +16,7 @@ $primary: #9395D3;
 $secondary: #A2A3BB;
 $tertiary: #B3B7EE;
 $black: #000807;
-$white: #FBF9FF;
+$white: #ffff;
 
 legend ~ div.form-check:first-of-type {
   clear: left;
@@ -50,12 +50,14 @@ legend ~ div.form-check:first-of-type {
 
 #event-btn{
   border-radius: 2px;
-  background-color: $black;
+  background-color: $primary;
   color: $white;
   font-size: 5vw;
   font-weight: 500;
   font-family: $smallheading;
   border: none;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .form-control{

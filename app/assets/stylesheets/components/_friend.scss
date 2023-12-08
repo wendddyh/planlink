@@ -139,11 +139,14 @@ a {
 
 #confirm_button {
   font-family: $paragraph;
+  color:white;
+  --bs-btn-border-color: none;
 }
 
 #send_request {
   font-family: $paragraph;
   --bs-btn-border-color: none;
+  color:white;
 }
 
 .notilist{

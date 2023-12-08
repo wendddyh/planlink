@@ -101,8 +101,8 @@ $white: #FBF9FF;
   padding: 2vw;
   text-align-last: center;
   a{
-    background: black;
-    color: white;
+    background: $primary;
+    color: $black;
     padding: 2vw;
     text-decoration: none;
     font-family: $paragraph;

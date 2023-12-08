@@ -141,6 +141,7 @@ $white: #FBF9FF;
 
 
 .reviewbox{
+  padding-bottom: 27px;
   h4{
     font-weight: 600;
     font-size: 5vw;
@@ -308,7 +309,6 @@ $white: #FBF9FF;
 // INVITATION BUTTON IN EVENT SHOW PAGE
 
 .floatbutton{
-  background-color: #000000;
   position: fixed;
   bottom: -3px;
   width: -webkit-fill-available;
@@ -317,7 +317,7 @@ $white: #FBF9FF;
   padding-right: 29vw;
   .btn-primary{
     border: none;
-    background-color: black;
+    background-color: $primary;
     color: white;
     font-family: $paragraph;
     font-size: 5vw;
@@ -393,6 +393,7 @@ $white: #FBF9FF;
   padding: 9vw;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  margin-bottom: 37px;
   a{
     text-decoration: none;
     font-family: $heading;
@@ -416,9 +417,9 @@ $white: #FBF9FF;
   }
   a{
     padding-right: 6vw;
-    background-color: black;
+    background-color: $primary;
     color: white;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: 400;
     padding-left: 6vw;
   }

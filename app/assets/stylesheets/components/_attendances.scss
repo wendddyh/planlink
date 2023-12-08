@@ -170,10 +170,12 @@ $white: #FBF9FF;
 #invites_button {
   --bs-btn-border-color: none;
   color: white;
-  background-color: black;
+  background-color: $primary;
   position: fixed;
   bottom: -1px;
   width: -webkit-fill-available;
+  font-family: $smallheading;
+  font-size: 5vw;
 }
 
 
