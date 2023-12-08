@@ -10,13 +10,13 @@
       </div>
     </div>
 
-    <div class="col-md-12 d-flex" id="profile">
+    <div class="col-md-12" id="profile">
       <div class="profile-photo">
         <%= image_tag @user.image_url %>
       </div>
       <div class="profile-info">
-        <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-        <p><%= @user.email %></p>
+        <h3><%= @user.first_name %> <%= @user.last_name %></h4>
+        <h4><%= @user.email %></p>
         <p><%= @user.phone_number %></p>
         <p><%= @user.dietary %></p>
       </div>

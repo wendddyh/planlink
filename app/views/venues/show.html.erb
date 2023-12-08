@@ -11,17 +11,18 @@
         <h3><%= @venue.name %></h3>
         <p><i class="fa-solid fa-star" style="color: #deb1fb;"></i><%= @venue.rating %></p>
       </div>
-       <p><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
-      <div class="col-md-12 d-flex" style="justify-content: space-between;">
-        <p><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
-        <p><i class="fa-solid fa-phone"></i><%= @venue.phone_number%></p>
+      <div class="venueshowinfo">
+        <p><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
+        <div class="col-md-12 d-flex" style="justify-content: space-between;">
+          <p><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
+          <p class="phone" style="padding-right:8vw"><i class="fa-solid fa-phone"></i><%= @venue.phone_number%></p>
 
+        </div>
+        <div class="col-md-12 d-flex" style="justify-content: space-between;">
+          <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
+          <p><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
+        </div>
       </div>
-      <div class="col-md-12 d-flex" style="justify-content: space-between;">
-        <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
-        <p><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
-      </div>
-
     </div>
 
     <div class="col-sm-12" id="venuedetails">
@@ -34,15 +35,15 @@
     </div>
 
     <div class="col-sm-12" id="capacity">
-      <h4>Capacity</h4>
+      <h4>capacity</h4>
       <p><%= @venue.capacity%></p>
-
     </div>
-      <p><%= @venue.time_slot%></p>
+    <div class="reviewbox">
       <h4>what they say about us;</h4>
-      <p>"<em><%= @venue.review %><em>"</p>
+      <p class='review'>"<em><%= @venue.review %><em>"</p>
+    </div>
   </div>
-  
+
   <div class="row">
     <%= render 'bookingform' %>
   </div>

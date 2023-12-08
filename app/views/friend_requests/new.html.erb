@@ -1,6 +1,14 @@
 <div class="container">
   <!-- Search Bar -->
   <div class="row justify-content-center">
+    <div class="col-12 d-flex" id="friendheader">
+      <div class="cardownfriend">
+        <%= link_to attendances_path do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+      </div>
+      <%= image_tag asset_path('PL_logo3.png') %>
+    </div>
     <div class="col-sm-12 my-3">
       <%= form_with url: new_friend_request_path, method: :get, class: "d-flex" do %>
         <div class="input-group">

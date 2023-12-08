@@ -7,7 +7,7 @@
       <h3>Event Lists</h3>
     </div>
 
-    <% if @event %>
+    <% if @event.length > 0 %>
       <div class="col-md-12" id="eventlistdetail">
         <% @event.each do |e| %>
         <div class="eventlistcard d-flex mt-3" style="justify-content: space-between;">
@@ -31,9 +31,13 @@
         <% end %>
       </div>
     <% else %>
-      <h3><em>No event.Start planning.</em></h3>
-    <% end %>
   </div>
+      <div class="row" id="noevent">
+        <h3>No event. Start planning.</h3>
+        <%= image_tag asset_path('nothing-here.png') %>
+      </div>
+    <% end %>
+
   <div class ="row"><%= render 'shared/footer'%>
   </div>
 </div>

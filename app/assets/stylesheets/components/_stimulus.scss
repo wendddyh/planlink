@@ -62,6 +62,8 @@ $white: #FBF9FF;
   border-top-left-radius: 46px;
   border-top-right-radius: 46px;
   background-color: #ffff;
+  text-align: -webkit-center;
+  border-bottom: 1px solid #9a99d1;
 
 }
 
@@ -70,28 +72,33 @@ $white: #FBF9FF;
   padding-left: 3vw;
   width: 23vw;
   img{
-    border-radius: 10px;
+    border-radius: 50%;
     width: -webkit-fill-available;
   }
 }
 .profile-info{
   padding-top: 2vw;
   margin-left: 5vw;
-  h4{
-    font-size: 4vw;
+  h3{
+    font-size: 5vw;
     font-weight: 600;
     font-family: $smallheading;
   }
-  p{
+  h4{
     font-size: 4vw;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: $smallheading;
+  }
+  p{
+    font-size: 3vw;
+    font-weight: 400;
     font-family: $paragraph;
   }
 }
 
 #profilebox{
   .venue{
-    background: $primary;
+    background: #892c68;
     padding-top: 7vw;
     width: 40vw;
     height: 21vw;
@@ -100,7 +107,7 @@ $white: #FBF9FF;
       text-decoration: none;
       font-family: $paragraph;
       color: white;
-      font-weight: 600;
+      font-weight: 500;
     }
     .fa-arrow-right::before{
       color: white;
@@ -110,7 +117,7 @@ $white: #FBF9FF;
     }
   }
   .event{
-    background: $tertiary;
+    background: #161d7b;;
     width: 40vw;
     padding-top: 7vw;
     height: 21vw;
@@ -119,7 +126,7 @@ $white: #FBF9FF;
       text-decoration: none;
       font-family: $paragraph;
       color: white;
-      font-weight: 600;
+      font-weight: 500;
     }
     .fa-arrow-right::before{
       color: white;

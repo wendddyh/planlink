@@ -70,6 +70,7 @@ $white: #FBF9FF;
     padding-right: 17vw;
     color: white;
     float: inline-end;
+    margin-right: 4vw;
   }
 }
 
@@ -99,7 +100,8 @@ $white: #FBF9FF;
   width: -webkit-fill-available;
   justify-content: space-around;
   box-shadow: 0 -2px 5px -2px #c1bdbd;
-  padding-left: 32vw;
+  padding: 2vw;
+  text-align-last: center;
   a{
     background: black;
     color: white;
@@ -112,20 +114,16 @@ $white: #FBF9FF;
 
 }
 
-
 // BOOKING CONFIRMATION
 
 #bookingtitle{
-  padding-top: 5vw;
+  padding-bottom: 5vw;
   background-color: $primary;
-  padding-left: 8vw;
-  padding-bottom: 4vw;
+  justify-content: space-between;
   p{
     padding-top: 2vw;
     color: white;
-    margin-left: 5vw;
     font-family: $paragraph;
-    padding-bottom: 6vw;
     font-size: 5vw;
   }
   .fa-arrow-left::before{
@@ -137,14 +135,18 @@ $white: #FBF9FF;
     font-size: 5vw;
     padding-left: 5vw;
   }
+  img{
+    width: 28vw;
+    height: 8vw;
+  }
 
 }
 
 #booking-titles{
   background-color: #dfe1ff;
   padding: 10px;
-  margin: 6vw;
-  border-radius: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 
@@ -180,8 +182,17 @@ $white: #FBF9FF;
   .btn{
     color:$white;
     font-family: $paragraph;
-    font-size: 6vw;
+    font-size: 5vw;
     background: black;
     border-radius: 11px;
   }
+}
+
+
+// BOOKING NEW
+#createbookingtitle{
+  padding-bottom: 5vw;
+  padding-top: 5vw;
+  background-color: #9395D3;
+  justify-content: space-between;
 }

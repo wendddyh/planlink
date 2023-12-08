@@ -20,7 +20,7 @@ class VenuesController < ApplicationController
     authorize @venue
     if @venue.save!
       @booking = Booking.create(venue_id: @venue.id)
-      redirect_to booking_path(@booking.id)
+      redirect_to venue_booking_path(@venue.id, @booking.id)
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,6 +29,7 @@ class VenuesController < ApplicationController
   def show
     authorize @venue
     @venue = Venue.find(params[:id])
+    @booking = Booking.where(venue_id: @venue)
   end
 
   def edit
