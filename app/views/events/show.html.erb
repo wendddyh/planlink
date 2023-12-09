@@ -59,7 +59,14 @@
       <% end %>
 
       <h3 style="margin-bottom: 20px;">Who's going?</h3>
-      <% if @number %>
+      <% if @number == 1%>
+        <div class="attstatus d-flex">
+          <%= link_to attendance_path do %>
+            <i class="fa-solid fa-users"></i>
+          <% end %>
+          <p><%= @number %> person is going </p>
+        </div>
+      <% elsif @number < 1 || @number > 1 %>
         <div class="attstatus d-flex">
           <%= link_to attendance_path do %>
             <i class="fa-solid fa-users"></i>
@@ -69,7 +76,7 @@
       <% else %>
         <div class="attempty d-flex">
           <i class="fa-solid fa-users"></i>
-          <p>Start Invite</p>
+          <p>Invite Guests</p>
         </div>
       <% end %>
     </div>
