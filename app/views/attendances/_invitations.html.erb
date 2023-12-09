@@ -21,7 +21,7 @@
                 <div class="col info-section">
                   <h2>You have been invited for <%= @event.event_name %>!</h2>
                   <p>at <%= @venue.name %>, <%= @venue.address %> </p>
-                  <p>on <%= @booking.date %>, <%= @booking.time  %></p>
+                  <p>on <%= @booking.date.strftime("%A, %e %B %Y") %>, <%= @booking.time.strftime("at %l %P")  %></p>
                   <p>Hosted by</p>
                   <div class="d-flex align-items-center">
                     <!-- User Image with Margin -->
