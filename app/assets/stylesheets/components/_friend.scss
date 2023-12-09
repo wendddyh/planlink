@@ -46,7 +46,7 @@ $white: #FBF9FF;
 }
 .norequest{
   text-align: -webkit-center;
-  margin-top: 14vw;
+  margin-top: 21vw;
   img{
     width: 60vw;
   }
@@ -212,7 +212,17 @@ a {
   }
 }
 
+
+#friend_list_profile {
+  margin-left: 18vw;
+  font-family: $paragraph;
+  color: $black;
+  font-weight: 600;
+
+}
+
 // FRIEND REQUEST
+
 
 #friendrequestarea{
   position: relative;
