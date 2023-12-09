@@ -30,7 +30,8 @@ User.create!(email: "diana@gmail.com", password: "dianaa", first_name: "Diana", 
 User.create!(email: "marcos@gmail.com", password: "marcos", first_name: "Marcos", last_name:"", phone_number:"045 682 2686",image_url:"https://res.cloudinary.com/ddmle7vip/image/upload/v1702032589/IMG-20231208-WA0002_h9jblg.jpg", dietary: "I aim for a high-protein diet to support my fitness goals, incorporating lean meats and legumes.")
 User.create!(email: "marika@gmail.com", password: "marika", first_name: "Marika", last_name:"", phone_number:"045 682 2686",image_url:"https://res.cloudinary.com/ddmle7vip/image/upload/v1702033189/IMG-20231208-WA0004_y642z4.jpg", dietary: "My diet includes superfoods like berries, kale, and nuts for added nutritional value.")
 User.create!(email: "hima@gmail.com", password: "himaaa", first_name: "Hima", last_name:"Perera", phone_number:"045 682 2686",image_url:"https://res.cloudinary.com/ddmle7vip/image/upload/v1702033544/IMG-20231208-WA0003_xqr93w.jpg", dietary: "I'm on a medically-prescribed diet that restricts sugar and processed foods.")
-
+User.create!(email: "dane@gmail.com", password: "daneee", first_name: "Dane", last_name:"Joshua", phone_number:"045 682 2686",image_url:"https://res.cloudinary.com/ddmle7vip/image/upload/v1702087560/IMG-20231209-WA0005_sjtaxq.jpg", dietary: "My diet includes superfoods like berries, kale, and nuts for added nutritional value.")
+User.create!(email: "tashya@gmail.com", password: "tashya", first_name: "Tashya", last_name:"Joshua", phone_number:"045 682 2686",image_url:"https://res.cloudinary.com/ddmle7vip/image/upload/v1702087560/IMG-20231209-WA0004_oackx4.jpg", dietary: "I'm on a medically-prescribed diet that restricts sugar and processed foods.")
 puts "User created"
 
 require_relative 'venue.rb'
