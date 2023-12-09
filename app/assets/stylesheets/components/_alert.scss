@@ -31,10 +31,11 @@ $white: #FBF9FF;
   margin-right: 9vw;
   [type="submit"]:not(:disabled) {
     background-color: $primary;
-    padding: 3vw;
+    padding-top: 1vw;
     color: white;
     font-family: $paragraph;
     font-size: 5vw;
+    margin-bottom: 2vw;
   }
   a{
     font-family: $paragraph;
