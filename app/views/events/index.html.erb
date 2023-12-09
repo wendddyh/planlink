@@ -4,7 +4,7 @@
       <%= link_to root_path do %>
           <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
         <% end %>
-      <h3>Event Lists</h3>
+      <h3>My Events</h3>
     </div>
 
     <% if @event.length > 0 %>
@@ -33,7 +33,7 @@
     <% else %>
   </div>
       <div class="row" id="noevent">
-        <h3>No event. <%= link_to "Start planning.", front_page_path %></h3>
+        <h3>No events. <%= link_to "Start planning.", front_page_path %></h3>
         <%= image_tag asset_path('nothing-here.png') %>
       </div>
     <% end %>

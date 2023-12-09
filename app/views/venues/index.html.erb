@@ -4,7 +4,7 @@
       <%= link_to profiles_path do %>
         <i class="fa-solid fa-arrow-left" id="arrow_left"></i>
       <% end %>
-      <h3>Venue Listing</h3>
+      <h3>My Venues</h3>
     </div>
     <% if @venue.length > 0  %>
       <div class="col-md-12" id="listing-card">
@@ -25,7 +25,7 @@
       <% else %>
   </div>
         <div class="row" id="novenue">
-          <h3>No venue. <%= link_to "Start creating.", new_venue_path %></h3>
+          <h3>No venues. <%= link_to "Start creating.", new_venue_path %></h3>
           <%= image_tag asset_path('nothing-here.png') %>
         </div>
       <% end %>

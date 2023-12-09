@@ -7,19 +7,19 @@
   </div>
   <div class="row" id="venueshowcard">
     <div class="col-sm-12" id="venuecarddetail">
-      <div class="col-sm-12 d-flex mb-2 " style="justify-content: space-between;">
-        <h3 style="margin-bottom: 0;"><%= @venue.name %></h3>
-        <p style="font-size: 13px;"><i class="fa-solid fa-star" style="color: #deb1fb;"></i><%= @venue.rating %></p>
+      <div class="col-sm-12 d-flex mb-3 " style="justify-content: space-between;">
+        <h3 style="font-size: 6vw;"><%= @venue.name %></h3>
+        <p style="font-size: 4vw;"><i class="fa-solid fa-star" style="color: #deb1fb;"></i><%= @venue.rating %></p>
       </div>
       <div class="venueshowinfo">
-        <p style="font-size: 13px;"><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
-        <div class="col-md-12 d-flex" style="justify-content: space-between;">
-          <p style="font-size: 13px;"><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
-          <p class="phone" style="font-size: 13px;"><i class="fa-solid fa-phone" ></i><%= @venue.phone_number%></p>
-        </div>
-        <div class="col-md-12 d-flex" style="justify-content: space-between;">
-          <p style="font-size: 13px;"><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
-          <p style="font-size: 13px;"><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
+        <p style="font-size: 4vw;"><i class="fa-regular fa-envelope"></i><%= @venue.email_address%></p>
+        <div class="col-md-12" style="justify-content: space-between;">
+          <p style="font-size: 4vw
+;"><i class="fa-solid fa-computer-mouse"></i><%= @venue.website%></p>
+          <p class="phone" style="font-size: 4vw
+;"><i class="fa-solid fa-phone" ></i><%= @venue.phone_number%></p>
+          <p style="font-size: 4vw;"><i class="fa-solid fa-location-dot"></i> <%= @venue.address%></p>
+          <p style="font-size: 4vw;"><i class="fa-regular fa-clock"></i> <%= @venue.operation_hour%></p>
         </div>
       </div>
     </div>
@@ -27,24 +27,24 @@
   <div class="row">
 
     <div class="col-sm-12 mt-2" id="venuedetails">
-      <p><%= @venue.description %></p>
+      <p style="margin-bottom:5vw;"><%= @venue.description %></p>
 
-      <h5><em>Type -</em></h5>
+      <h6 style="font-size: 5vw; margin-bottom:1px;"><em><strong>Type -</strong></em></h6>
       <p><%= @venue.category%></p>
-      <h5><em>$$ -</em></h5>
-      <p style="margin-bottom: 2px;">Estimated price per person</p>
+      <h6 style="font-size: 5vw; margin-bottom:1px;"><em><strong>$$ -</strong></em></h6>
+      <p style="margin-bottom: 0px;">Estimated price per person</p>
       <p>$<%= @venue.price%></p>
     </div>
 
     <div class="col-sm-12" id="capacity">
 
-      <h5><em>Capacity -</em></h5>
+      <h6 style="font-size: 5vw; margin-bottom:1px;"><em><strong>Capacity -</strong></em></h6>
       <p><%= @venue.capacity%> people</p>
     </div>
-    <div class="reviewbox">
-      <h5><em>What they say about us:</em></h5>
+    <div class="reviewbox mb-3" >
+      <h6 style="font-size: 5vw; margin-bottom:1px;"><em><strong>What they say about us:</strong></em></h6>
 
-      <p class='review'>"<em><%= @venue.review %><em>"</p>
+      <p class='review' style="font-size: 4vw;">"<em><%= @venue.review %><em>"</p>
     </div>
   </div>
 
