@@ -24,8 +24,12 @@ class AttendancesController < ApplicationController
     @event.booking_id = params[:booking_id]
 
     @booking = Booking.find(params[:booking_id])
-
-    @users = current_user.friends
+    @already_invited = Attendance.where(event_id: params[:event_id], user_id: current_user.friends)
+    @already_invited = @already_invited.map do |object|
+      object.user_id
+    end
+    @already_invited = User.where(id: @already_invited)
+    @users = current_user.friends - @already_invited
     @booking_id = params[:booking_id]
     @event_id = params[:event_id]
     if params[:user].present?
