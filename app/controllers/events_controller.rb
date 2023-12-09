@@ -34,11 +34,12 @@ before_action:set_event, only:[:edit, :show, :destroy, :update]
     @user = current_user
     @event = policy_scope(Event)
     @event = Event.where(user_id: @user.id )
-    if user_signed_in?
-      if Attendance.exists?(user_id: current_user.id)
-        @attendance = Attendance.where(user_id: current_user.id)
-      end
+    @attendances = Attendance.where(user_id: @user.id, status: "true")
+    @attendances = @attendances.map do |attendance|
+      attendance.event_id
     end
+    @events_going_for = Event.where(id: @attendances)
+    @event = Event.where(user_id: @user.id ) + @events_going_for
   end
 
   def show
